@@ -15,20 +15,20 @@ import 'setup_intents.dart';
 
 ///https://stripe.com/docs/api/balance
 class Core {
-    Core(this._stripe) {
-      balance = Balance(_stripe);
-      balanceTransactions = BalanceTransactions(_stripe);
-      customers = Customers(_stripe);
-      disputes = Disputes(_stripe);
-      events = Events(_stripe);
-      files = Files(_stripe);
-      fileLinks = FileLinks(_stripe);
-      mandates = Mandates(_stripe);
-      paymentIntents = PaymentIntents(_stripe);
-      payouts = Payouts(_stripe);
-      products = Products(_stripe);
-      refunds = Refunds(_stripe);
-      setupIntents = SetupIntents(_stripe);
+  Core(this._stripe) {
+    balance = Balance(_stripe);
+    balanceTransactions = BalanceTransactions(_stripe);
+    customers = Customers(_stripe);
+    disputes = Disputes(_stripe);
+    events = Events(_stripe);
+    files = Files(_stripe);
+    fileLinks = FileLinks(_stripe);
+    mandates = Mandates(_stripe);
+    paymentIntents = PaymentIntents(_stripe);
+    payouts = Payouts(_stripe);
+    products = Products(_stripe);
+    refunds = Refunds(_stripe);
+    setupIntents = SetupIntents(_stripe);
   }
 
   final Stripe _stripe;

@@ -3,7 +3,8 @@ import 'package:stripedart/src/api/model/checkout/tier.dart';
 import 'package:stripedart/src/api/model/checkout/transform.dart';
 part 'price.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Price {
   String id;
   String object;

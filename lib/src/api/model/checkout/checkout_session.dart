@@ -4,10 +4,11 @@ import 'package:stripedart/src/api/model/checkout/line_items.dart';
 import 'package:stripedart/src/api/model/checkout/shipping_address_collection.dart';
 import 'package:stripedart/src/api/model/issuing/shipping.dart';
 
-part 'session.g.dart';
+part 'checkout_session.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
-class Session {
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+class CheckoutSession {
   String id;
   String cancelUrl;
   String clientReferenceId;
@@ -29,30 +30,30 @@ class Session {
   ShippingAddressCollection shippingAddressCollection;
   String submitType;
   dynamic subscription;
-  
-  Session({
-    this.billingAddressCollection,
-    this.cancelUrl,
-    this.clientReferenceId,
-    this.customer,
-    this.customerEmail,
-    this.displayItems,
-    this.id,
-    this.lineItems,
-    this.livemode,
-    this.locale,
-    this.metadata,
-    this.mode,
-    this.object,
-    this.paymentIntent,
-    this.paymentMethodTypes,
-    this.setupIntent,
-    this.shipping,
-    this.shippingAddressCollection,
-    this.submitType,
-    this.subscription,
-    this.successUrl
-  });
-  factory Session.fromJson(Map<String, dynamic> json) => _$SessionFromJson(json);
-  Map<String, dynamic> toJson() => _$SessionToJson(this);
+
+  CheckoutSession(
+      {this.billingAddressCollection,
+      this.cancelUrl,
+      this.clientReferenceId,
+      this.customer,
+      this.customerEmail,
+      this.displayItems,
+      this.id,
+      this.lineItems,
+      this.livemode,
+      this.locale,
+      this.metadata,
+      this.mode,
+      this.object,
+      this.paymentIntent,
+      this.paymentMethodTypes,
+      this.setupIntent,
+      this.shipping,
+      this.shippingAddressCollection,
+      this.submitType,
+      this.subscription,
+      this.successUrl});
+  factory CheckoutSession.fromJson(Map<String, dynamic> json) =>
+      _$CheckoutSessionFromJson(json);
+  Map<String, dynamic> toJson() => _$CheckoutSessionToJson(this);
 }

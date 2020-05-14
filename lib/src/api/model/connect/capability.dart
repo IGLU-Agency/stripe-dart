@@ -14,15 +14,14 @@ class Capability {
   String object;
   int requestedAt;
 
-  Capability({
-    this.id,
-    this.object,
-    this.account,
-    this.requested,
-    this.requestedAt,
-    this.requirements,
-    this.status
-  });
+  Capability(
+      {this.id,
+      this.object,
+      this.account,
+      this.requested,
+      this.requestedAt,
+      this.requirements,
+      this.status});
   factory Capability.fromJson(Map<String, dynamic> json) =>
       _$CapabilityFromJson(json);
   Map<String, dynamic> toJson() => _$CapabilityToJson(this);

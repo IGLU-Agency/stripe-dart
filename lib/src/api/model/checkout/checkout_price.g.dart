@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'price.dart';
+part of 'checkout_price.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Price _$PriceFromJson(Map<String, dynamic> json) {
-  return Price(
+CheckoutPrice _$CheckoutPriceFromJson(Map<String, dynamic> json) {
+  return CheckoutPrice(
     active: json['active'] as bool,
     billingScheme: json['billing_scheme'] as String,
     created: json['created'] as int,
@@ -37,7 +37,8 @@ Price _$PriceFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$PriceToJson(Price instance) => <String, dynamic>{
+Map<String, dynamic> _$CheckoutPriceToJson(CheckoutPrice instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'object': instance.object,
       'active': instance.active,

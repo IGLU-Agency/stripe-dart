@@ -16,7 +16,7 @@ import 'usage_records.dart';
 
 ///https://stripe.com/docs/api/radar
 class Billing {
-    Billing(this._stripe) {
+  Billing(this._stripe) {
     coupons = Coupons(_stripe);
     creditNotes = CreditNotes(_stripe);
     customerBalanceTransactions = CustomerBalanceTransactions(_stripe);
@@ -25,7 +25,7 @@ class Billing {
     invoiceItems = InvoiceItems(_stripe);
     invoices = Invoices(_stripe);
     plans = Plans(_stripe);
-    selfServePortal = SelfServePortal(_stripe); 
+    selfServePortal = SelfServePortal(_stripe);
     subscriptions = Subscriptions(_stripe);
     subscriptionItems = SubscriptionItems(_stripe);
     subscriptionSchedules = SubscriptionSchedules(_stripe);

@@ -2,7 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'file_link.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class FileLink {
   String id;
   String object;
@@ -14,17 +15,17 @@ class FileLink {
   Map<String, dynamic> metadata;
   String url;
 
-  FileLink({
-    this.id,
-    this.object,
-    this.created,
-    this.expired,
-    this.expiresAt,
-    this.file,
-    this.livemode,
-    this.metadata,
-    this.url
-  });
-  factory FileLink.fromJson(Map<String, dynamic> json) => _$FileLinkFromJson(json);
+  FileLink(
+      {this.id,
+      this.object,
+      this.created,
+      this.expired,
+      this.expiresAt,
+      this.file,
+      this.livemode,
+      this.metadata,
+      this.url});
+  factory FileLink.fromJson(Map<String, dynamic> json) =>
+      _$FileLinkFromJson(json);
   Map<String, dynamic> toJson() => _$FileLinkToJson(this);
 }

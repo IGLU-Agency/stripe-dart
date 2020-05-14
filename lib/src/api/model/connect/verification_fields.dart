@@ -10,10 +10,7 @@ class VerificationFields {
   VerificationFieldsCompany company;
   VerificationFieldsIndividual individual;
 
-  VerificationFields({
-    this.company,
-    this.individual
-  });
+  VerificationFields({this.company, this.individual});
   factory VerificationFields.fromJson(Map<String, dynamic> json) =>
       _$VerificationFieldsFromJson(json);
   Map<String, dynamic> toJson() => _$VerificationFieldsToJson(this);

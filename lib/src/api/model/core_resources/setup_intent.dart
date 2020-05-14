@@ -3,7 +3,8 @@ import 'package:stripedart/src/api/model/core_resources/intent_action.dart';
 
 part 'setup_intent.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class SetupIntent {
   String id;
   String object;
@@ -50,6 +51,7 @@ class SetupIntent {
     this.status,
     this.usage,
   });
-  factory SetupIntent.fromJson(Map<String, dynamic> json) => _$SetupIntentFromJson(json);
+  factory SetupIntent.fromJson(Map<String, dynamic> json) =>
+      _$SetupIntentFromJson(json);
   Map<String, dynamic> toJson() => _$SetupIntentToJson(this);
 }

@@ -31,14 +31,16 @@ class Files {
     var response = await request.send();
     if (response.statusCode == 200) {
       var streamedResponse = await http.Response.fromStream(response);
-      var jsonResponse = convert.jsonDecode(streamedResponse.body) as Map<String, dynamic>;
+      var jsonResponse =
+          convert.jsonDecode(streamedResponse.body) as Map<String, dynamic>;
       return jsonResponse;
     } else {
       return map;
     }
   }
 
-  Future<Map<String, dynamic>> retrieve(String id, {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>> retrieve(String id,
+      {Map<String, dynamic> params}) {
     return _resource.retrieve(_endpoint, id, params: params);
   }
 

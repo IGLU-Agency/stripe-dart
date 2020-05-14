@@ -1,10 +1,10 @@
-
 import 'package:json_annotation/json_annotation.dart';
 import 'package:stripedart/src/api/model/issuing/spending_limits.dart';
 
 part 'spending_controls.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class SpendingControls {
   List<String> allowedCategories;
   List<String> blockedCategories;
@@ -17,6 +17,7 @@ class SpendingControls {
     this.spendingLimits,
     this.spendingLimitsCurrency,
   });
-  factory SpendingControls.fromJson(Map<String, dynamic> json) => _$SpendingControlsFromJson(json);
+  factory SpendingControls.fromJson(Map<String, dynamic> json) =>
+      _$SpendingControlsFromJson(json);
   Map<String, dynamic> toJson() => _$SpendingControlsToJson(this);
 }

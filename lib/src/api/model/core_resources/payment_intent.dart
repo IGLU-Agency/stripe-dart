@@ -5,7 +5,8 @@ import 'package:stripedart/src/api/model/issuing/shipping.dart';
 
 part 'payment_intent.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class PaymentIntent {
   String id;
   String object;
@@ -82,6 +83,7 @@ class PaymentIntent {
     this.transferData,
     this.transferGroup,
   });
-  factory PaymentIntent.fromJson(Map<String, dynamic> json) => _$PaymentIntentFromJson(json);
+  factory PaymentIntent.fromJson(Map<String, dynamic> json) =>
+      _$PaymentIntentFromJson(json);
   Map<String, dynamic> toJson() => _$PaymentIntentToJson(this);
 }

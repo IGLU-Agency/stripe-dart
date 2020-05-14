@@ -2,7 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'early_fraud_warning.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class EarlyFraudWarning {
   String id;
   String object;
@@ -11,7 +12,7 @@ class EarlyFraudWarning {
   int created;
   String fraudType;
   bool livemode;
-  
+
   EarlyFraudWarning({
     this.id,
     this.object,
@@ -21,6 +22,7 @@ class EarlyFraudWarning {
     this.fraudType,
     this.livemode,
   });
-  factory EarlyFraudWarning.fromJson(Map<String, dynamic> json) => _$EarlyFraudWarningFromJson(json);
+  factory EarlyFraudWarning.fromJson(Map<String, dynamic> json) =>
+      _$EarlyFraudWarningFromJson(json);
   Map<String, dynamic> toJson() => _$EarlyFraudWarningToJson(this);
 }

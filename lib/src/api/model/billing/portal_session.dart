@@ -1,7 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'portal_session.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class PortalSession {
   String id;
   String object;
@@ -20,7 +21,7 @@ class PortalSession {
     this.returnUrl,
     this.url,
   });
-  factory PortalSession.fromJson(Map<String, dynamic> json) => _$PortalSessionFromJson(json);
+  factory PortalSession.fromJson(Map<String, dynamic> json) =>
+      _$PortalSessionFromJson(json);
   Map<String, dynamic> toJson() => _$PortalSessionToJson(this);
 }
-

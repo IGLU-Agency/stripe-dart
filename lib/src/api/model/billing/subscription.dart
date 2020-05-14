@@ -6,7 +6,8 @@ import 'package:stripedart/src/api/model/billing/plan.dart';
 import 'package:stripedart/src/api/model/billing/subscription_items.dart';
 part 'subscription.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Subscription {
   String id;
   String object;
@@ -86,6 +87,7 @@ class Subscription {
     this.trialEnd,
     this.trialStart,
   });
-  factory Subscription.fromJson(Map<String, dynamic> json) => _$SubscriptionFromJson(json);
+  factory Subscription.fromJson(Map<String, dynamic> json) =>
+      _$SubscriptionFromJson(json);
   Map<String, dynamic> toJson() => _$SubscriptionToJson(this);
 }

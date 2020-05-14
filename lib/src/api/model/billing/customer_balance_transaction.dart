@@ -1,7 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'customer_balance_transaction.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class CustomerBalanceTransaction {
   String id;
   String object;
@@ -32,6 +33,7 @@ class CustomerBalanceTransaction {
     this.metadata,
     this.type,
   });
-  factory CustomerBalanceTransaction.fromJson(Map<String, dynamic> json) => _$CustomerBalanceTransactionFromJson(json);
+  factory CustomerBalanceTransaction.fromJson(Map<String, dynamic> json) =>
+      _$CustomerBalanceTransactionFromJson(json);
   Map<String, dynamic> toJson() => _$CustomerBalanceTransactionToJson(this);
 }

@@ -11,7 +11,8 @@ class Events {
   BasicResource _resource;
   final String _endpoint = "/events";
 
-  Future<Map<String, dynamic>> retrieve(String id, {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>> retrieve(String id,
+      {Map<String, dynamic> params}) {
     return _resource.retrieve(_endpoint, id, params: params);
   }
 

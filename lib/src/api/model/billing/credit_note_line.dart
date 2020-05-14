@@ -4,7 +4,8 @@ import 'package:stripedart/src/api/model/billing/rate.dart';
 
 part 'credit_note_line.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class CreditNoteLine {
   String id;
   String object;
@@ -20,21 +21,21 @@ class CreditNoteLine {
   int unitAmount;
   String unitAmountDecimal;
 
-  CreditNoteLine({
-    this.id,
-    this.object,
-    this.amount,
-    this.description,
-    this.discountAmount,
-    this.invoiceLineItem,
-    this.livemode,
-    this.taxRates,
-    this.type,
-    this.unitAmount,
-    this.unitAmountDecimal,
-    this.quantity,
-    this.taxAmounts
-  });
-  factory CreditNoteLine.fromJson(Map<String, dynamic> json) => _$CreditNoteLineFromJson(json);
+  CreditNoteLine(
+      {this.id,
+      this.object,
+      this.amount,
+      this.description,
+      this.discountAmount,
+      this.invoiceLineItem,
+      this.livemode,
+      this.taxRates,
+      this.type,
+      this.unitAmount,
+      this.unitAmountDecimal,
+      this.quantity,
+      this.taxAmounts});
+  factory CreditNoteLine.fromJson(Map<String, dynamic> json) =>
+      _$CreditNoteLineFromJson(json);
   Map<String, dynamic> toJson() => _$CreditNoteLineToJson(this);
 }

@@ -14,16 +14,15 @@ class ApplicationFeeRefund {
   dynamic balanceTransaction;
   int created;
 
-  ApplicationFeeRefund({
-    this.id,
-    this.object,
-    this.amount,
-    this.balanceTransaction,
-    this.created,
-    this.currency,
-    this.fee,
-    this.metadata
-  });
+  ApplicationFeeRefund(
+      {this.id,
+      this.object,
+      this.amount,
+      this.balanceTransaction,
+      this.created,
+      this.currency,
+      this.fee,
+      this.metadata});
   factory ApplicationFeeRefund.fromJson(Map<String, dynamic> json) =>
       _$ApplicationFeeRefundFromJson(json);
   Map<String, dynamic> toJson() => _$ApplicationFeeRefundToJson(this);

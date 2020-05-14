@@ -3,7 +3,8 @@ import 'package:stripedart/src/api/model/core_resources/fee_detail.dart';
 
 part 'balance_transaction.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class BalanceTransaction {
   String id;
   int amount;
@@ -38,6 +39,7 @@ class BalanceTransaction {
     this.status,
     this.type,
   });
-  factory BalanceTransaction.fromJson(Map<String, dynamic> json) => _$BalanceTransactionFromJson(json);
+  factory BalanceTransaction.fromJson(Map<String, dynamic> json) =>
+      _$BalanceTransactionFromJson(json);
   Map<String, dynamic> toJson() => _$BalanceTransactionToJson(this);
 }

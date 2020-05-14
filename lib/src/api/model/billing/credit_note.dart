@@ -3,7 +3,8 @@ import 'package:stripedart/src/api/model/billing/credit_note_lines.dart';
 import 'package:stripedart/src/api/model/billing/tax_amount.dart';
 part 'credit_note.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class CreditNote {
   String id;
   String object;
@@ -56,6 +57,7 @@ class CreditNote {
     this.type,
     this.voidedAt,
   });
-  factory CreditNote.fromJson(Map<String, dynamic> json) => _$CreditNoteFromJson(json);
+  factory CreditNote.fromJson(Map<String, dynamic> json) =>
+      _$CreditNoteFromJson(json);
   Map<String, dynamic> toJson() => _$CreditNoteToJson(this);
 }

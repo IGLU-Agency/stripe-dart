@@ -3,7 +3,8 @@ import 'package:stripedart/src/api/model/connect/reversals.dart';
 
 part 'transfer.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Transfer {
   String id;
   int amount;
@@ -23,25 +24,25 @@ class Transfer {
   String sourceType;
   String transferGroup;
 
-  Transfer({
-    this.id,
-    this.amount,
-    this.balanceTransaction,
-    this.created,
-    this.currency,
-    this.description,
-    this.amountReversed,
-    this.destination,
-    this.destinationPayment,
-    this.livemode,
-    this.metadata,
-    this.object,
-    this.reversals,
-    this.reversed,
-    this.sourceTransaction,
-    this.sourceType,
-    this.transferGroup
-  });
-  factory Transfer.fromJson(Map<String, dynamic> json) => _$TransferFromJson(json);
+  Transfer(
+      {this.id,
+      this.amount,
+      this.balanceTransaction,
+      this.created,
+      this.currency,
+      this.description,
+      this.amountReversed,
+      this.destination,
+      this.destinationPayment,
+      this.livemode,
+      this.metadata,
+      this.object,
+      this.reversals,
+      this.reversed,
+      this.sourceTransaction,
+      this.sourceType,
+      this.transferGroup});
+  factory Transfer.fromJson(Map<String, dynamic> json) =>
+      _$TransferFromJson(json);
   Map<String, dynamic> toJson() => _$TransferToJson(this);
 }

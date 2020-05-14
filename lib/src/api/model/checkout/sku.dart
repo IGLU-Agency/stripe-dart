@@ -4,7 +4,8 @@ import 'package:stripedart/src/api/model/checkout/package_dimensions.dart';
 
 part 'sku.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Sku {
   String id;
   String object;
@@ -21,9 +22,8 @@ class Sku {
   dynamic product;
   int updated;
 
-  
   Sku({
-   this.id,
+    this.id,
     this.object,
     this.active,
     this.attributes,
@@ -38,7 +38,7 @@ class Sku {
     this.product,
     this.updated,
   });
-  
+
   factory Sku.fromJson(Map<String, dynamic> json) => _$SkuFromJson(json);
   Map<String, dynamic> toJson() => _$SkuToJson(this);
 }

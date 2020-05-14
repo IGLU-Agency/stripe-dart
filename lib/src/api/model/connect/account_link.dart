@@ -2,7 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'account_link.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class AccountLink {
   String object;
   int created;
@@ -15,6 +16,7 @@ class AccountLink {
     this.expiresAt,
     this.url,
   });
-  factory AccountLink.fromJson(Map<String, dynamic> json) => _$AccountLinkFromJson(json);
+  factory AccountLink.fromJson(Map<String, dynamic> json) =>
+      _$AccountLinkFromJson(json);
   Map<String, dynamic> toJson() => _$AccountLinkToJson(this);
 }

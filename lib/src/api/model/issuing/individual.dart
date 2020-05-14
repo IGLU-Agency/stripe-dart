@@ -1,4 +1,3 @@
-
 import 'package:json_annotation/json_annotation.dart';
 import 'package:stripedart/src/api/model/issuing/dob.dart';
 import 'package:stripedart/src/api/model/issuing/relationship.dart';
@@ -8,7 +7,8 @@ import 'package:stripedart/src/api/model/terminal/address.dart';
 
 part 'individual.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Individual {
   String id;
   String object;
@@ -35,31 +35,31 @@ class Individual {
   bool ssnLast_4Provided;
   Verification verification;
 
-  Individual({
-    this.dob,
-    this.firstName,
-    this.lastName,
-    this.verification,
-    this.account,
-    this.address,
-    this.addressKana,
-    this.addressKanji,
-    this.created,
-    this.email,
-    this.firstNameKana,
-    this.firstNameKanji,
-    this.gender,
-    this.id,
-    this.idNumberProvided,
-    this.lastNameKana,
-    this.lastNameKanji,
-    this.maidenName,
-    this.metadata,
-    this.object,
-    this.phone,
-    this.requirements,
-    this.ssnLast_4Provided
-  });
-  factory Individual.fromJson(Map<String, dynamic> json) => _$IndividualFromJson(json);
+  Individual(
+      {this.dob,
+      this.firstName,
+      this.lastName,
+      this.verification,
+      this.account,
+      this.address,
+      this.addressKana,
+      this.addressKanji,
+      this.created,
+      this.email,
+      this.firstNameKana,
+      this.firstNameKanji,
+      this.gender,
+      this.id,
+      this.idNumberProvided,
+      this.lastNameKana,
+      this.lastNameKanji,
+      this.maidenName,
+      this.metadata,
+      this.object,
+      this.phone,
+      this.requirements,
+      this.ssnLast_4Provided});
+  factory Individual.fromJson(Map<String, dynamic> json) =>
+      _$IndividualFromJson(json);
   Map<String, dynamic> toJson() => _$IndividualToJson(this);
 }

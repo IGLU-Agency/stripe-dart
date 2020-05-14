@@ -1,7 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'refund.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Refund {
   String id;
   String object;

@@ -49,7 +49,6 @@ class Stripe {
   //CORE
   Core core;
 
-
   /// Creates a new [Stripe] object. Use this constructor if you wish to handle the instance of this class by yourself.
   /// Alternatively, use [Stripe.init] to create a singleton and access it through [Stripe.instance].
   ///
@@ -116,10 +115,10 @@ class Stripe {
     }
   }
 
-  Future<Map<String, dynamic>> request(
-      RequestMethod method, String path,
+  Future<Map<String, dynamic>> request(RequestMethod method, String path,
       {Map<String, dynamic> params}) {
-    return _apiHandler.request(method, path, publishableKey, defaultApiVersion, params: params);
+    return _apiHandler.request(method, path, publishableKey, defaultApiVersion,
+        params: params);
   }
 }
 

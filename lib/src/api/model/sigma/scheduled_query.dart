@@ -4,7 +4,8 @@ import 'package:stripedart/src/api/model/sigma/scheduled_query_error.dart';
 
 part 'scheduled_query.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class ScheduledQuery {
   String id;
   int dataLoadTime;
@@ -18,19 +19,19 @@ class ScheduledQuery {
   bool livemode;
   int resultAvailableUntil;
 
-  ScheduledQuery({
-    this.id,
-    this.dataLoadTime,
-    this.file,
-    this.sql,
-    this.status,
-    this.title,
-    this.object,
-    this.created,
-    this.error,
-    this.livemode,
-    this.resultAvailableUntil
-  });
-  factory ScheduledQuery.fromJson(Map<String, dynamic> json) => _$ScheduledQueryFromJson(json);
+  ScheduledQuery(
+      {this.id,
+      this.dataLoadTime,
+      this.file,
+      this.sql,
+      this.status,
+      this.title,
+      this.object,
+      this.created,
+      this.error,
+      this.livemode,
+      this.resultAvailableUntil});
+  factory ScheduledQuery.fromJson(Map<String, dynamic> json) =>
+      _$ScheduledQueryFromJson(json);
   Map<String, dynamic> toJson() => _$ScheduledQueryToJson(this);
 }

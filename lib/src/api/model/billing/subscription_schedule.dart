@@ -1,7 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'subscription_schedule.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class SubscriptionSchedule {
   String id;
   String object;
@@ -41,6 +42,7 @@ class SubscriptionSchedule {
     this.status,
     this.subscription,
   });
-  factory SubscriptionSchedule.fromJson(Map<String, dynamic> json) => _$SubscriptionScheduleFromJson(json);
+  factory SubscriptionSchedule.fromJson(Map<String, dynamic> json) =>
+      _$SubscriptionScheduleFromJson(json);
   Map<String, dynamic> toJson() => _$SubscriptionScheduleToJson(this);
 }

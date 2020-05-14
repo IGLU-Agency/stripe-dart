@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'session.dart';
+part of 'checkout_session.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Session _$SessionFromJson(Map<String, dynamic> json) {
-  return Session(
+CheckoutSession _$CheckoutSessionFromJson(Map<String, dynamic> json) {
+  return CheckoutSession(
     billingAddressCollection: json['billing_address_collection'] as String,
     cancelUrl: json['cancel_url'] as String,
     clientReferenceId: json['client_reference_id'] as String,
@@ -44,7 +44,8 @@ Session _$SessionFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$SessionToJson(Session instance) => <String, dynamic>{
+Map<String, dynamic> _$CheckoutSessionToJson(CheckoutSession instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'cancel_url': instance.cancelUrl,
       'client_reference_id': instance.clientReferenceId,

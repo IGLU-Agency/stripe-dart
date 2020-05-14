@@ -10,7 +10,8 @@ import 'package:stripedart/src/api/model/issuing/requirements.dart';
 
 part 'account.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Account {
   String id;
   String businessType;
@@ -33,25 +34,25 @@ class Account {
   bool payoutsEnabled;
   Settings settings;
 
-  Account({
-    this.id,
-    this.businessType,
-    this.company,
-    this.country,
-    this.email,
-    this.individual,
-    this.metadata,
-    this.requirements,
-    this.type,
-    this.chargesEnabled,
-    this.created,
-    this.defaultCurrency,
-    this.detailsSubmitted,
-    this.object,
-    this.payoutsEnabled,
-    this.tosAcceptance,
-    this.capabilities
-  });
-  factory Account.fromJson(Map<String, dynamic> json) => _$AccountFromJson(json);
+  Account(
+      {this.id,
+      this.businessType,
+      this.company,
+      this.country,
+      this.email,
+      this.individual,
+      this.metadata,
+      this.requirements,
+      this.type,
+      this.chargesEnabled,
+      this.created,
+      this.defaultCurrency,
+      this.detailsSubmitted,
+      this.object,
+      this.payoutsEnabled,
+      this.tosAcceptance,
+      this.capabilities});
+  factory Account.fromJson(Map<String, dynamic> json) =>
+      _$AccountFromJson(json);
   Map<String, dynamic> toJson() => _$AccountToJson(this);
 }

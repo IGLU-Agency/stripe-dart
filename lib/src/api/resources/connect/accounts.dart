@@ -16,19 +16,23 @@ class Accounts {
     return _resource.create(_endpoint, params: params);
   }
 
-  Future<Map<String, dynamic>> retrieve(String id, {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>> retrieve(String id,
+      {Map<String, dynamic> params}) {
     return _resource.retrieve(_endpoint, id, params: params);
   }
 
-  Future<Map<String, dynamic>> update(String id, {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>> update(String id,
+      {Map<String, dynamic> params}) {
     return _resource.update(_endpoint, id, params: params);
   }
-  
-  Future<Map<String, dynamic>> delete(String id, {Map<String, dynamic> params}) {
+
+  Future<Map<String, dynamic>> delete(String id,
+      {Map<String, dynamic> params}) {
     return _resource.delete(_endpoint, id, params: params);
   }
 
-  Future<Map<String, dynamic>> reject(String id, {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>> reject(String id,
+      {Map<String, dynamic> params}) {
     return _resource.reject(_endpoint, id, params: params);
   }
 
@@ -36,7 +40,8 @@ class Accounts {
     return _resource.list(_endpoint, params: params);
   }
 
-  Future<Map<String, dynamic>> loginLinks(String endpoint, {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>> loginLinks(String endpoint,
+      {Map<String, dynamic> params}) {
     return _stripe.request(RequestMethod.post, "/login_links", params: params);
   }
 }

@@ -1,10 +1,10 @@
-
 import 'package:json_annotation/json_annotation.dart';
 import 'package:stripedart/src/api/model/terminal/address.dart';
 
 part 'shipping.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Shipping {
   Address address;
   String carrier;
@@ -17,17 +17,17 @@ class Shipping {
   String trackingUrl;
   String type;
 
-  Shipping({
-    this.address,
-    this.carrier,
-    this.eta,
-    this.name,
-    this.service,
-    this.status,
-    this.trackingNumber,
-    this.trackingUrl,
-    this.type
-  });
-  factory Shipping.fromJson(Map<String, dynamic> json) => _$ShippingFromJson(json);
+  Shipping(
+      {this.address,
+      this.carrier,
+      this.eta,
+      this.name,
+      this.service,
+      this.status,
+      this.trackingNumber,
+      this.trackingUrl,
+      this.type});
+  factory Shipping.fromJson(Map<String, dynamic> json) =>
+      _$ShippingFromJson(json);
   Map<String, dynamic> toJson() => _$ShippingToJson(this);
 }

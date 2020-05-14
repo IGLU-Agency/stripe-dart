@@ -16,7 +16,7 @@ class Connect {
   Connect(this._stripe) {
     accounts = Accounts(_stripe);
     accountsLinks = AccountLinks(_stripe);
-    applicationFees =  ApplicationFees(_stripe);
+    applicationFees = ApplicationFees(_stripe);
     applicationFeeRefunds = ApplicationFeeRefunds(_stripe);
     capabilities = Capabilities(_stripe);
     countrySpecs = CountrySpecs(_stripe);

@@ -9,7 +9,8 @@ import 'package:stripedart/src/api/model/issuing/verification_data.dart';
 
 part 'authorization.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Authorization {
   String id;
   dynamic amount;
@@ -17,7 +18,7 @@ class Authorization {
   Card card;
   dynamic cardholder;
   String currency;
-  Map<String,dynamic> metadata;
+  Map<String, dynamic> metadata;
   String status;
   String object;
   String authorizationMethod;
@@ -56,6 +57,7 @@ class Authorization {
     this.verificationData,
     this.wallet,
   });
-  factory Authorization.fromJson(Map<String, dynamic> json) => _$AuthorizationFromJson(json);
+  factory Authorization.fromJson(Map<String, dynamic> json) =>
+      _$AuthorizationFromJson(json);
   Map<String, dynamic> toJson() => _$AuthorizationToJson(this);
 }

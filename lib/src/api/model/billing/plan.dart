@@ -4,7 +4,8 @@ import 'package:stripedart/src/api/model/checkout/transform.dart';
 
 part 'plan.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Plan {
   String id;
   String object;
@@ -18,7 +19,7 @@ class Plan {
   String interval;
   int intervalCount;
   bool livemode;
-  Map<String,dynamic> metadata;
+  Map<String, dynamic> metadata;
   String nickname;
   dynamic product;
   List<Tier> tiers;

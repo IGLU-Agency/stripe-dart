@@ -8,10 +8,7 @@ class VerificationFieldsCompany {
   List<String> additional;
   List<String> minimum;
 
-  VerificationFieldsCompany({
-    this.additional,
-    this.minimum
-  });
+  VerificationFieldsCompany({this.additional, this.minimum});
   factory VerificationFieldsCompany.fromJson(Map<String, dynamic> json) =>
       _$VerificationFieldsCompanyFromJson(json);
   Map<String, dynamic> toJson() => _$VerificationFieldsCompanyToJson(this);

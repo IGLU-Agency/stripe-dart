@@ -11,12 +11,14 @@ class Disputes {
   BasicResource _resource;
   final String _endpoint = "/disputes";
 
-  Future<Map<String, dynamic>> retrieve(String id, {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>> retrieve(String id,
+      {Map<String, dynamic> params}) {
     return _resource.retrieve(_endpoint, id, params: params);
   }
 
-  Future<Map<String, dynamic>> update(String id, {Map<String, dynamic> params}) {
-   return  _resource.update(_endpoint, id, params: params);
+  Future<Map<String, dynamic>> update(String id,
+      {Map<String, dynamic> params}) {
+    return _resource.update(_endpoint, id, params: params);
   }
 
   Future<Map<String, dynamic>> close(String id, {Map<String, dynamic> params}) {

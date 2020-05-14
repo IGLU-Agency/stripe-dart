@@ -4,7 +4,8 @@ import 'package:stripedart/src/api/model/terminal/address.dart';
 
 part 'customer.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Customer {
   String id;
   Address address;
@@ -35,32 +36,32 @@ class Customer {
   //TODO: tax_ids
   dynamic taxIds;
 
-  Customer({
-    this.address,
-    this.balance,
-    this.created,
-    this.currency,
-    this.defaultSource,
-    this.delinquent,
-    this.description,
-    this.discount,
-    this.email,
-    this.id,
-    this.invoicePrefix,
-    this.invoiceSettings,
-    this.livemode,
-    this.metadata,
-    this.name,
-    this.nextInvoiceSequence,
-    this.object,
-    this.phone,
-    this.preferredLocales,
-    this.shipping,
-    this.sources,
-    this.subscriptions,
-    this.taxExempt,
-    this.taxIds
-  });
-  factory Customer.fromJson(Map<String, dynamic> json) => _$CustomerFromJson(json);
+  Customer(
+      {this.address,
+      this.balance,
+      this.created,
+      this.currency,
+      this.defaultSource,
+      this.delinquent,
+      this.description,
+      this.discount,
+      this.email,
+      this.id,
+      this.invoicePrefix,
+      this.invoiceSettings,
+      this.livemode,
+      this.metadata,
+      this.name,
+      this.nextInvoiceSequence,
+      this.object,
+      this.phone,
+      this.preferredLocales,
+      this.shipping,
+      this.sources,
+      this.subscriptions,
+      this.taxExempt,
+      this.taxIds});
+  factory Customer.fromJson(Map<String, dynamic> json) =>
+      _$CustomerFromJson(json);
   Map<String, dynamic> toJson() => _$CustomerToJson(this);
 }

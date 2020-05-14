@@ -15,9 +15,9 @@ class StripeApiHandler {
 
   static const String versionName = "27";
 
-  ///Each API request has an associated request identifier. 
-  ///You can find this value in the response headers, under Request-Id. 
-  ///You can also find request identifiers in the URLs of individual request logs in your Dashboard. 
+  ///Each API request has an associated request identifier.
+  ///You can find this value in the response headers, under Request-Id.
+  ///You can also find request identifiers in the URLs of individual request logs in your Dashboard.
   ///If you need to contact us about a specific request, providing the request identifier will ensure the fastest possible resolution.
   static const String headerKeyRequestID = "Request-Id";
   static const String fieldError = "error";
@@ -37,8 +37,8 @@ class StripeApiHandler {
   Future<Map<String, dynamic>> request(
       RequestMethod method, String path, String key, String apiVersion,
       {final Map<String, dynamic> params}) {
-    final options = RequestOptions(
-        apiVersion, key: key, stripeAccount: stripeAccount);
+    final options =
+        RequestOptions(apiVersion, key: key, stripeAccount: stripeAccount);
     return _getStripeResponse(method, liveApiPath + path, options,
         params: params);
   }
@@ -47,7 +47,7 @@ class StripeApiHandler {
       RequestMethod method, final String url, final RequestOptions options,
       {Map<String, dynamic> params}) async {
     final headers = _headers(options: options);
-    
+
     http.Response response;
 
     switch (method) {
@@ -80,12 +80,19 @@ class StripeApiHandler {
     try {
       resp = json.decode(response.body);
     } catch (error) {
-      return {"isError": true, "error": { "type": "general", "message": "Unknown Error", "requestId": requestId }};
+      return {
+        "isError": true,
+        "error": {
+          "type": "general",
+          "message": "Unknown Error",
+          "requestId": requestId
+        }
+      };
     }
     if (statusCode < 200 || statusCode >= 300) {
       final Map<String, dynamic> errBody = resp[fieldError];
       errBody["requestId"] = requestId;
-      return { "isError": true, "error": errBody };
+      return {"isError": true, "error": errBody};
     } else {
       return resp;
     }
@@ -178,7 +185,8 @@ class RequestOptions {
   final String requestType;
   final String stripeAccount;
 
-  RequestOptions(this.apiVersion, {
+  RequestOptions(
+    this.apiVersion, {
     this.guid,
     this.idempotencyKey,
     this.key,

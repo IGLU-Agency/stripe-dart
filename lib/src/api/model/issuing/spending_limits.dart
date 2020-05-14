@@ -1,9 +1,9 @@
-
 import 'package:json_annotation/json_annotation.dart';
 
 part 'spending_limits.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class SpendingLimits {
   dynamic amount;
   List<String> categories;
@@ -16,6 +16,7 @@ class SpendingLimits {
     this.interval,
     this.spendingLimitsCurrency,
   });
-  factory SpendingLimits.fromJson(Map<String, dynamic> json) => _$SpendingLimitsFromJson(json);
+  factory SpendingLimits.fromJson(Map<String, dynamic> json) =>
+      _$SpendingLimitsFromJson(json);
   Map<String, dynamic> toJson() => _$SpendingLimitsToJson(this);
 }

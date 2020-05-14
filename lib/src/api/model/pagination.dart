@@ -26,7 +26,8 @@ class PaginationResponse<T> {
     this.data,
   });
 
-  factory PaginationResponse.fromJSON(Map<String, dynamic> json, Function fromJSON) {
+  factory PaginationResponse.fromJSON(
+      Map<String, dynamic> json, Function fromJSON) {
     var item = PaginationResponse();
     item.object = json["object"];
     item.url = json["url"];

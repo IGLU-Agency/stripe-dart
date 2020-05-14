@@ -2,17 +2,15 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'tos_acceptance.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class TosAcceptance {
   int date;
   String ip;
   String userAgent;
 
-  TosAcceptance({
-    this.date,
-    this.ip,
-    this.userAgent
-  });
-  factory TosAcceptance.fromJson(Map<String, dynamic> json) => _$TosAcceptanceFromJson(json);
+  TosAcceptance({this.date, this.ip, this.userAgent});
+  factory TosAcceptance.fromJson(Map<String, dynamic> json) =>
+      _$TosAcceptanceFromJson(json);
   Map<String, dynamic> toJson() => _$TosAcceptanceToJson(this);
 }

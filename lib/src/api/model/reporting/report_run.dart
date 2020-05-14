@@ -4,7 +4,8 @@ import 'package:stripedart/src/api/model/reporting/report_run_parameters.dart';
 
 part 'report_run.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class ReportRun {
   String id;
   ReportRunParameters parameters;
@@ -17,18 +18,18 @@ class ReportRun {
   bool livemode;
   int succeededAt;
 
-  ReportRun({
-    this.id,
-    this.object,
-    this.parameters,
-    this.reportType,
-    this.created,
-    this.result,
-    this.succeededAt,
-    this.livemode,
-    this.error,
-    this.status
-  });
-  factory ReportRun.fromJson(Map<String, dynamic> json) => _$ReportRunFromJson(json);
+  ReportRun(
+      {this.id,
+      this.object,
+      this.parameters,
+      this.reportType,
+      this.created,
+      this.result,
+      this.succeededAt,
+      this.livemode,
+      this.error,
+      this.status});
+  factory ReportRun.fromJson(Map<String, dynamic> json) =>
+      _$ReportRunFromJson(json);
   Map<String, dynamic> toJson() => _$ReportRunToJson(this);
 }

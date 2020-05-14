@@ -1,7 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'payout.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Payout {
   String id;
   String object;

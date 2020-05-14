@@ -31,6 +31,21 @@ export 'src/api/model/billing/tax_amount.dart';
 export 'src/api/model/billing/tax_id_verification.dart';
 export 'src/api/model/billing/usage_record.dart';
 
+export 'src/api/model/checkout/display_item_custom.dart';
+export 'src/api/model/checkout/display_item.dart';
+export 'src/api/model/checkout/inventory.dart';
+export 'src/api/model/checkout/line_item.dart';
+export 'src/api/model/checkout/line_items.dart';
+export 'src/api/model/checkout/package_dimensions.dart';
+export 'src/api/model/checkout/checkout_price.dart';
+export 'src/api/model/checkout/recurring.dart';
+export 'src/api/model/checkout/checkout_session.dart';
+export 'src/api/model/checkout/shipping_address_collection.dart';
+export 'src/api/model/checkout/sku.dart';
+export 'src/api/model/checkout/tax.dart';
+export 'src/api/model/checkout/tier.dart';
+export 'src/api/model/checkout/transform.dart';
+
 export 'src/api/model/connect/account_link.dart';
 export 'src/api/model/connect/account.dart';
 export 'src/api/model/connect/application_fee_refund.dart';

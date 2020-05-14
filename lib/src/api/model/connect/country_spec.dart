@@ -15,16 +15,15 @@ class CountrySpec {
   String object;
   VerificationFields verificationFields;
 
-  CountrySpec({
-    this.id,
-    this.object,
-    this.defaultCurrency,
-    this.supportedBankAccountCurrencies,
-    this.supportedPaymentCurrencies,
-    this.supportedPaymentMethods,
-    this.supportedTransferCountries,
-    this.verificationFields
-  });
+  CountrySpec(
+      {this.id,
+      this.object,
+      this.defaultCurrency,
+      this.supportedBankAccountCurrencies,
+      this.supportedPaymentCurrencies,
+      this.supportedPaymentMethods,
+      this.supportedTransferCountries,
+      this.verificationFields});
   factory CountrySpec.fromJson(Map<String, dynamic> json) =>
       _$CountrySpecFromJson(json);
   Map<String, dynamic> toJson() => _$CountrySpecToJson(this);

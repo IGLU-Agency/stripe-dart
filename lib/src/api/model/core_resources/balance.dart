@@ -4,7 +4,8 @@ import 'package:stripedart/src/api/model/core_resources/balance_issuing.dart';
 
 part 'balance.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Balance {
   List<BalanceFund> available;
   List<BalanceFund> pending;
@@ -13,13 +14,13 @@ class Balance {
   BalanceIssuing issuing;
   bool livemode;
 
-  Balance({
-    this.available,
-    this.connectReserved,
-    this.object,
-    this.pending,
-    this.issuing
-  });
-  factory Balance.fromJson(Map<String, dynamic> json) => _$BalanceFromJson(json);
+  Balance(
+      {this.available,
+      this.connectReserved,
+      this.object,
+      this.pending,
+      this.issuing});
+  factory Balance.fromJson(Map<String, dynamic> json) =>
+      _$BalanceFromJson(json);
   Map<String, dynamic> toJson() => _$BalanceToJson(this);
 }

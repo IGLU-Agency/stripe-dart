@@ -6,7 +6,8 @@ import 'package:stripedart/src/api/model/billing/period.dart';
 
 part 'invoice_item.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class InvoiceItem {
   String id;
   String object;
@@ -52,6 +53,7 @@ class InvoiceItem {
     this.unitAmount,
     this.unitAmountDecimal,
   });
-  factory InvoiceItem.fromJson(Map<String, dynamic> json) => _$InvoiceItemFromJson(json);
+  factory InvoiceItem.fromJson(Map<String, dynamic> json) =>
+      _$InvoiceItemFromJson(json);
   Map<String, dynamic> toJson() => _$InvoiceItemToJson(this);
 }

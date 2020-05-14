@@ -1,11 +1,11 @@
-
 import 'package:json_annotation/json_annotation.dart';
 import 'package:stripedart/src/api/model/issuing/verification.dart';
 import 'package:stripedart/src/api/model/terminal/address.dart';
 
 part 'company.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Company {
   Address address;
   Address addressKana;
@@ -26,6 +26,7 @@ class Company {
   Company({
     this.taxIdProvided,
   });
-  factory Company.fromJson(Map<String, dynamic> json) => _$CompanyFromJson(json);
+  factory Company.fromJson(Map<String, dynamic> json) =>
+      _$CompanyFromJson(json);
   Map<String, dynamic> toJson() => _$CompanyToJson(this);
 }

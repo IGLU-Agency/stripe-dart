@@ -8,7 +8,7 @@ class WebhookEndpoint {
   String apiVersion;
   String description;
   List<String> enabledEvents;
-  Map<String,dynamic> metadata;
+  Map<String, dynamic> metadata;
   String secret;
   String status;
   String url;
@@ -17,20 +17,20 @@ class WebhookEndpoint {
   int created;
   bool livemode;
 
-  WebhookEndpoint({
-    this.id,
-    this.object,
-    this.apiVersion,
-    this.application,
-    this.created,
-    this.description,
-    this.enabledEvents,
-    this.livemode,
-    this.metadata,
-    this.status,
-    this.url,
-    this.secret
-  });
-  factory WebhookEndpoint.fromJson(Map<String, dynamic> json) => _$WebhookEndpointFromJson(json);
+  WebhookEndpoint(
+      {this.id,
+      this.object,
+      this.apiVersion,
+      this.application,
+      this.created,
+      this.description,
+      this.enabledEvents,
+      this.livemode,
+      this.metadata,
+      this.status,
+      this.url,
+      this.secret});
+  factory WebhookEndpoint.fromJson(Map<String, dynamic> json) =>
+      _$WebhookEndpointFromJson(json);
   Map<String, dynamic> toJson() => _$WebhookEndpointToJson(this);
 }

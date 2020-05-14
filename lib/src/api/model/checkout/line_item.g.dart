@@ -15,9 +15,7 @@ LineItem _$LineItemFromJson(Map<String, dynamic> json) {
     currency: json['currency'] as String,
     description: json['description'] as String,
     quantity: json['quantity'] as int,
-    price: json['price'] == null
-        ? null
-        : Price.fromJson(json['price'] as Map<String, dynamic>),
+    price: json['price'],
     taxes: (json['taxes'] as List)
         ?.map((e) => e == null ? null : Tax.fromJson(e as Map<String, dynamic>))
         ?.toList(),
@@ -31,7 +29,7 @@ Map<String, dynamic> _$LineItemToJson(LineItem instance) => <String, dynamic>{
       'amount_total': instance.amountTotal,
       'currency': instance.currency,
       'description': instance.description,
-      'price': instance.price?.toJson(),
+      'price': instance.price,
       'quantity': instance.quantity,
       'taxes': instance.taxes?.map((e) => e?.toJson())?.toList(),
     };

@@ -2,7 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'transfer_reversal.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class TransferReversal {
   String id;
   int amount;
@@ -16,19 +17,19 @@ class TransferReversal {
   dynamic destinationPaymentRefund;
   dynamic sourceRefund;
 
-  TransferReversal({
-    this.id,
-    this.amount,
-    this.balanceTransaction,
-    this.created,
-    this.currency,
-    this.description,
-    this.destinationPaymentRefund,
-    this.metadata,
-    this.object,
-    this.sourceRefund,
-    this.transfer
-  });
-  factory TransferReversal.fromJson(Map<String, dynamic> json) => _$TransferReversalFromJson(json);
+  TransferReversal(
+      {this.id,
+      this.amount,
+      this.balanceTransaction,
+      this.created,
+      this.currency,
+      this.description,
+      this.destinationPaymentRefund,
+      this.metadata,
+      this.object,
+      this.sourceRefund,
+      this.transfer});
+  factory TransferReversal.fromJson(Map<String, dynamic> json) =>
+      _$TransferReversalFromJson(json);
   Map<String, dynamic> toJson() => _$TransferReversalToJson(this);
 }

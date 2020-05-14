@@ -18,5 +18,4 @@ class ReportTypes {
   list({Map<String, dynamic> params}) {
     _resource.list(_endpoint, params: params);
   }
-  
 }

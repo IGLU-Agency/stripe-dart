@@ -2,7 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'external_account.g.dart';
 
-@JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(
+    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class ExternalAccount {
   String id;
   String object;
@@ -38,41 +39,41 @@ class ExternalAccount {
   String routingNumber;
   String status;
 
-  ExternalAccount({
-    this.id,
-    this.object,
-    this.account,
-    this.accountHolderName,
-    this.accountHolderType,
-    this.addressCity,
-    this.addressCountry,
-    this.addressLine1,
-    this.addressLine1Check,
-    this.addressLine2,
-    this.addressState,
-    this.addressZip,
-    this.addressZipCheck,
-    this.availablePayoutMethods,
-    this.bankName,
-    this.brand,
-    this.country,
-    this.currency,
-    this.customer,
-    this.cvcCheck,
-    this.defaultForCurrency,
-    this.dynamicLast4,
-    this.expMonth,
-    this.expYear,
-    this.fingerprint,
-    this.funding,
-    this.last4,
-    this.metadata,
-    this.name,
-    this.recipient,
-    this.routingNumber,
-    this.status,
-    this.tokenizationMethod
-  });
-  factory ExternalAccount.fromJson(Map<String, dynamic> json) => _$ExternalAccountFromJson(json);
+  ExternalAccount(
+      {this.id,
+      this.object,
+      this.account,
+      this.accountHolderName,
+      this.accountHolderType,
+      this.addressCity,
+      this.addressCountry,
+      this.addressLine1,
+      this.addressLine1Check,
+      this.addressLine2,
+      this.addressState,
+      this.addressZip,
+      this.addressZipCheck,
+      this.availablePayoutMethods,
+      this.bankName,
+      this.brand,
+      this.country,
+      this.currency,
+      this.customer,
+      this.cvcCheck,
+      this.defaultForCurrency,
+      this.dynamicLast4,
+      this.expMonth,
+      this.expYear,
+      this.fingerprint,
+      this.funding,
+      this.last4,
+      this.metadata,
+      this.name,
+      this.recipient,
+      this.routingNumber,
+      this.status,
+      this.tokenizationMethod});
+  factory ExternalAccount.fromJson(Map<String, dynamic> json) =>
+      _$ExternalAccountFromJson(json);
   Map<String, dynamic> toJson() => _$ExternalAccountToJson(this);
 }
