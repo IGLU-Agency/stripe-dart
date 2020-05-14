@@ -1,4 +1,4 @@
-import '../../../../stripedart.dart';
+import '../../stripe.dart';
 import 'connection_tokes.dart';
 import 'locations.dart';
 import 'readers.dart';

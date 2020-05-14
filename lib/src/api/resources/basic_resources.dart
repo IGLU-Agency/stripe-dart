@@ -1,4 +1,4 @@
-import '../../../stripedart.dart';
+import '../stripe.dart';
 import '../api_handler.dart';
 
 class BasicResource {

@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'refund.g.dart';
+part 'refund_item.g.dart';
 
 @JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
-class Refund {
+class RefundItem {
   String id;
   String object;
   int amount;
@@ -13,7 +13,7 @@ class Refund {
   dynamic fee;
   Map<String, dynamic> metadata;
 
-  Refund({
+  RefundItem({
     this.object,
     this.amount,
     this.balanceTransaction,
@@ -23,6 +23,6 @@ class Refund {
     this.id,
     this.metadata
   });
-  factory Refund.fromJson(Map<String, dynamic> json) => _$RefundFromJson(json);
-  Map<String, dynamic> toJson() => _$RefundToJson(this);
+  factory RefundItem.fromJson(Map<String, dynamic> json) => _$RefundItemFromJson(json);
+  Map<String, dynamic> toJson() => _$RefundItemToJson(this);
 }

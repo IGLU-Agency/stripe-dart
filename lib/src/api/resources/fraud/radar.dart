@@ -1,9 +1,8 @@
-import 'package:stripedart/src/api/resources/fraud/early_fraud_warnings.dart';
-import 'package:stripedart/src/api/resources/fraud/reviews.dart';
-import 'package:stripedart/src/api/resources/fraud/value_list_items.dart';
-import 'package:stripedart/src/api/resources/fraud/value_lists.dart';
-
-import '../../../../stripedart.dart';
+import '../../stripe.dart';
+import 'early_fraud_warnings.dart';
+import 'reviews.dart';
+import 'value_list_items.dart';
+import 'value_lists.dart';
 
 ///https://stripe.com/docs/api/radar
 class Radar {

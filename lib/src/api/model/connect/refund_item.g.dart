@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'refund.dart';
+part of 'refund_item.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Refund _$RefundFromJson(Map<String, dynamic> json) {
-  return Refund(
+RefundItem _$RefundItemFromJson(Map<String, dynamic> json) {
+  return RefundItem(
     object: json['object'] as String,
     amount: json['amount'] as int,
     balanceTransaction: json['balance_transaction'],
@@ -19,7 +19,8 @@ Refund _$RefundFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RefundToJson(Refund instance) => <String, dynamic>{
+Map<String, dynamic> _$RefundItemToJson(RefundItem instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'object': instance.object,
       'amount': instance.amount,

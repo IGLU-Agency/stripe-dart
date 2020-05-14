@@ -4,7 +4,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 import 'package:stripedart/src/api/resources/basic_resources.dart';
 
-import '../../../../stripedart.dart';
+import '../../stripe.dart';
+import '../basic_resources.dart';
 
 ///https://stripe.com/docs/api/files
 class Files {

@@ -1,12 +1,12 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:stripedart/src/api/model/connect/external_account.dart';
+import 'package:stripedart/stripedart.dart';
 
 part 'refunds.g.dart';
 
 @JsonSerializable(nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
 class Refunds {
   String object;
-  List<ExternalAccount> data;
+  List<RefundItem> data;
   bool hasMore;
   String url;
 

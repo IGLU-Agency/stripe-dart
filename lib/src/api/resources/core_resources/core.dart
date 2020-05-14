@@ -1,18 +1,17 @@
-import 'package:stripedart/src/api/resources/core_resources/customers.dart';
-import 'package:stripedart/src/api/resources/core_resources/disputes.dart';
-import 'package:stripedart/src/api/resources/core_resources/events.dart';
-import 'package:stripedart/src/api/resources/core_resources/file_links.dart';
-import 'package:stripedart/src/api/resources/core_resources/files.dart';
-import 'package:stripedart/src/api/resources/core_resources/mandates.dart';
-import 'package:stripedart/src/api/resources/core_resources/payment_intents.dart';
-import 'package:stripedart/src/api/resources/core_resources/payouts.dart';
-import 'package:stripedart/src/api/resources/core_resources/products.dart';
-import 'package:stripedart/src/api/resources/core_resources/refunds.dart';
-import 'package:stripedart/src/api/resources/core_resources/setup_intents.dart';
-
-import '../../../../stripedart.dart';
+import '../../stripe.dart';
 import 'balance.dart';
 import 'balance_transactions.dart';
+import 'customers.dart';
+import 'disputes.dart';
+import 'events.dart';
+import 'file_links.dart';
+import 'files.dart';
+import 'mandates.dart';
+import 'payment_intents.dart';
+import 'payouts.dart';
+import 'products.dart';
+import 'refunds.dart';
+import 'setup_intents.dart';
 
 ///https://stripe.com/docs/api/balance
 class Core {

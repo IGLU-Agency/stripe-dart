@@ -1,5 +1,5 @@
-import '../../../../stripedart.dart';
 import '../../api_handler.dart';
+import '../../stripe.dart';
 
 ///https://stripe.com/docs/api/usage_records
 class UsageRecords {

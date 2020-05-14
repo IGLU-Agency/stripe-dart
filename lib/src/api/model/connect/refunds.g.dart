@@ -10,9 +10,8 @@ Refunds _$RefundsFromJson(Map<String, dynamic> json) {
   return Refunds(
     object: json['object'] as String,
     data: (json['data'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ExternalAccount.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : RefundItem.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     hasMore: json['has_more'] as bool,
     url: json['url'] as String,

@@ -1,7 +1,6 @@
-import 'package:stripedart/src/api/resources/basic_resources.dart';
-
-import '../../../../stripedart.dart';
 import '../../api_handler.dart';
+import '../../stripe.dart';
+import '../basic_resources.dart';
 
 ///https://stripe.com/docs/api/accounts
 class Accounts {

@@ -1,19 +1,18 @@
-import 'package:stripedart/src/api/resources/billing/coupons.dart';
-import 'package:stripedart/src/api/resources/billing/credit_notes.dart';
-import 'package:stripedart/src/api/resources/billing/customer_balance_transactions.dart';
-import 'package:stripedart/src/api/resources/billing/customer_tax_ids.dart';
-import 'package:stripedart/src/api/resources/billing/discounts.dart';
-import 'package:stripedart/src/api/resources/billing/invoice_items.dart';
-import 'package:stripedart/src/api/resources/billing/invoices.dart';
-import 'package:stripedart/src/api/resources/billing/plans.dart';
-import 'package:stripedart/src/api/resources/billing/self_serve_portal.dart';
-import 'package:stripedart/src/api/resources/billing/subscription_items.dart';
-import 'package:stripedart/src/api/resources/billing/subscription_schedules.dart';
-import 'package:stripedart/src/api/resources/billing/subscriptions.dart';
-import 'package:stripedart/src/api/resources/billing/tax_rates.dart';
-import 'package:stripedart/src/api/resources/billing/usage_records.dart';
-
-import '../../../../stripedart.dart';
+import '../../stripe.dart';
+import 'coupons.dart';
+import 'credit_notes.dart';
+import 'customer_balance_transactions.dart';
+import 'customer_tax_ids.dart';
+import 'discounts.dart';
+import 'invoice_items.dart';
+import 'invoices.dart';
+import 'plans.dart';
+import 'self_serve_portal.dart';
+import 'subscription_schedules.dart';
+import 'subscriptions.dart';
+import 'subscription_items.dart';
+import 'tax_rates.dart';
+import 'usage_records.dart';
 
 ///https://stripe.com/docs/api/radar
 class Billing {

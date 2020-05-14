@@ -1,6 +1,5 @@
-import 'package:stripedart/src/api/resources/basic_resources.dart';
-
-import '../../../../stripedart.dart';
+import '../../stripe.dart';
+import '../basic_resources.dart';
 
 ///https://stripe.com/docs/api/subscription_items
 class SubscriptionItems {

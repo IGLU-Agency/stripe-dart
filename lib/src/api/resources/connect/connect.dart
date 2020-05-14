@@ -1,16 +1,15 @@
-import 'package:stripedart/src/api/resources/connect/account_links.dart';
-import 'package:stripedart/src/api/resources/connect/accounts.dart';
-import 'package:stripedart/src/api/resources/connect/application_fee_refunds.dart';
-import 'package:stripedart/src/api/resources/connect/application_fees.dart';
-import 'package:stripedart/src/api/resources/connect/capabilities.dart';
-import 'package:stripedart/src/api/resources/connect/country_specs.dart';
-import 'package:stripedart/src/api/resources/connect/external_accounts.dart';
-import 'package:stripedart/src/api/resources/connect/persons.dart';
-import 'package:stripedart/src/api/resources/connect/topups.dart';
-import 'package:stripedart/src/api/resources/connect/transfer_reversals.dart';
-import 'package:stripedart/src/api/resources/connect/transfers.dart';
-
-import '../../../../stripedart.dart';
+import '../../stripe.dart';
+import 'account_links.dart';
+import 'accounts.dart';
+import 'application_fee_refunds.dart';
+import 'application_fees.dart';
+import 'capabilities.dart';
+import 'country_specs.dart';
+import 'external_accounts.dart';
+import 'persons.dart';
+import 'topups.dart';
+import 'transfer_reversals.dart';
+import 'transfers.dart';
 
 ///https://stripe.com/docs/api/accounts
 class Connect {

@@ -21,3 +21,19 @@ var result = await stripe.core.customers.create(params: {
   "email": 'customer@example.com',
 });
 ```
+
+## Configuration
+
+### Initialize with config object
+
+The package can be initialized with several options:
+
+```dart
+var stripe = Stripe('sk_test_...', {
+  apiVersion: '2020-03-02'
+});
+```
+
+| Option              | Default            | Description                                                                           |
+| ------------------- | ------------------ | ------------------------------------------------------------------------------------- |
+| `apiVersion`        | `null`             | Stripe API version to be used. If not set the account's default version will be used. |

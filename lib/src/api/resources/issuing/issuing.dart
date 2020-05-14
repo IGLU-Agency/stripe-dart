@@ -1,9 +1,8 @@
-import 'package:stripedart/src/api/resources/issuing/cardholders.dart';
-import 'package:stripedart/src/api/resources/issuing/cards.dart';
-import 'package:stripedart/src/api/resources/issuing/transactions.dart';
-
-import '../../../../stripedart.dart';
+import '../../stripe.dart';
 import 'authorizations.dart';
+import 'cardholders.dart';
+import 'cards.dart';
+import 'transactions.dart';
 
 ///https://stripe.com/docs/api/issuing
 class Issuing {
