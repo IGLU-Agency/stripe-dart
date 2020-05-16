@@ -1,7 +1,7 @@
 name: stripedart
 description: Dart library for the Stripe API. The Stripe Dart library provides convenient access to the Stripe API from applications written in server-side Dart.
-version: 1.0.0
-homepage: https://github.com/LucaIaconelli/stripe_dart
+version: 1.0.1
+homepage: https://github.com/LucaIaconelli/stripe-dart
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
