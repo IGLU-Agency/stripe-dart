@@ -3,7 +3,7 @@ import 'dart:convert' show json;
 
 import 'package:http/http.dart' as http;
 
-const String defaultApiVersion = "2020-03-02";
+const String defaultApiVersion = '2020-08-27';
 
 enum RequestMethod { get, post, put, delete, option }
 
