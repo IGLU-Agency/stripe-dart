@@ -1,3 +1,4 @@
+import '../../api_handler.dart';
 import '../../stripe.dart';
 import '../basic_resources.dart';
 
@@ -22,5 +23,10 @@ class Sessions {
 
   Future<Map<String, dynamic>> list({Map<String, dynamic> params}) {
     return _resource.list(_endpoint, params: params);
+  }
+
+  Future<Map<String, dynamic>> listLineItems({Map<String, dynamic> params}) {
+    return _stripe.request(RequestMethod.get, '$_endpoint/listLineItems',
+        params: params);
   }
 }
