@@ -25,8 +25,9 @@ class Sessions {
     return _resource.list(_endpoint, params: params);
   }
 
-  Future<Map<String, dynamic>> listLineItems({Map<String, dynamic> params}) {
-    return _stripe.request(RequestMethod.get, '$_endpoint/listLineItems',
+  Future<Map<String, dynamic>> listLineItems(String id,
+      {Map<String, dynamic> params}) {
+    return _stripe.request(RequestMethod.get, '$_endpoint/$id/line_items',
         params: params);
   }
 }
