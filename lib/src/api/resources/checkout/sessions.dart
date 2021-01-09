@@ -23,4 +23,9 @@ class Sessions {
   Future<Map<String, dynamic>> list({Map<String, dynamic> params}) {
     return _resource.list(_endpoint, params: params);
   }
+
+  Future<Map<String, dynamic>> listLineItems(String id,
+      {Map<String, dynamic> params}) {
+    return _resource.list("$_endpoint/$id/line_items", params: params);
+  }
 }
