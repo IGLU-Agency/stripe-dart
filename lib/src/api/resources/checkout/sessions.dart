@@ -25,10 +25,8 @@ class Sessions {
     return _resource.list(_endpoint, params: params);
   }
 
-  /// Retreive a Checkout Session's line items (see https://stripe.com/docs/api/checkout/sessions/line_items?lang=node)
   Future<Map<String, dynamic>> listLineItems(String id,
       {Map<String, dynamic> params}) {
-    return _stripe.request(RequestMethod.get, '$_endpoint/$id/line_items',
-        params: params);
+    return _resource.list("$_endpoint/$id/line_items", params: params);
   }
 }
