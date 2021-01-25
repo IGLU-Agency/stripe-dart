@@ -57,6 +57,7 @@ class StripeApiHandler {
           fUrl = "$url?${_encodeMap(params)}";
         }
         response = await _client.get(fUrl, headers: headers);
+        print(response.headers);
         break;
 
       case RequestMethod.post:
