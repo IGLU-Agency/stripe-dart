@@ -57,7 +57,6 @@ class StripeApiHandler {
           fUrl = "$url?${_encodeMap(params)}";
         }
         response = await _client.get(fUrl, headers: headers);
-        print(response.headers);
         break;
 
       case RequestMethod.post:
@@ -105,7 +104,7 @@ class StripeApiHandler {
   static Map<String, String> _headers({RequestOptions options}) {
     final Map<String, String> headers = Map();
     headers["Accept-Charset"] = "UTF-8";
-    headers["Accept"] = "application/json";
+    headers["Accept"] = "application/json; charset=utf-8";
     headers["Content-Type"] = "application/x-www-form-urlencoded";
     headers["User-Agent"] = "Stripe/v1Dart/$versionName";
 
