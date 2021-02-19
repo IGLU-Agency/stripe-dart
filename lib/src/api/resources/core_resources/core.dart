@@ -9,6 +9,7 @@ import 'files.dart';
 import 'mandates.dart';
 import 'payment_intents.dart';
 import 'payouts.dart';
+import 'prices.dart';
 import 'products.dart';
 import 'prices.dart';
 import 'refunds.dart';
@@ -27,6 +28,7 @@ class Core {
     mandates = Mandates(_stripe);
     paymentIntents = PaymentIntents(_stripe);
     payouts = Payouts(_stripe);
+    prices = Prices(_stripe);
     products = Products(_stripe);
     prices = Prices(_stripe);
     refunds = Refunds(_stripe);
@@ -44,6 +46,7 @@ class Core {
   Mandates mandates;
   PaymentIntents paymentIntents;
   Payouts payouts;
+  Prices prices;
   Products products;
   Prices prices;
   Refunds refunds;
