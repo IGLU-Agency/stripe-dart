@@ -11,7 +11,6 @@ import 'payment_intents.dart';
 import 'payouts.dart';
 import 'prices.dart';
 import 'products.dart';
-import 'prices.dart';
 import 'refunds.dart';
 import 'setup_intents.dart';
 
@@ -48,7 +47,6 @@ class Core {
   Payouts payouts;
   Prices prices;
   Products products;
-  Prices prices;
   Refunds refunds;
   SetupIntents setupIntents;
 }
