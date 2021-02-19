@@ -57,7 +57,7 @@ class BasicResource {
 
   Future<Map<String, dynamic>> cancel(String endpoint, String id,
       {Map<String, dynamic> params}) {
-    return _stripe.request(RequestMethod.delete, "$endpoint/$id",
+    return _stripe.request(RequestMethod.post, "$endpoint/$id/cancel",
         params: params);
   }
 

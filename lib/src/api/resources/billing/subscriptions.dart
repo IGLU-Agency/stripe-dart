@@ -31,6 +31,6 @@ class Subscriptions {
 
   Future<Map<String, dynamic>> cancel(String id,
       {Map<String, dynamic> params}) {
-    return _resource.cancel(_endpoint, id, params: params);
+    return _resource.delete(_endpoint, id, params: params);
   }
 }
