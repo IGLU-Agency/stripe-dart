@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'dart:convert' show json;
+import 'dart:convert' show json, utf8;
 
 import 'package:http/http.dart' as http;
 
@@ -78,7 +78,7 @@ class StripeApiHandler {
     final statusCode = response.statusCode;
     Map<String, dynamic> resp;
     try {
-      resp = json.decode(response.body);
+      resp = json.decode(utf8.decode(response.bodyBytes));
     } catch (error) {
       return {
         "isError": true,
