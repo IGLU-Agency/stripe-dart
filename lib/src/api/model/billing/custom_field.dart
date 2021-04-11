@@ -2,8 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'custom_field.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class CustomField {
   String name;
   String value;

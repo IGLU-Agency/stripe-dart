@@ -6,8 +6,7 @@ import 'package:stripedart/src/api/model/billing/plan.dart';
 
 part 'subscription_item.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SubscriptionItem {
   String id;
   String object;

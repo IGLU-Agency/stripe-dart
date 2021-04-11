@@ -2,8 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'package_dimensions.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class PackageDimensions {
   double height;
   double length;

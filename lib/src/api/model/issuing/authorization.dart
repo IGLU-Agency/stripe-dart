@@ -9,8 +9,7 @@ import 'package:stripedart/src/api/model/issuing/verification_data.dart';
 
 part 'authorization.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Authorization {
   String id;
   dynamic amount;

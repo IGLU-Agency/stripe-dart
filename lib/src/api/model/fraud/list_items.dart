@@ -3,8 +3,7 @@ import 'package:stripedart/src/api/model/fraud/list_item.dart';
 
 part 'list_items.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ListItems {
   String object;
   List<ListItem> data;

@@ -1,8 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'coupon.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Coupon {
   String id;
   String object;

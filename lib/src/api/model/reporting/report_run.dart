@@ -4,8 +4,7 @@ import 'package:stripedart/src/api/model/reporting/report_run_parameters.dart';
 
 part 'report_run.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ReportRun {
   String id;
   ReportRunParameters parameters;

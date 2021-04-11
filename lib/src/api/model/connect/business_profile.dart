@@ -3,8 +3,7 @@ import 'package:stripedart/src/api/model/terminal/address.dart';
 
 part 'business_profile.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class BusinessProfile {
   String mcc;
   String name;

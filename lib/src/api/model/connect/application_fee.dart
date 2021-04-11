@@ -3,8 +3,7 @@ import 'package:stripedart/src/api/model/connect/refunds.dart';
 
 part 'application_fee.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ApplicationFee {
   String id;
   String object;

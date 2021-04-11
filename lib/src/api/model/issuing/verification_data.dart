@@ -2,8 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'verification_data.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class VerificationData {
   String addressLine1Check;
   String addressPostalCodeCheck;

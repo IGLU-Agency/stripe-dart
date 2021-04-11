@@ -3,8 +3,7 @@ import 'package:stripedart/stripedart.dart';
 
 part 'refunds.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Refunds {
   String object;
   List<RefundItem> data;

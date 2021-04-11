@@ -3,8 +3,7 @@ import 'package:stripedart/src/api/model/billing/subscription_item.dart';
 
 part 'subscription_items.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SubscriptionItems {
   String object;
   List<SubscriptionItem> data;

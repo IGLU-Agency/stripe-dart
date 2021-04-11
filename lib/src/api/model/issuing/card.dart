@@ -7,8 +7,7 @@ import 'package:stripedart/src/api/model/issuing/three_d_secure_usage.dart';
 
 part 'card.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Card {
   String id;
   String object;

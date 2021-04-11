@@ -3,8 +3,7 @@ import 'package:stripedart/src/api/model/issuing/requirement_error.dart';
 
 part 'requirements.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Requirements {
   String disabledReasons;
   List<String> pastDue;

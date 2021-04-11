@@ -1,8 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'subscription_schedule.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SubscriptionSchedule {
   String id;
   String object;

@@ -2,8 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:stripedart/src/api/model/checkout/package_dimensions.dart';
 part 'product.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Product {
   String id;
   String object;

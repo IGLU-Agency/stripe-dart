@@ -2,8 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'report_type.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ReportType {
   String id;
   int dataAvailableEnd;

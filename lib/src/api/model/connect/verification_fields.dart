@@ -4,8 +4,7 @@ import 'package:stripedart/src/api/model/connect/verification_fields_individual.
 
 part 'verification_fields.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class VerificationFields {
   VerificationFieldsCompany company;
   VerificationFieldsIndividual individual;

@@ -1,3 +1,7 @@
+## [1.0.6] - 11/04/2021
+
+- update dep
+
 ## [1.0.5] - 09/01/2021
 
 - added listLineItems to sessions

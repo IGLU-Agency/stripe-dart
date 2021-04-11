@@ -3,8 +3,7 @@ import 'package:stripedart/src/api/model/issuing/document.dart';
 
 part 'verification.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Verification {
   Document document;
 

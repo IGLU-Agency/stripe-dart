@@ -3,8 +3,7 @@ import 'package:stripedart/src/api/model/reporting/links.dart';
 
 part 'file.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class File {
   String id;
   String object;

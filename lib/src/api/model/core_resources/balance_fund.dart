@@ -3,8 +3,7 @@ import 'package:stripedart/src/api/model/core_resources/source_types.dart';
 
 part 'balance_fund.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class BalanceFund {
   int amount;
   String currency;

@@ -3,8 +3,7 @@ import 'package:stripedart/src/api/model/fraud/list_items.dart';
 
 part 'value_list.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ValueList {
   String id;
   String alias;

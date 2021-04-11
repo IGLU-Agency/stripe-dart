@@ -2,8 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:stripedart/src/api/model/core_resources/balance_transaction.dart';
 part 'dispute.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Dispute {
   String id;
   String object;

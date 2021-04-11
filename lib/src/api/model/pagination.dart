@@ -33,7 +33,7 @@ class PaginationResponse<T> {
     item.url = json["url"];
     item.hasMore = json["has_more"];
     if (json['data'] != null) {
-      item.data = List<T>();
+      item.data = [];
       (json['data'] as List).forEach((m) {
         item.data.add(fromJSON(m));
       });

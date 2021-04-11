@@ -3,8 +3,7 @@ import 'package:stripedart/src/api/model/checkout/line_item.dart';
 
 part 'line_items.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class LineItems {
   String object;
   List<LineItem> data;

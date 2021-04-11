@@ -4,8 +4,7 @@ import 'package:stripedart/src/api/model/fraud/session.dart';
 
 part 'reviews.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Reviews {
   String id;
   String object;

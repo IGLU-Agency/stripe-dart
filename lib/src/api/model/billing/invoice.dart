@@ -10,8 +10,7 @@ import 'package:stripedart/src/api/model/billing/custom_field.dart';
 import 'package:stripedart/src/api/model/billing/invoice_line_items.dart';
 part 'invoice.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Invoice {
   String id;
   String object;

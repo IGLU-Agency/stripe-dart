@@ -5,8 +5,7 @@ import 'package:stripedart/src/api/model/checkout/transform.dart';
 
 part 'checkout_price.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class CheckoutPrice {
   String id;
   String object;

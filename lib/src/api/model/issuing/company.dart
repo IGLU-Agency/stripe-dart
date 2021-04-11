@@ -4,8 +4,7 @@ import 'package:stripedart/src/api/model/terminal/address.dart';
 
 part 'company.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Company {
   Address address;
   Address addressKana;

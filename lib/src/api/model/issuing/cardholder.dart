@@ -7,8 +7,7 @@ import 'package:stripedart/src/api/model/issuing/spending_controls.dart';
 
 part 'cardholder.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Cardholder {
   String id;
   String object;

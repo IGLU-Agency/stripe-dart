@@ -3,8 +3,7 @@ import 'package:stripedart/src/api/model/billing/credit_note_lines.dart';
 import 'package:stripedart/src/api/model/billing/tax_amount.dart';
 part 'credit_note.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class CreditNote {
   String id;
   String object;

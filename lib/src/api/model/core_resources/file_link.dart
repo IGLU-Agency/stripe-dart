@@ -2,8 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'file_link.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class FileLink {
   String id;
   String object;
