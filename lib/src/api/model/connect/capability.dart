@@ -5,13 +5,13 @@ part 'capability.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Capability {
-  String id;
+  String? id;
   dynamic account;
-  bool requested;
-  Requirements requirements;
-  String status;
-  String object;
-  int requestedAt;
+  bool? requested;
+  Requirements? requirements;
+  String? status;
+  String? object;
+  int? requestedAt;
 
   Capability(
       {this.id,

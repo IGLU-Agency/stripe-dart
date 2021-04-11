@@ -4,11 +4,11 @@ part 'fee_detail.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class FeeDetail {
-  int amount;
-  String application;
-  String currency;
-  String description;
-  String type;
+  int? amount;
+  String? application;
+  String? currency;
+  String? description;
+  String? type;
 
   FeeDetail({
     this.amount,

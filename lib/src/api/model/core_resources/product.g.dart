@@ -8,29 +8,33 @@ part of 'product.dart';
 
 Product _$ProductFromJson(Map<String, dynamic> json) {
   return Product(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    active: json['active'] as bool,
-    attributes: (json['attributes'] as List)?.map((e) => e as String)?.toList(),
-    caption: json['caption'] as String,
-    created: json['created'] as int,
-    deactivateOn:
-        (json['deactivate_on'] as List)?.map((e) => e as String)?.toList(),
-    description: json['description'] as String,
-    images: (json['images'] as List)?.map((e) => e as String)?.toList(),
-    livemode: json['livemode'] as bool,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    name: json['name'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    active: json['active'] as bool?,
+    attributes: (json['attributes'] as List<dynamic>?)
+        ?.map((e) => e as String)
+        .toList(),
+    caption: json['caption'] as String?,
+    created: json['created'] as int?,
+    deactivateOn: (json['deactivate_on'] as List<dynamic>?)
+        ?.map((e) => e as String)
+        .toList(),
+    description: json['description'] as String?,
+    images:
+        (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
+    livemode: json['livemode'] as bool?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    name: json['name'] as String?,
     packageDimensions: json['package_dimensions'] == null
         ? null
         : PackageDimensions.fromJson(
             json['package_dimensions'] as Map<String, dynamic>),
-    shippable: json['shippable'] as bool,
-    type: json['type'] as String,
-    updated: json['updated'] as int,
-    url: json['url'] as String,
-    statementDescriptor: json['statement_descriptor'] as String,
-    unitLabel: json['unit_label'] as String,
+    shippable: json['shippable'] as bool?,
+    type: json['type'] as String?,
+    updated: json['updated'] as int?,
+    url: json['url'] as String?,
+    statementDescriptor: json['statement_descriptor'] as String?,
+    unitLabel: json['unit_label'] as String?,
   );
 }
 

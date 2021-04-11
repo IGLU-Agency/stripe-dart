@@ -5,9 +5,9 @@ part 'balance_fund.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class BalanceFund {
-  int amount;
-  String currency;
-  SourceTypes sourceTypes;
+  int? amount;
+  String? currency;
+  SourceTypes? sourceTypes;
 
   BalanceFund({this.amount, this.currency, this.sourceTypes});
   factory BalanceFund.fromJson(Map<String, dynamic> json) =>

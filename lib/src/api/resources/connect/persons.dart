@@ -8,35 +8,35 @@ class Persons {
   }
 
   final Stripe _stripe;
-  BasicResource _resource;
+  late BasicResource _resource;
   final String _endpoint = "/accounts/:id/persons";
 
-  Future<Map<String, dynamic>> create(String accountId,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> create(String accountId,
+      {Map<String, dynamic>? params}) {
     return _resource.create(_endpoint.replaceAll(":id", accountId),
         params: params);
   }
 
-  Future<Map<String, dynamic>> retrieve(String accountId, String id,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> retrieve(String accountId, String id,
+      {Map<String, dynamic>? params}) {
     return _resource.retrieve(_endpoint.replaceAll(":id", accountId), id,
         params: params);
   }
 
-  Future<Map<String, dynamic>> update(String accountId, String id,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> update(String accountId, String id,
+      {Map<String, dynamic>? params}) {
     return _resource.update(_endpoint.replaceAll(":id", accountId), id,
         params: params);
   }
 
-  Future<Map<String, dynamic>> list(String accountId,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> list(String accountId,
+      {Map<String, dynamic>? params}) {
     return _resource.list(_endpoint.replaceAll(":id", accountId),
         params: params);
   }
 
-  Future<Map<String, dynamic>> delete(String accountId, String id,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> delete(String accountId, String id,
+      {Map<String, dynamic>? params}) {
     return _resource.delete(_endpoint.replaceAll(":id", accountId), id,
         params: params);
   }

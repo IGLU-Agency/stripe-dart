@@ -12,7 +12,7 @@ SettingsCardPayments _$SettingsCardPaymentsFromJson(Map<String, dynamic> json) {
         ? null
         : SettingsCardPaymentsDeclineOn.fromJson(
             json['decline_on'] as Map<String, dynamic>),
-    statementDescriptorPrefix: json['statement_descriptor_prefix'] as String,
+    statementDescriptorPrefix: json['statement_descriptor_prefix'] as String?,
   );
 }
 

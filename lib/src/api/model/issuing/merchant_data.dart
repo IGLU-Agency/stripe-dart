@@ -4,13 +4,13 @@ part 'merchant_data.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class MerchantData {
-  String category;
-  String city;
-  String country;
-  String name;
-  String networkId;
-  String postalCode;
-  String state;
+  String? category;
+  String? city;
+  String? country;
+  String? name;
+  String? networkId;
+  String? postalCode;
+  String? state;
 
   MerchantData(
       {this.category,

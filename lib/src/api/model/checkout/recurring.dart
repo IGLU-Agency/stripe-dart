@@ -4,11 +4,11 @@ part 'recurring.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Recurring {
-  String aggregateUsage;
-  String interval;
-  int intervalCount;
-  int trialPeriodDays;
-  String usageType;
+  String? aggregateUsage;
+  String? interval;
+  int? intervalCount;
+  int? trialPeriodDays;
+  String? usageType;
 
   Recurring(
       {this.aggregateUsage,

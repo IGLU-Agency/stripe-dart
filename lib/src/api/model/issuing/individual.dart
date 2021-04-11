@@ -9,30 +9,30 @@ part 'individual.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Individual {
-  String id;
-  String object;
-  String account;
-  Address address;
-  Address addressKana;
-  Address addressKanji;
-  int created;
-  Dob dob;
-  String email;
-  String firstName;
-  String firstNameKana;
-  String firstNameKanji;
-  String gender;
-  bool idNumberProvided;
-  String lastName;
-  String lastNameKana;
-  String lastNameKanji;
-  String maidenName;
-  Map<String, dynamic> metadata;
-  String phone;
-  Relationship relationship;
-  Requirements requirements;
-  bool ssnLast_4Provided;
-  Verification verification;
+  String? id;
+  String? object;
+  String? account;
+  Address? address;
+  Address? addressKana;
+  Address? addressKanji;
+  int? created;
+  Dob? dob;
+  String? email;
+  String? firstName;
+  String? firstNameKana;
+  String? firstNameKanji;
+  String? gender;
+  bool? idNumberProvided;
+  String? lastName;
+  String? lastNameKana;
+  String? lastNameKanji;
+  String? maidenName;
+  Map<String, dynamic>? metadata;
+  String? phone;
+  Relationship? relationship;
+  Requirements? requirements;
+  bool? ssnLast_4Provided;
+  Verification? verification;
 
   Individual(
       {this.dob,

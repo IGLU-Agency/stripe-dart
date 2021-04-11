@@ -8,17 +8,17 @@ part 'subscription_item.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SubscriptionItem {
-  String id;
-  String object;
-  int amount;
-  BillingThresholds billingThresholds;
-  int created;
-  Map<String, dynamic> metadata;
-  Plan plan;
-  Price price;
-  int quantity;
-  String subscription;
-  List<Rate> taxRates;
+  String? id;
+  String? object;
+  int? amount;
+  BillingThresholds? billingThresholds;
+  int? created;
+  Map<String, dynamic>? metadata;
+  Plan? plan;
+  Price? price;
+  int? quantity;
+  String? subscription;
+  List<Rate>? taxRates;
 
   SubscriptionItem(
       {this.id,

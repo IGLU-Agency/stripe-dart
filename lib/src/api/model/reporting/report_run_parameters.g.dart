@@ -8,14 +8,15 @@ part of 'report_run_parameters.dart';
 
 ReportRunParameters _$ReportRunParametersFromJson(Map<String, dynamic> json) {
   return ReportRunParameters(
-    columns: (json['columns'] as List)?.map((e) => e as String)?.toList(),
-    connectedAccount: json['connected_account'] as String,
-    currency: json['currency'] as String,
-    intervalEnd: json['interval_end'] as int,
-    intervalStart: json['interval_start'] as int,
-    payout: json['payout'] as String,
-    reportingCategory: json['reporting_category'] as String,
-    timezone: json['timezone'] as String,
+    columns:
+        (json['columns'] as List<dynamic>?)?.map((e) => e as String).toList(),
+    connectedAccount: json['connected_account'] as String?,
+    currency: json['currency'] as String?,
+    intervalEnd: json['interval_end'] as int?,
+    intervalStart: json['interval_start'] as int?,
+    payout: json['payout'] as String?,
+    reportingCategory: json['reporting_category'] as String?,
+    timezone: json['timezone'] as String?,
   );
 }
 

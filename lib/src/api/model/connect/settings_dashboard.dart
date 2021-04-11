@@ -4,8 +4,8 @@ part 'settings_dashboard.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SettingsDashboard {
-  String displayName;
-  String timezone;
+  String? displayName;
+  String? timezone;
 
   SettingsDashboard({this.displayName, this.timezone});
   factory SettingsDashboard.fromJson(Map<String, dynamic> json) =>

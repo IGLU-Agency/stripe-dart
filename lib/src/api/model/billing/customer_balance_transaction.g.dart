@@ -9,19 +9,19 @@ part of 'customer_balance_transaction.dart';
 CustomerBalanceTransaction _$CustomerBalanceTransactionFromJson(
     Map<String, dynamic> json) {
   return CustomerBalanceTransaction(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    amount: json['amount'] as int,
-    created: json['created'] as int,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    amount: json['amount'] as int?,
+    created: json['created'] as int?,
     creditNote: json['credit_note'],
-    currency: json['currency'] as String,
+    currency: json['currency'] as String?,
     customer: json['customer'],
-    description: json['description'] as String,
-    endingBalance: json['ending_balance'] as int,
+    description: json['description'] as String?,
+    endingBalance: json['ending_balance'] as int?,
     invoice: json['invoice'],
-    livemode: json['livemode'] as bool,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    type: json['type'] as String,
+    livemode: json['livemode'] as bool?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    type: json['type'] as String?,
   );
 }
 

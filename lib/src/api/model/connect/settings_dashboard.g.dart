@@ -8,8 +8,8 @@ part of 'settings_dashboard.dart';
 
 SettingsDashboard _$SettingsDashboardFromJson(Map<String, dynamic> json) {
   return SettingsDashboard(
-    displayName: json['display_name'] as String,
-    timezone: json['timezone'] as String,
+    displayName: json['display_name'] as String?,
+    timezone: json['timezone'] as String?,
   );
 }
 

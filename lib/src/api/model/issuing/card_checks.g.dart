@@ -8,9 +8,9 @@ part of 'card_checks.dart';
 
 CardChecks _$CardChecksFromJson(Map<String, dynamic> json) {
   return CardChecks(
-    addressLine1Check: json['address_line1_check'] as String,
-    addressPostalCodeCheck: json['address_postal_code_check'] as String,
-    cvcCheck: json['cvc_check'] as String,
+    addressLine1Check: json['address_line1_check'] as String?,
+    addressPostalCodeCheck: json['address_postal_code_check'] as String?,
+    cvcCheck: json['cvc_check'] as String?,
   );
 }
 

@@ -8,11 +8,11 @@ part of 'tier.dart';
 
 Tier _$TierFromJson(Map<String, dynamic> json) {
   return Tier(
-    flatAmount: json['flat_amount'] as int,
-    flatAmountDecimal: json['flat_amount_decimal'] as String,
-    unitAmount: json['unit_amount'] as int,
-    unitAmountDecimal: json['unit_amount_decimal'] as String,
-    upTo: json['up_to'] as int,
+    flatAmount: json['flat_amount'] as int?,
+    flatAmountDecimal: json['flat_amount_decimal'] as String?,
+    unitAmount: json['unit_amount'] as int?,
+    unitAmountDecimal: json['unit_amount_decimal'] as String?,
+    upTo: json['up_to'] as int?,
   );
 }
 

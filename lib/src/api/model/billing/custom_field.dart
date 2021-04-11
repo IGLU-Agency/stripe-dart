@@ -4,8 +4,8 @@ part 'custom_field.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class CustomField {
-  String name;
-  String value;
+  String? name;
+  String? value;
 
   CustomField({this.name, this.value});
   factory CustomField.fromJson(Map<String, dynamic> json) =>

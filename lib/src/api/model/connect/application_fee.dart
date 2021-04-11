@@ -5,20 +5,20 @@ part 'application_fee.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ApplicationFee {
-  String id;
-  String object;
+  String? id;
+  String? object;
   dynamic account;
-  int amount;
-  int amountRefunded;
+  int? amount;
+  int? amountRefunded;
   dynamic application;
   dynamic balanceTransaction;
   dynamic charge;
-  int created;
-  String currency;
-  bool livemode;
+  int? created;
+  String? currency;
+  bool? livemode;
   dynamic originatingTransaction;
-  bool refunded;
-  Refunds refunds;
+  bool? refunded;
+  Refunds? refunds;
 
   ApplicationFee({
     this.id,

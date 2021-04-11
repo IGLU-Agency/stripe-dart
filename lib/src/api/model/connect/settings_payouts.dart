@@ -5,9 +5,9 @@ part 'settings_payouts.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SettingsPayouts {
-  bool debitNegativeBalances;
-  SettingsPayoutsSchedule schedule;
-  String statementDescriptor;
+  bool? debitNegativeBalances;
+  SettingsPayoutsSchedule? schedule;
+  String? statementDescriptor;
 
   SettingsPayouts(
       {this.debitNegativeBalances, this.schedule, this.statementDescriptor});

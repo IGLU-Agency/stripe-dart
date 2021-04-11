@@ -11,12 +11,12 @@ Individual _$IndividualFromJson(Map<String, dynamic> json) {
     dob: json['dob'] == null
         ? null
         : Dob.fromJson(json['dob'] as Map<String, dynamic>),
-    firstName: json['first_name'] as String,
-    lastName: json['last_name'] as String,
+    firstName: json['first_name'] as String?,
+    lastName: json['last_name'] as String?,
     verification: json['verification'] == null
         ? null
         : Verification.fromJson(json['verification'] as Map<String, dynamic>),
-    account: json['account'] as String,
+    account: json['account'] as String?,
     address: json['address'] == null
         ? null
         : Address.fromJson(json['address'] as Map<String, dynamic>),
@@ -26,23 +26,23 @@ Individual _$IndividualFromJson(Map<String, dynamic> json) {
     addressKanji: json['address_kanji'] == null
         ? null
         : Address.fromJson(json['address_kanji'] as Map<String, dynamic>),
-    created: json['created'] as int,
-    email: json['email'] as String,
-    firstNameKana: json['first_name_kana'] as String,
-    firstNameKanji: json['first_name_kanji'] as String,
-    gender: json['gender'] as String,
-    id: json['id'] as String,
-    idNumberProvided: json['id_number_provided'] as bool,
-    lastNameKana: json['last_name_kana'] as String,
-    lastNameKanji: json['last_name_kanji'] as String,
-    maidenName: json['maiden_name'] as String,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    object: json['object'] as String,
-    phone: json['phone'] as String,
+    created: json['created'] as int?,
+    email: json['email'] as String?,
+    firstNameKana: json['first_name_kana'] as String?,
+    firstNameKanji: json['first_name_kanji'] as String?,
+    gender: json['gender'] as String?,
+    id: json['id'] as String?,
+    idNumberProvided: json['id_number_provided'] as bool?,
+    lastNameKana: json['last_name_kana'] as String?,
+    lastNameKanji: json['last_name_kanji'] as String?,
+    maidenName: json['maiden_name'] as String?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    object: json['object'] as String?,
+    phone: json['phone'] as String?,
     requirements: json['requirements'] == null
         ? null
         : Requirements.fromJson(json['requirements'] as Map<String, dynamic>),
-    ssnLast_4Provided: json['ssn_last_4_provided'] as bool,
+    ssnLast_4Provided: json['ssn_last_4_provided'] as bool?,
   )..relationship = json['relationship'] == null
       ? null
       : Relationship.fromJson(json['relationship'] as Map<String, dynamic>);

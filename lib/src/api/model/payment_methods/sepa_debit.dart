@@ -4,11 +4,11 @@ part 'sepa_debit.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SepaDebit {
-  String bankCode;
-  String branchCode;
-  String country;
-  String fingerprint;
-  String last4;
+  String? bankCode;
+  String? branchCode;
+  String? country;
+  String? fingerprint;
+  String? last4;
 
   SepaDebit(
       {this.bankCode,

@@ -4,12 +4,12 @@ part 'relationship.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Relationship {
-  bool director;
-  bool executive;
-  bool owner;
-  double percentOwnership;
-  bool representative;
-  String title;
+  bool? director;
+  bool? executive;
+  bool? owner;
+  double? percentOwnership;
+  bool? representative;
+  String? title;
 
   Relationship(
       {this.director,

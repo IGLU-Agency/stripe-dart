@@ -5,12 +5,12 @@ part 'location.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Location {
-  String id;
-  Address address;
-  String displayName;
-  Map<String, dynamic> metadata;
-  String object;
-  bool livemode;
+  String? id;
+  Address? address;
+  String? displayName;
+  Map<String, dynamic>? metadata;
+  String? object;
+  bool? livemode;
 
   Location(
       {this.id,

@@ -50,8 +50,8 @@ StripeError generateStripeErrorFromRaw(rawStripeError) {
 
 class StripeApiException implements Exception {
   final StripeError error;
-  final String requestId;
-  final String message;
+  final String? requestId;
+  final String? message;
 
   StripeApiException(this.error)
       : requestId = error.requestId,
@@ -59,6 +59,6 @@ class StripeApiException implements Exception {
 
   @override
   String toString() {
-    return message;
+    return message!;
   }
 }

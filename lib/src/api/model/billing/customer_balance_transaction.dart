@@ -3,19 +3,19 @@ part 'customer_balance_transaction.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class CustomerBalanceTransaction {
-  String id;
-  String object;
-  int amount;
-  int created;
+  String? id;
+  String? object;
+  int? amount;
+  int? created;
   dynamic creditNote;
-  String currency;
+  String? currency;
   dynamic customer;
-  String description;
-  int endingBalance;
+  String? description;
+  int? endingBalance;
   dynamic invoice;
-  bool livemode;
-  Map<String, dynamic> metadata;
-  String type;
+  bool? livemode;
+  Map<String, dynamic>? metadata;
+  String? type;
 
   CustomerBalanceTransaction({
     this.id,

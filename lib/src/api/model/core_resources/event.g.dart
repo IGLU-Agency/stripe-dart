@@ -8,16 +8,16 @@ part of 'event.dart';
 
 Event _$EventFromJson(Map<String, dynamic> json) {
   return Event(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    apiVersion: json['api_version'] as String,
-    created: json['created'] as int,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    apiVersion: json['api_version'] as String?,
+    created: json['created'] as int?,
     data: json['data'],
-    livemode: json['livemode'] as bool,
-    pendingWebhooks: json['pending_webhooks'] as int,
+    livemode: json['livemode'] as bool?,
+    pendingWebhooks: json['pending_webhooks'] as int?,
     request: json['request'],
-    type: json['type'] as String,
-    connect: json['connect'] as String,
+    type: json['type'] as String?,
+    connect: json['connect'] as String?,
   );
 }
 

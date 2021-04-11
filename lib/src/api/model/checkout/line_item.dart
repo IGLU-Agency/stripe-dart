@@ -6,15 +6,15 @@ part 'line_item.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class LineItem {
-  String id;
-  String object;
-  int amountSubtotal;
-  int amountTotal;
-  String currency;
-  String description;
-  CheckoutPrice price;
-  int quantity;
-  List<Tax> taxes;
+  String? id;
+  String? object;
+  int? amountSubtotal;
+  int? amountTotal;
+  String? currency;
+  String? description;
+  CheckoutPrice? price;
+  int? quantity;
+  List<Tax>? taxes;
 
   LineItem(
       {this.id,

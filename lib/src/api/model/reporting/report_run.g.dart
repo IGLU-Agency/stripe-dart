@@ -8,21 +8,21 @@ part of 'report_run.dart';
 
 ReportRun _$ReportRunFromJson(Map<String, dynamic> json) {
   return ReportRun(
-    id: json['id'] as String,
-    object: json['object'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
     parameters: json['parameters'] == null
         ? null
         : ReportRunParameters.fromJson(
             json['parameters'] as Map<String, dynamic>),
-    reportType: json['report_type'] as String,
-    created: json['created'] as int,
+    reportType: json['report_type'] as String?,
+    created: json['created'] as int?,
     result: json['result'] == null
         ? null
         : File.fromJson(json['result'] as Map<String, dynamic>),
-    succeededAt: json['succeeded_at'] as int,
-    livemode: json['livemode'] as bool,
-    error: json['error'] as String,
-    status: json['status'] as String,
+    succeededAt: json['succeeded_at'] as int?,
+    livemode: json['livemode'] as bool?,
+    error: json['error'] as String?,
+    status: json['status'] as String?,
   );
 }
 

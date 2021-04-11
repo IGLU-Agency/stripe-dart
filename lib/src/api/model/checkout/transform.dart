@@ -5,7 +5,7 @@ part 'transform.g.dart';
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Transform {
   dynamic divideBy;
-  String round;
+  String? round;
 
   Transform({this.divideBy, this.round});
   factory Transform.fromJson(Map<String, dynamic> json) =>

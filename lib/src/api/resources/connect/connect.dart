@@ -28,15 +28,15 @@ class Connect {
   }
 
   final Stripe _stripe;
-  Accounts accounts;
-  AccountLinks accountsLinks;
-  ApplicationFees applicationFees;
-  ApplicationFeeRefunds applicationFeeRefunds;
-  Capabilities capabilities;
-  CountrySpecs countrySpecs;
-  ExternalAccounts externalAccounts;
-  Persons persons;
-  Topups topups;
-  Transfers transfers;
-  TransferReversals transferReversals;
+  Accounts? accounts;
+  AccountLinks? accountsLinks;
+  ApplicationFees? applicationFees;
+  ApplicationFeeRefunds? applicationFeeRefunds;
+  Capabilities? capabilities;
+  CountrySpecs? countrySpecs;
+  ExternalAccounts? externalAccounts;
+  Persons? persons;
+  Topups? topups;
+  Transfers? transfers;
+  TransferReversals? transferReversals;
 }

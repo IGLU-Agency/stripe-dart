@@ -5,10 +5,10 @@ part 'credit_note_lines.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class CreditNoteLines {
-  String object;
-  List<CreditNoteLine> data;
-  bool hasMore;
-  String url;
+  String? object;
+  List<CreditNoteLine>? data;
+  bool? hasMore;
+  String? url;
 
   CreditNoteLines({this.object, this.data, this.hasMore, this.url});
   factory CreditNoteLines.fromJson(Map<String, dynamic> json) =>

@@ -8,14 +8,14 @@ class ReportTypes {
   }
 
   final Stripe _stripe;
-  BasicResource _resource;
+  late BasicResource _resource;
   final String _endpoint = "/reporting/report_types";
 
-  retrieve(String id, {Map<String, dynamic> params}) {
+  retrieve(String id, {Map<String, dynamic>? params}) {
     _resource.retrieve(_endpoint, id, params: params);
   }
 
-  list({Map<String, dynamic> params}) {
+  list({Map<String, dynamic>? params}) {
     _resource.list(_endpoint, params: params);
   }
 }

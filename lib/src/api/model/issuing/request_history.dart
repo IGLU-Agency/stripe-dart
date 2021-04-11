@@ -5,12 +5,12 @@ part 'request_history.g.dart';
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class RequestHistory {
   dynamic amount;
-  bool approved;
-  int created;
-  String currency;
+  bool? approved;
+  int? created;
+  String? currency;
   dynamic merchantAmount;
-  String merchantCurrency;
-  String reason;
+  String? merchantCurrency;
+  String? reason;
 
   RequestHistory(
       {this.amount,

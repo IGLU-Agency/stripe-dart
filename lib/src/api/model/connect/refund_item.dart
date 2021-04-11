@@ -4,14 +4,14 @@ part 'refund_item.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class RefundItem {
-  String id;
-  String object;
-  int amount;
+  String? id;
+  String? object;
+  int? amount;
   dynamic balanceTransaction;
-  int created;
-  String currency;
+  int? created;
+  String? currency;
   dynamic fee;
-  Map<String, dynamic> metadata;
+  Map<String, dynamic>? metadata;
 
   RefundItem(
       {this.object,

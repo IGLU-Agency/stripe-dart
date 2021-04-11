@@ -7,15 +7,15 @@ class Discounts {
 
   final Stripe _stripe;
 
-  Future<Map<String, dynamic>> deleteCustomerDiscount(String customerId,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> deleteCustomerDiscount(String customerId,
+      {Map<String, dynamic>? params}) {
     return _stripe.request(
         RequestMethod.delete, "/customers/$customerId/discount",
         params: params);
   }
 
-  Future<Map<String, dynamic>> deleteSubscriptionDiscount(String subscriptionId,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> deleteSubscriptionDiscount(String subscriptionId,
+      {Map<String, dynamic>? params}) {
     return _stripe.request(
         RequestMethod.delete, "/subscriptions/$subscriptionId/discount",
         params: params);

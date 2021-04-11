@@ -14,8 +14,8 @@ class Issuing {
   }
 
   final Stripe _stripe;
-  Authorizations authorizations;
-  Cardholders cardholders;
-  Cards cards;
-  Transactions transactions;
+  Authorizations? authorizations;
+  Cardholders? cardholders;
+  Cards? cards;
+  Transactions? transactions;
 }

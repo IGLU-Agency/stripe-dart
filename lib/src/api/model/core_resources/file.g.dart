@@ -8,18 +8,18 @@ part of 'file.dart';
 
 File _$FileFromJson(Map<String, dynamic> json) {
   return File(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    created: json['created'] as int,
-    filename: json['filename'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    created: json['created'] as int?,
+    filename: json['filename'] as String?,
     links: json['links'] == null
         ? null
         : Links.fromJson(json['links'] as Map<String, dynamic>),
-    purpose: json['purpose'] as String,
-    size: json['size'] as int,
-    title: json['title'] as String,
-    type: json['type'] as String,
-    url: json['url'] as String,
+    purpose: json['purpose'] as String?,
+    size: json['size'] as int?,
+    title: json['title'] as String?,
+    type: json['type'] as String?,
+    url: json['url'] as String?,
   );
 }
 

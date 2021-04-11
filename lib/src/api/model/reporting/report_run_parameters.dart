@@ -4,14 +4,14 @@ part 'report_run_parameters.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ReportRunParameters {
-  List<String> columns;
-  String connectedAccount;
-  String currency;
-  int intervalEnd;
-  int intervalStart;
-  String payout;
-  String reportingCategory;
-  String timezone;
+  List<String>? columns;
+  String? connectedAccount;
+  String? currency;
+  int? intervalEnd;
+  int? intervalStart;
+  String? payout;
+  String? reportingCategory;
+  String? timezone;
 
   ReportRunParameters(
       {this.columns,

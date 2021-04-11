@@ -8,7 +8,7 @@ part of 'company.dart';
 
 Company _$CompanyFromJson(Map<String, dynamic> json) {
   return Company(
-    taxIdProvided: json['tax_id_provided'] as bool,
+    taxIdProvided: json['tax_id_provided'] as bool?,
   )
     ..address = json['address'] == null
         ? null
@@ -19,16 +19,16 @@ Company _$CompanyFromJson(Map<String, dynamic> json) {
     ..addressKanji = json['address_kanji'] == null
         ? null
         : Address.fromJson(json['address_kanji'] as Map<String, dynamic>)
-    ..directorsProvided = json['directors_provided'] as bool
-    ..executivesProvided = json['executives_provided'] as bool
-    ..name = json['name'] as String
-    ..nameKana = json['name_kana'] as String
-    ..nameKanji = json['name_kanji'] as String
-    ..ownersProvided = json['owners_provided'] as bool
-    ..phone = json['phone'] as String
-    ..structure = json['structure'] as String
-    ..taxIdRegistrar = json['tax_id_registrar'] as String
-    ..vatIdProvided = json['vat_id_provided'] as bool
+    ..directorsProvided = json['directors_provided'] as bool?
+    ..executivesProvided = json['executives_provided'] as bool?
+    ..name = json['name'] as String?
+    ..nameKana = json['name_kana'] as String?
+    ..nameKanji = json['name_kanji'] as String?
+    ..ownersProvided = json['owners_provided'] as bool?
+    ..phone = json['phone'] as String?
+    ..structure = json['structure'] as String?
+    ..taxIdRegistrar = json['tax_id_registrar'] as String?
+    ..vatIdProvided = json['vat_id_provided'] as bool?
     ..verification = json['verification'] == null
         ? null
         : Verification.fromJson(json['verification'] as Map<String, dynamic>);

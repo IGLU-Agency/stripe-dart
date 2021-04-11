@@ -4,11 +4,11 @@ part 'mandates.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Mandates {
-  String id;
-  String object;
+  String? id;
+  String? object;
   //TODO: customer acceptance
   dynamic customerAcceptance;
-  bool livemode;
+  bool? livemode;
   //TODO: multiUse
   dynamic multiUse;
   //TODO: singleUse
@@ -16,8 +16,8 @@ class Mandates {
   dynamic paymentMethod;
   //TODO: paymentMethodDetails
   dynamic paymentMethodDetails;
-  String status;
-  String type;
+  String? status;
+  String? type;
 
   Mandates(
       {this.id,

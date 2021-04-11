@@ -6,21 +6,21 @@ part 'company.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Company {
-  Address address;
-  Address addressKana;
-  Address addressKanji;
-  bool directorsProvided;
-  bool executivesProvided;
-  String name;
-  String nameKana;
-  String nameKanji;
-  bool ownersProvided;
-  String phone;
-  String structure;
-  bool taxIdProvided;
-  String taxIdRegistrar;
-  bool vatIdProvided;
-  Verification verification;
+  Address? address;
+  Address? addressKana;
+  Address? addressKanji;
+  bool? directorsProvided;
+  bool? executivesProvided;
+  String? name;
+  String? nameKana;
+  String? nameKanji;
+  bool? ownersProvided;
+  String? phone;
+  String? structure;
+  bool? taxIdProvided;
+  String? taxIdRegistrar;
+  bool? vatIdProvided;
+  Verification? verification;
 
   Company({
     this.taxIdProvided,

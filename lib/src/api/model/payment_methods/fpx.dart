@@ -4,7 +4,7 @@ part 'fpx.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Fpx {
-  String bank;
+  String? bank;
 
   Fpx({
     this.bank,

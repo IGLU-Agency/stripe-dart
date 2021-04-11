@@ -8,27 +8,27 @@ part of 'card.dart';
 
 Card _$CardFromJson(Map<String, dynamic> json) {
   return Card(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    brand: json['brand'] as String,
-    cancellationReason: json['cancellation_reason'] as String,
-    created: json['created'] as int,
-    currency: json['currency'] as String,
-    cvc: json['cvc'] as String,
-    expMonth: json['exp_month'] as int,
-    expYear: json['exp_year'] as int,
-    last4: json['last4'] as int,
-    livemode: json['livemode'] as bool,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    number: json['number'] as String,
-    replacedBy: json['replaced_by'] as String,
-    replacementFor: json['replacement_for'] as String,
-    replacementReason: json['replacement_reason'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    brand: json['brand'] as String?,
+    cancellationReason: json['cancellation_reason'] as String?,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
+    cvc: json['cvc'] as String?,
+    expMonth: json['exp_month'] as int?,
+    expYear: json['exp_year'] as int?,
+    last4: json['last4'] as int?,
+    livemode: json['livemode'] as bool?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    number: json['number'] as String?,
+    replacedBy: json['replaced_by'] as String?,
+    replacementFor: json['replacement_for'] as String?,
+    replacementReason: json['replacement_reason'] as String?,
     shipping: json['shipping'] == null
         ? null
         : Shipping.fromJson(json['shipping'] as Map<String, dynamic>),
-    status: json['status'] as String,
-    type: json['type'] as String,
+    status: json['status'] as String?,
+    type: json['type'] as String?,
     cardholder: json['cardholder'] == null
         ? null
         : Cardholder.fromJson(json['cardholder'] as Map<String, dynamic>),
@@ -40,9 +40,9 @@ Card _$CardFromJson(Map<String, dynamic> json) {
         ? null
         : CardChecks.fromJson(json['checks'] as Map<String, dynamic>),
     generatedFrom: json['generated_from'],
-    country: json['country'] as String,
-    fingerprint: json['fingerprint'] as String,
-    funding: json['funding'] as String,
+    country: json['country'] as String?,
+    fingerprint: json['fingerprint'] as String?,
+    funding: json['funding'] as String?,
     threeDSecureUsage: json['three_d_secure_usage'] == null
         ? null
         : ThreeDSecureUsage.fromJson(

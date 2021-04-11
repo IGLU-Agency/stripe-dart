@@ -4,17 +4,17 @@ part 'rate.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Rate {
-  String id;
-  String object;
-  bool active;
-  int created;
-  String description;
-  String displayName;
-  bool inclusive;
-  String jurisdiction;
-  bool livemode;
-  Map<String, dynamic> metadata;
-  double percentage;
+  String? id;
+  String? object;
+  bool? active;
+  int? created;
+  String? description;
+  String? displayName;
+  bool? inclusive;
+  String? jurisdiction;
+  bool? livemode;
+  Map<String, dynamic>? metadata;
+  double? percentage;
 
   Rate(
       {this.active,

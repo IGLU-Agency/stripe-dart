@@ -5,10 +5,10 @@ part 'links.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Links {
-  String object;
-  List<FileLink> data;
-  bool hasMore;
-  String url;
+  String? object;
+  List<FileLink>? data;
+  bool? hasMore;
+  String? url;
 
   Links({this.object, this.data, this.hasMore, this.url});
   factory Links.fromJson(Map<String, dynamic> json) => _$LinksFromJson(json);

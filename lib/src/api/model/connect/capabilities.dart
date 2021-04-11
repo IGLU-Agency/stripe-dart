@@ -4,14 +4,14 @@ part 'capabilities.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Capabilities {
-  String auBecsDebitPayments;
-  String cardIssuing;
-  String cardPayments;
-  String jcbPayments;
-  String legacyPayments;
-  String taxReportingUs_1099K;
-  String taxReportingUS_1099Misc;
-  String transfers;
+  String? auBecsDebitPayments;
+  String? cardIssuing;
+  String? cardPayments;
+  String? jcbPayments;
+  String? legacyPayments;
+  String? taxReportingUs_1099K;
+  String? taxReportingUS_1099Misc;
+  String? transfers;
 
   Capabilities(
       {this.auBecsDebitPayments,

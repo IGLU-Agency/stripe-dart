@@ -3,13 +3,13 @@ part 'portal_session.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class PortalSession {
-  String id;
-  String object;
-  int created;
-  String customer;
-  bool livemode;
-  String returnUrl;
-  String url;
+  String? id;
+  String? object;
+  int? created;
+  String? customer;
+  bool? livemode;
+  String? returnUrl;
+  String? url;
 
   PortalSession({
     this.id,

@@ -5,21 +5,21 @@ part 'balance_transaction.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class BalanceTransaction {
-  String id;
-  int amount;
-  String object;
-  int availableOn;
-  int created;
-  String currency;
-  String description;
+  String? id;
+  int? amount;
+  String? object;
+  int? availableOn;
+  int? created;
+  String? currency;
+  String? description;
   dynamic exchangeRate;
-  int fee;
-  List<FeeDetail> feeDetails;
-  int net;
-  String reportingCategory;
-  String source;
-  String status;
-  String type;
+  int? fee;
+  List<FeeDetail>? feeDetails;
+  int? net;
+  String? reportingCategory;
+  String? source;
+  String? status;
+  String? type;
 
   BalanceTransaction({
     this.id,

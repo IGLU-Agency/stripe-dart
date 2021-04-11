@@ -9,8 +9,11 @@ part of 'verification_fields_company.dart';
 VerificationFieldsCompany _$VerificationFieldsCompanyFromJson(
     Map<String, dynamic> json) {
   return VerificationFieldsCompany(
-    additional: (json['additional'] as List)?.map((e) => e as String)?.toList(),
-    minimum: (json['minimum'] as List)?.map((e) => e as String)?.toList(),
+    additional: (json['additional'] as List<dynamic>?)
+        ?.map((e) => e as String)
+        .toList(),
+    minimum:
+        (json['minimum'] as List<dynamic>?)?.map((e) => e as String).toList(),
   );
 }
 

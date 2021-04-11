@@ -8,8 +8,8 @@ part of 'period.dart';
 
 Period _$PeriodFromJson(Map<String, dynamic> json) {
   return Period(
-    end: json['end'] as int,
-    start: json['start'] as int,
+    end: json['end'] as int?,
+    start: json['start'] as int?,
   );
 }
 

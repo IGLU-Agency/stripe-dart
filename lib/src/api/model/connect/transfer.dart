@@ -5,23 +5,23 @@ part 'transfer.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Transfer {
-  String id;
-  int amount;
-  String currency;
-  String description;
+  String? id;
+  int? amount;
+  String? currency;
+  String? description;
   dynamic destination;
-  Map<String, dynamic> metadata;
-  String object;
-  int amountReversed;
+  Map<String, dynamic>? metadata;
+  String? object;
+  int? amountReversed;
   dynamic balanceTransaction;
-  int created;
+  int? created;
   dynamic destinationPayment;
-  bool livemode;
-  Reversals reversals;
-  bool reversed;
+  bool? livemode;
+  Reversals? reversals;
+  bool? reversed;
   dynamic sourceTransaction;
-  String sourceType;
-  String transferGroup;
+  String? sourceType;
+  String? transferGroup;
 
   Transfer(
       {this.id,

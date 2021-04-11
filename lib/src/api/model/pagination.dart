@@ -1,8 +1,8 @@
 class Pagination {
   Pagination({this.limit = 10, this.startingAfter, this.endingBefore});
   int limit;
-  String startingAfter;
-  String endingBefore;
+  String? startingAfter;
+  String? endingBefore;
 
   Map<String, dynamic> toJSON() {
     var item = Map<String, dynamic>();
@@ -14,10 +14,10 @@ class Pagination {
 }
 
 class PaginationResponse<T> {
-  String object;
-  String url;
-  bool hasMore;
-  List<T> data;
+  String? object;
+  String? url;
+  bool? hasMore;
+  List<T>? data;
 
   PaginationResponse({
     this.object,
@@ -35,9 +35,9 @@ class PaginationResponse<T> {
     if (json['data'] != null) {
       item.data = [];
       (json['data'] as List).forEach((m) {
-        item.data.add(fromJSON(m));
+        item.data!.add(fromJSON(m));
       });
     }
-    return item;
+    return item as PaginationResponse<T>;
   }
 }

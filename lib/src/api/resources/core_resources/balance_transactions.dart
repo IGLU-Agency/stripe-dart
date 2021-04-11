@@ -8,15 +8,15 @@ class BalanceTransactions {
   }
 
   final Stripe _stripe;
-  BasicResource _resource;
+  late BasicResource _resource;
   final String _endpoint = "/balance_transactions";
 
-  Future<Map<String, dynamic>> retrieve(String id,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> retrieve(String id,
+      {Map<String, dynamic>? params}) {
     return _resource.retrieve(_endpoint, id, params: params);
   }
 
-  Future<Map<String, dynamic>> list({Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> list({Map<String, dynamic>? params}) {
     return _resource.list(_endpoint, params: params);
   }
 }

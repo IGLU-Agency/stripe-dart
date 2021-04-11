@@ -9,10 +9,10 @@ part of 'pending_request.dart';
 PendingRequest _$PendingRequestFromJson(Map<String, dynamic> json) {
   return PendingRequest(
     amount: json['amount'],
-    currency: json['currency'] as String,
-    isAmountControllable: json['is_amount_controllable'] as bool,
+    currency: json['currency'] as String?,
+    isAmountControllable: json['is_amount_controllable'] as bool?,
     merchantAmount: json['merchant_amount'],
-    merchantCurrency: json['merchant_currency'] as String,
+    merchantCurrency: json['merchant_currency'] as String?,
   );
 }
 

@@ -5,10 +5,10 @@ part 'invoice_line_items.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class InvoiceLineItems {
-  String object;
-  List<InvoiceLineItem> data;
-  bool hasMore;
-  String url;
+  String? object;
+  List<InvoiceLineItem>? data;
+  bool? hasMore;
+  String? url;
 
   InvoiceLineItems({this.object, this.data, this.hasMore, this.url});
   factory InvoiceLineItems.fromJson(Map<String, dynamic> json) =>

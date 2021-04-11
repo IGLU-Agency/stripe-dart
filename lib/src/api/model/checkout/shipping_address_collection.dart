@@ -4,7 +4,7 @@ part 'shipping_address_collection.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ShippingAddressCollection {
-  List<String> allowedCountries;
+  List<String>? allowedCountries;
 
   ShippingAddressCollection({
     this.allowedCountries,

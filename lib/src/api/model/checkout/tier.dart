@@ -4,11 +4,11 @@ part 'tier.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Tier {
-  int flatAmount;
-  String flatAmountDecimal;
-  int unitAmount;
-  String unitAmountDecimal;
-  int upTo;
+  int? flatAmount;
+  String? flatAmountDecimal;
+  int? unitAmount;
+  String? unitAmountDecimal;
+  int? upTo;
 
   Tier(
       {this.flatAmount,

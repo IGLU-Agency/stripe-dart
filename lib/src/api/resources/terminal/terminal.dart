@@ -12,7 +12,7 @@ class Terminal {
   }
 
   final Stripe _stripe;
-  ConnectionTokens connectionTokens;
-  Locations locations;
-  Readers readers;
+  ConnectionTokens? connectionTokens;
+  Locations? locations;
+  Readers? readers;
 }

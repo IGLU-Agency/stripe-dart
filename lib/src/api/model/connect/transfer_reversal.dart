@@ -4,15 +4,15 @@ part 'transfer_reversal.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class TransferReversal {
-  String id;
-  int amount;
-  String currency;
-  String description;
-  Map<String, dynamic> metadata;
+  String? id;
+  int? amount;
+  String? currency;
+  String? description;
+  Map<String, dynamic>? metadata;
   dynamic transfer;
-  String object;
+  String? object;
   dynamic balanceTransaction;
-  int created;
+  int? created;
   dynamic destinationPaymentRefund;
   dynamic sourceRefund;
 

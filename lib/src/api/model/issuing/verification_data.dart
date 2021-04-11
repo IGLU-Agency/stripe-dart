@@ -4,10 +4,10 @@ part 'verification_data.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class VerificationData {
-  String addressLine1Check;
-  String addressPostalCodeCheck;
-  String cvcCheck;
-  String expiryCheck;
+  String? addressLine1Check;
+  String? addressPostalCodeCheck;
+  String? cvcCheck;
+  String? expiryCheck;
 
   VerificationData({
     this.addressLine1Check,

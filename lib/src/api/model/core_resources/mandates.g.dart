@@ -8,15 +8,15 @@ part of 'mandates.dart';
 
 Mandates _$MandatesFromJson(Map<String, dynamic> json) {
   return Mandates(
-    id: json['id'] as String,
-    object: json['object'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
     customerAcceptance: json['customer_acceptance'],
-    livemode: json['livemode'] as bool,
+    livemode: json['livemode'] as bool?,
     multiUse: json['multi_use'],
     paymentMethod: json['payment_method'],
     paymentMethodDetails: json['payment_method_details'],
-    status: json['status'] as String,
-    type: json['type'] as String,
+    status: json['status'] as String?,
+    type: json['type'] as String?,
     singleUse: json['single_use'],
   );
 }

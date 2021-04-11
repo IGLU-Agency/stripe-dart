@@ -5,8 +5,8 @@ part 'settings_card_payments.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SettingsCardPayments {
-  SettingsCardPaymentsDeclineOn declineOn;
-  String statementDescriptorPrefix;
+  SettingsCardPaymentsDeclineOn? declineOn;
+  String? statementDescriptorPrefix;
 
   SettingsCardPayments({this.declineOn, this.statementDescriptorPrefix});
   factory SettingsCardPayments.fromJson(Map<String, dynamic> json) =>

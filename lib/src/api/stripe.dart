@@ -17,7 +17,7 @@ import 'resources/webhook_endpoints/webhook_endpoints.dart';
 typedef Future<Map<String, dynamic>> IntentProvider(Uri uri);
 
 class Stripe {
-  static Stripe _instance;
+  static Stripe? _instance;
 
   final StripeApiHandler _apiHandler;
 
@@ -26,28 +26,28 @@ class Stripe {
   final String apiVersion;
 
   //WEBHOOK_ENDPOINTS
-  WebhookEndpoints webhookEndpoints;
+  WebhookEndpoints? webhookEndpoints;
   //REPORT RUNS
-  ReportRuns reportRuns;
-  ReportTypes reportTypes;
+  ReportRuns? reportRuns;
+  ReportTypes? reportTypes;
   //SIGMA
-  ScheduledQueries scheduledQueries;
+  ScheduledQueries? scheduledQueries;
   //TERMINAL
-  Terminal terminal;
+  Terminal? terminal;
   //ISSUING
-  Issuing issuing;
+  Issuing? issuing;
   //FRAUD
-  Radar radar;
+  Radar? radar;
   //CONNECT
-  Connect connect;
+  Connect? connect;
   //BILLING
-  Billing billing;
+  Billing? billing;
   //CHECKOUT
-  Sessions sessions;
+  Sessions? sessions;
   //PAYMENT METHODS
-  PaymentMethods paymentMethods;
+  PaymentMethods? paymentMethods;
   //CORE
-  Core core;
+  late Core core;
 
   /// Creates a new [Stripe] object. Use this constructor if you wish to handle the instance of this class by yourself.
   /// Alternatively, use [Stripe.init] to create a singleton and access it through [Stripe.instance].
@@ -58,7 +58,7 @@ class Stripe {
   /// [stripeAccount] is the id of a stripe customer and stats with "cus_".
   /// This is a optional parameter.
   Stripe(this.publishableKey,
-      {this.apiVersion = defaultApiVersion, String stripeAccount})
+      {this.apiVersion = defaultApiVersion, String? stripeAccount})
       : _apiHandler = StripeApiHandler(stripeAccount: stripeAccount) {
     _validateKey(publishableKey, stripeAccount);
     _apiHandler.apiVersion = apiVersion;
@@ -85,7 +85,7 @@ class Stripe {
   /// [stripeAccount].
   /// This is a optional parameter.
   static void init(String publishableKey,
-      {String apiVersion = defaultApiVersion, String stripeAccount}) {
+      {String apiVersion = defaultApiVersion, String? stripeAccount}) {
     if (_instance == null) {
       _instance = Stripe(publishableKey,
           apiVersion: apiVersion, stripeAccount: stripeAccount);
@@ -94,7 +94,7 @@ class Stripe {
 
   /// Access the singleton instance of [Stripe].
   /// Throws an [Exception] if [Stripe.init] hasn't been called previously.
-  static Stripe get instance {
+  static Stripe? get instance {
     if (_instance == null) {
       throw Exception(
           "Attempted to get singleton instance of StripeApi without initialization");
@@ -104,7 +104,7 @@ class Stripe {
 
   /// Validates the received [publishableKey] and throws a [Exception] if an
   /// invalid key has been submitted.
-  static void _validateKey(String publishableKey, String stripeAccount) {
+  static void _validateKey(String publishableKey, String? stripeAccount) {
     if (publishableKey == null || publishableKey.isEmpty) {
       throw Exception("Invalid Publishable Key: " +
           "You must use a valid publishable key to create a token.  " +
@@ -115,8 +115,8 @@ class Stripe {
     }
   }
 
-  Future<Map<String, dynamic>> request(RequestMethod method, String path,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> request(RequestMethod method, String path,
+      {Map<String, dynamic>? params}) {
     return _apiHandler.request(method, path, publishableKey, defaultApiVersion,
         params: params);
   }

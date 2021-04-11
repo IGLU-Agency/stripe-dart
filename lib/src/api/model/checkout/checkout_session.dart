@@ -8,26 +8,26 @@ part 'checkout_session.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class CheckoutSession {
-  String id;
-  String cancelUrl;
-  String clientReferenceId;
+  String? id;
+  String? cancelUrl;
+  String? clientReferenceId;
   dynamic customer;
-  String customerEmail;
-  List<DisplayItem> displayItems;
-  LineItems lineItems;
-  Map<String, dynamic> metadata;
-  String mode;
+  String? customerEmail;
+  List<DisplayItem>? displayItems;
+  LineItems? lineItems;
+  Map<String, dynamic>? metadata;
+  String? mode;
   dynamic paymentIntent;
-  List<String> paymentMethodTypes;
-  String successUrl;
-  String object;
-  String billingAddressCollection;
-  bool livemode;
-  String locale;
+  List<String>? paymentMethodTypes;
+  String? successUrl;
+  String? object;
+  String? billingAddressCollection;
+  bool? livemode;
+  String? locale;
   dynamic setupIntent;
-  Shipping shipping;
-  ShippingAddressCollection shippingAddressCollection;
-  String submitType;
+  Shipping? shipping;
+  ShippingAddressCollection? shippingAddressCollection;
+  String? submitType;
   dynamic subscription;
 
   CheckoutSession(

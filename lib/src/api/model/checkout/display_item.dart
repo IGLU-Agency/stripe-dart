@@ -8,12 +8,12 @@ part 'display_item.g.dart';
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class DisplayItem {
   dynamic amount;
-  String currency;
-  DisplayItemCustom custom;
-  int quantity;
-  String type;
-  Sku sku;
-  Plan plan;
+  String? currency;
+  DisplayItemCustom? custom;
+  int? quantity;
+  String? type;
+  Sku? sku;
+  Plan? plan;
 
   DisplayItem(
       {this.amount,

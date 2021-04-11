@@ -8,15 +8,15 @@ part of 'capability.dart';
 
 Capability _$CapabilityFromJson(Map<String, dynamic> json) {
   return Capability(
-    id: json['id'] as String,
-    object: json['object'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
     account: json['account'],
-    requested: json['requested'] as bool,
-    requestedAt: json['requested_at'] as int,
+    requested: json['requested'] as bool?,
+    requestedAt: json['requested_at'] as int?,
     requirements: json['requirements'] == null
         ? null
         : Requirements.fromJson(json['requirements'] as Map<String, dynamic>),
-    status: json['status'] as String,
+    status: json['status'] as String?,
   );
 }
 

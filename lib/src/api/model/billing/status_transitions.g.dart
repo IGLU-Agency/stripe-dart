@@ -8,10 +8,10 @@ part of 'status_transitions.dart';
 
 StatusTransitions _$StatusTransitionsFromJson(Map<String, dynamic> json) {
   return StatusTransitions(
-    finalizedAt: json['finalized_at'] as int,
-    markedUncollectibleAt: json['marked_uncollectible_at'] as int,
-    paidAt: json['paid_at'] as int,
-    voidedAt: json['voided_at'] as int,
+    finalizedAt: json['finalized_at'] as int?,
+    markedUncollectibleAt: json['marked_uncollectible_at'] as int?,
+    paidAt: json['paid_at'] as int?,
+    voidedAt: json['voided_at'] as int?,
   );
 }
 

@@ -5,28 +5,28 @@ part 'setup_intent.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SetupIntent {
-  String id;
-  String object;
-  String application;
-  String cancellationReason;
-  String clientSecret;
-  int created;
+  String? id;
+  String? object;
+  String? application;
+  String? cancellationReason;
+  String? clientSecret;
+  int? created;
   dynamic customer;
-  String description;
+  String? description;
   //TODO: LAST SETUP ERRO
   dynamic lastSetupError;
-  bool livemode;
+  bool? livemode;
   dynamic mandate;
-  Map<String, dynamic> metadata;
-  IntentAction nextAction;
+  Map<String, dynamic>? metadata;
+  IntentAction? nextAction;
   dynamic onBehalfOf;
   dynamic paymentMethod;
   //TODO: paymentMethodOptions
   dynamic paymentMethodOptions;
-  List<String> paymentMethodTypes;
+  List<String>? paymentMethodTypes;
   dynamic singleUseMandate;
-  String status;
-  String usage;
+  String? status;
+  String? usage;
 
   SetupIntent({
     this.id,

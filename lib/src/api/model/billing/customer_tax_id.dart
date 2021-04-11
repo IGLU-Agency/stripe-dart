@@ -4,15 +4,15 @@ part 'customer_tax_id.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class CustomerTaxId {
-  String id;
-  String object;
-  String country;
-  int created;
+  String? id;
+  String? object;
+  String? country;
+  int? created;
   dynamic customer;
-  bool livemode;
-  String type;
-  String value;
-  TaxIdVerification verification;
+  bool? livemode;
+  String? type;
+  String? value;
+  TaxIdVerification? verification;
 
   CustomerTaxId({
     this.id,

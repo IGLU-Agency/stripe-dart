@@ -4,10 +4,10 @@ part 'status_transitions.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class StatusTransitions {
-  int finalizedAt;
-  int markedUncollectibleAt;
-  int paidAt;
-  int voidedAt;
+  int? finalizedAt;
+  int? markedUncollectibleAt;
+  int? paidAt;
+  int? voidedAt;
 
   StatusTransitions(
       {this.finalizedAt,

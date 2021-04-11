@@ -8,9 +8,9 @@ part of 'requirement_error.dart';
 
 RequirementError _$RequirementErrorFromJson(Map<String, dynamic> json) {
   return RequirementError(
-    code: json['code'] as String,
-    reason: json['reason'] as String,
-    requirement: json['requirement'] as String,
+    code: json['code'] as String?,
+    reason: json['reason'] as String?,
+    requirement: json['requirement'] as String?,
   );
 }
 

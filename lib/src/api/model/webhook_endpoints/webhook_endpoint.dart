@@ -4,18 +4,18 @@ part 'webhook_endpoint.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class WebhookEndpoint {
-  String id;
-  String apiVersion;
-  String description;
-  List<String> enabledEvents;
-  Map<String, dynamic> metadata;
-  String secret;
-  String status;
-  String url;
-  String object;
-  String application;
-  int created;
-  bool livemode;
+  String? id;
+  String? apiVersion;
+  String? description;
+  List<String>? enabledEvents;
+  Map<String, dynamic>? metadata;
+  String? secret;
+  String? status;
+  String? url;
+  String? object;
+  String? application;
+  int? created;
+  bool? livemode;
 
   WebhookEndpoint(
       {this.id,

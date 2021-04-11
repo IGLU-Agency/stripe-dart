@@ -8,14 +8,13 @@ part of 'balance_issuing.dart';
 
 BalanceIssuing _$BalanceIssuingFromJson(Map<String, dynamic> json) {
   return BalanceIssuing(
-    available: (json['available'] as List)
-        ?.map((e) =>
-            e == null ? null : BalanceFund.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    available: (json['available'] as List<dynamic>?)
+        ?.map((e) => BalanceFund.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
 Map<String, dynamic> _$BalanceIssuingToJson(BalanceIssuing instance) =>
     <String, dynamic>{
-      'available': instance.available?.map((e) => e?.toJson())?.toList(),
+      'available': instance.available?.map((e) => e.toJson()).toList(),
     };

@@ -4,13 +4,13 @@ part 'early_fraud_warning.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class EarlyFraudWarning {
-  String id;
-  String object;
-  bool actionable;
+  String? id;
+  String? object;
+  bool? actionable;
   dynamic charge;
-  int created;
-  String fraudType;
-  bool livemode;
+  int? created;
+  String? fraudType;
+  bool? livemode;
 
   EarlyFraudWarning({
     this.id,

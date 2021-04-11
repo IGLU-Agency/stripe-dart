@@ -8,21 +8,21 @@ part of 'scheduled_query.dart';
 
 ScheduledQuery _$ScheduledQueryFromJson(Map<String, dynamic> json) {
   return ScheduledQuery(
-    id: json['id'] as String,
-    dataLoadTime: json['data_load_time'] as int,
+    id: json['id'] as String?,
+    dataLoadTime: json['data_load_time'] as int?,
     file: json['file'] == null
         ? null
         : File.fromJson(json['file'] as Map<String, dynamic>),
-    sql: json['sql'] as String,
-    status: json['status'] as String,
-    title: json['title'] as String,
-    object: json['object'] as String,
-    created: json['created'] as int,
+    sql: json['sql'] as String?,
+    status: json['status'] as String?,
+    title: json['title'] as String?,
+    object: json['object'] as String?,
+    created: json['created'] as int?,
     error: json['error'] == null
         ? null
         : ScheduledQueryError.fromJson(json['error'] as Map<String, dynamic>),
-    livemode: json['livemode'] as bool,
-    resultAvailableUntil: json['result_available_until'] as int,
+    livemode: json['livemode'] as bool?,
+    resultAvailableUntil: json['result_available_until'] as int?,
   );
 }
 

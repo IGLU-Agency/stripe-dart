@@ -6,17 +6,17 @@ part 'scheduled_query.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ScheduledQuery {
-  String id;
-  int dataLoadTime;
-  File file;
-  String sql;
-  String status;
-  String title;
-  String object;
-  int created;
-  ScheduledQueryError error;
-  bool livemode;
-  int resultAvailableUntil;
+  String? id;
+  int? dataLoadTime;
+  File? file;
+  String? sql;
+  String? status;
+  String? title;
+  String? object;
+  int? created;
+  ScheduledQueryError? error;
+  bool? livemode;
+  int? resultAvailableUntil;
 
   ScheduledQuery(
       {this.id,

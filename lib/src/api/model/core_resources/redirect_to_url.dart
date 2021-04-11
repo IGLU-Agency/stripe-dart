@@ -4,8 +4,8 @@ part 'redirect_to_url.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class RedirectToUrl {
-  String returnUrl;
-  String url;
+  String? returnUrl;
+  String? url;
 
   RedirectToUrl({this.url, this.returnUrl});
   factory RedirectToUrl.fromJson(Map<String, dynamic> json) =>

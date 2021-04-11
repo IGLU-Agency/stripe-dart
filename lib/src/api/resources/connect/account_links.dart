@@ -8,10 +8,10 @@ class AccountLinks {
   }
 
   final Stripe _stripe;
-  BasicResource _resource;
+  late BasicResource _resource;
   final String _endpoint = "/account_links";
 
-  Future<Map<String, dynamic>> create({Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> create({Map<String, dynamic>? params}) {
     return _resource.create(_endpoint, params: params);
   }
 }

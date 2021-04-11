@@ -8,7 +8,7 @@ part of 'fpx.dart';
 
 Fpx _$FpxFromJson(Map<String, dynamic> json) {
   return Fpx(
-    bank: json['bank'] as String,
+    bank: json['bank'] as String?,
   );
 }
 

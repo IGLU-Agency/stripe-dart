@@ -5,7 +5,7 @@ part 'verification.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Verification {
-  Document document;
+  Document? document;
 
   Verification({this.document});
   factory Verification.fromJson(Map<String, dynamic> json) =>

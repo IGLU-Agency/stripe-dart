@@ -8,7 +8,7 @@ part of 'billing_thresholds.dart';
 
 BillingThresholds _$BillingThresholdsFromJson(Map<String, dynamic> json) {
   return BillingThresholds(
-    usageGte: json['usage_gte'] as int,
+    usageGte: json['usage_gte'] as int?,
   );
 }
 

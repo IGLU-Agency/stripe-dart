@@ -4,22 +4,22 @@ part 'topup.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Topup {
-  String id;
-  int amount;
-  String currency;
-  String description;
-  Map<String, dynamic> metadata;
-  String status;
-  String object;
+  String? id;
+  int? amount;
+  String? currency;
+  String? description;
+  Map<String, dynamic>? metadata;
+  String? status;
+  String? object;
   dynamic balanceTransaction;
-  int created;
-  int expectedAvailabilityDate;
-  String failureCode;
-  String failureMessage;
-  bool livemode;
-  Map<String, dynamic> source;
-  String statementDescriptor;
-  String transferGroup;
+  int? created;
+  int? expectedAvailabilityDate;
+  String? failureCode;
+  String? failureMessage;
+  bool? livemode;
+  Map<String, dynamic>? source;
+  String? statementDescriptor;
+  String? transferGroup;
 
   Topup(
       {this.id,

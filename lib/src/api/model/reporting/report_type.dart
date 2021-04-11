@@ -4,14 +4,14 @@ part 'report_type.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ReportType {
-  String id;
-  int dataAvailableEnd;
-  int dataAvailableStart;
-  String name;
-  String object;
-  List<String> defaultColumns;
-  int updated;
-  int version;
+  String? id;
+  int? dataAvailableEnd;
+  int? dataAvailableStart;
+  String? name;
+  String? object;
+  List<String>? defaultColumns;
+  int? updated;
+  int? version;
 
   ReportType({
     this.id,

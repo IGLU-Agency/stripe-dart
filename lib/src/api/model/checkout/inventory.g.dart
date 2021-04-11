@@ -8,9 +8,9 @@ part of 'inventory.dart';
 
 Inventory _$InventoryFromJson(Map<String, dynamic> json) {
   return Inventory(
-    quantity: json['quantity'] as int,
-    type: json['type'] as String,
-    value: json['value'] as String,
+    quantity: json['quantity'] as int?,
+    type: json['type'] as String?,
+    value: json['value'] as String?,
   );
 }
 

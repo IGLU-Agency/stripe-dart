@@ -8,9 +8,9 @@ part of 'tax_id_verification.dart';
 
 TaxIdVerification _$TaxIdVerificationFromJson(Map<String, dynamic> json) {
   return TaxIdVerification(
-    status: json['status'] as String,
-    verifiedAddress: json['verified_address'] as String,
-    verifiedName: json['verified_name'] as String,
+    status: json['status'] as String?,
+    verifiedAddress: json['verified_address'] as String?,
+    verifiedName: json['verified_name'] as String?,
   );
 }
 

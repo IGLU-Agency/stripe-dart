@@ -5,10 +5,10 @@ part 'pending_request.g.dart';
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class PendingRequest {
   dynamic amount;
-  String currency;
-  bool isAmountControllable;
+  String? currency;
+  bool? isAmountControllable;
   dynamic merchantAmount;
-  String merchantCurrency;
+  String? merchantCurrency;
 
   PendingRequest(
       {this.amount,

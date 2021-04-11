@@ -4,10 +4,10 @@ part 'account_link.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class AccountLink {
-  String object;
-  int created;
-  int expiresAt;
-  String url;
+  String? object;
+  int? created;
+  int? expiresAt;
+  String? url;
 
   AccountLink({
     this.object,

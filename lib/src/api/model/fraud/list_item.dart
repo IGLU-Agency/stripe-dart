@@ -4,13 +4,13 @@ part 'list_item.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ListItem {
-  String id;
-  String object;
-  int created;
-  String createdBy;
-  bool livemode;
-  String value;
-  String valueList;
+  String? id;
+  String? object;
+  int? created;
+  String? createdBy;
+  bool? livemode;
+  String? value;
+  String? valueList;
 
   ListItem(
       {this.id,

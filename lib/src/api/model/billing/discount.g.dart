@@ -8,14 +8,14 @@ part of 'discount.dart';
 
 Discount _$DiscountFromJson(Map<String, dynamic> json) {
   return Discount(
-    object: json['object'] as String,
+    object: json['object'] as String?,
     coupon: json['coupon'] == null
         ? null
         : Coupon.fromJson(json['coupon'] as Map<String, dynamic>),
     customer: json['customer'],
-    end: json['end'] as int,
-    start: json['start'] as int,
-    subscription: json['subscription'] as String,
+    end: json['end'] as int?,
+    start: json['start'] as int?,
+    subscription: json['subscription'] as String?,
   );
 }
 

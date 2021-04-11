@@ -8,41 +8,40 @@ part of 'subscription.dart';
 
 Subscription _$SubscriptionFromJson(Map<String, dynamic> json) {
   return Subscription(
-    id: json['id'] as String,
-    object: json['object'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
     applicationFeePercent: json['application_fee_percent'],
-    billingCycleAnchor: json['billing_cycle_anchor'] as int,
+    billingCycleAnchor: json['billing_cycle_anchor'] as int?,
     billingThresholds: json['billing_thresholds'] == null
         ? null
         : BillingThresholds.fromJson(
             json['billing_thresholds'] as Map<String, dynamic>),
-    cancelAt: json['cancel_at'] as int,
-    cancelAtPeriodEnd: json['cancel_at_period_end'] as bool,
-    canceledAt: json['canceled_at'] as int,
-    collectionMethod: json['collection_method'] as String,
-    created: json['created'] as int,
-    currentPeriodEnd: json['current_period_end'] as int,
-    currentPeriodStart: json['current_period_start'] as int,
+    cancelAt: json['cancel_at'] as int?,
+    cancelAtPeriodEnd: json['cancel_at_period_end'] as bool?,
+    canceledAt: json['canceled_at'] as int?,
+    collectionMethod: json['collection_method'] as String?,
+    created: json['created'] as int?,
+    currentPeriodEnd: json['current_period_end'] as int?,
+    currentPeriodStart: json['current_period_start'] as int?,
     customer: json['customer'],
-    daysUntilDue: json['days_until_due'] as int,
+    daysUntilDue: json['days_until_due'] as int?,
     defaultPaymentMethod: json['default_payment_method'],
     defaultSource: json['default_source'],
-    defaultTaxRates: (json['default_tax_rates'] as List)
-        ?.map(
-            (e) => e == null ? null : Rate.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    defaultTaxRates: (json['default_tax_rates'] as List<dynamic>?)
+        ?.map((e) => Rate.fromJson(e as Map<String, dynamic>))
+        .toList(),
     discount: json['discount'] == null
         ? null
         : Discount.fromJson(json['discount'] as Map<String, dynamic>),
-    endedAt: json['ended_at'] as int,
+    endedAt: json['ended_at'] as int?,
     items: json['items'] == null
         ? null
         : SubscriptionItems.fromJson(json['items'] as Map<String, dynamic>),
     latestInvoice: json['latest_invoice'],
-    livemode: json['livemode'] as bool,
-    metadata: json['metadata'] as Map<String, dynamic>,
+    livemode: json['livemode'] as bool?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
     nextPendingInvoiceItemInvoice:
-        json['next_pending_invoice_item_invoice'] as int,
+        json['next_pending_invoice_item_invoice'] as int?,
     pauseCollection: json['pause_collection'],
     pendingInvoiceItemInterval: json['pending_invoice_item_interval'],
     pendingSetupIntent: json['pending_setup_intent'],
@@ -50,12 +49,12 @@ Subscription _$SubscriptionFromJson(Map<String, dynamic> json) {
     plan: json['plan'] == null
         ? null
         : Plan.fromJson(json['plan'] as Map<String, dynamic>),
-    quantity: json['quantity'] as int,
+    quantity: json['quantity'] as int?,
     schedule: json['schedule'],
-    startDate: json['start_date'] as int,
-    status: json['status'] as String,
+    startDate: json['start_date'] as int?,
+    status: json['status'] as String?,
     taxPercent: json['tax_percent'],
-    trialEnd: json['trial_end'] as int,
+    trialEnd: json['trial_end'] as int?,
     trialStart: json['trial_start'],
   );
 }
@@ -79,7 +78,7 @@ Map<String, dynamic> _$SubscriptionToJson(Subscription instance) =>
       'default_payment_method': instance.defaultPaymentMethod,
       'default_source': instance.defaultSource,
       'default_tax_rates':
-          instance.defaultTaxRates?.map((e) => e?.toJson())?.toList(),
+          instance.defaultTaxRates?.map((e) => e.toJson()).toList(),
       'discount': instance.discount?.toJson(),
       'ended_at': instance.endedAt,
       'items': instance.items?.toJson(),

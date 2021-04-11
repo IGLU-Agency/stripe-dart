@@ -8,19 +8,19 @@ part of 'application_fee.dart';
 
 ApplicationFee _$ApplicationFeeFromJson(Map<String, dynamic> json) {
   return ApplicationFee(
-    id: json['id'] as String,
-    object: json['object'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
     account: json['account'],
-    amount: json['amount'] as int,
-    amountRefunded: json['amount_refunded'] as int,
+    amount: json['amount'] as int?,
+    amountRefunded: json['amount_refunded'] as int?,
     application: json['application'],
     balanceTransaction: json['balance_transaction'],
     charge: json['charge'],
-    created: json['created'] as int,
-    currency: json['currency'] as String,
-    livemode: json['livemode'] as bool,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
+    livemode: json['livemode'] as bool?,
     originatingTransaction: json['originating_transaction'],
-    refunded: json['refunded'] as bool,
+    refunded: json['refunded'] as bool?,
     refunds: json['refunds'] == null
         ? null
         : Refunds.fromJson(json['refunds'] as Map<String, dynamic>),

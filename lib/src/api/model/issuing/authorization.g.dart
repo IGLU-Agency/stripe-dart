@@ -8,48 +8,43 @@ part of 'authorization.dart';
 
 Authorization _$AuthorizationFromJson(Map<String, dynamic> json) {
   return Authorization(
-    id: json['id'] as String,
-    object: json['object'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
     amount: json['amount'],
-    approved: json['approved'] as bool,
-    authorizationMethod: json['authorization_method'] as String,
-    balanceTransactions: (json['balance_transactions'] as List)
-        ?.map((e) => e == null
-            ? null
-            : BalanceTransaction.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    approved: json['approved'] as bool?,
+    authorizationMethod: json['authorization_method'] as String?,
+    balanceTransactions: (json['balance_transactions'] as List<dynamic>?)
+        ?.map((e) => BalanceTransaction.fromJson(e as Map<String, dynamic>))
+        .toList(),
     card: json['card'] == null
         ? null
         : Card.fromJson(json['card'] as Map<String, dynamic>),
     cardholder: json['cardholder'],
-    created: json['created'] as int,
-    currency: json['currency'] as String,
-    livemode: json['livemode'] as bool,
-    merchantAmount: json['merchant_amount'] as int,
-    merchantCurrency: json['merchant_currency'] as String,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
+    livemode: json['livemode'] as bool?,
+    merchantAmount: json['merchant_amount'] as int?,
+    merchantCurrency: json['merchant_currency'] as String?,
     merchantData: json['merchant_data'] == null
         ? null
         : MerchantData.fromJson(json['merchant_data'] as Map<String, dynamic>),
-    metadata: json['metadata'] as Map<String, dynamic>,
+    metadata: json['metadata'] as Map<String, dynamic>?,
     pendingRequest: json['pending_request'] == null
         ? null
         : PendingRequest.fromJson(
             json['pending_request'] as Map<String, dynamic>),
-    requestHistory: (json['request_history'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RequestHistory.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    status: json['status'] as String,
-    transactions: (json['transactions'] as List)
-        ?.map((e) =>
-            e == null ? null : Transaction.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    requestHistory: (json['request_history'] as List<dynamic>?)
+        ?.map((e) => RequestHistory.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    status: json['status'] as String?,
+    transactions: (json['transactions'] as List<dynamic>?)
+        ?.map((e) => Transaction.fromJson(e as Map<String, dynamic>))
+        .toList(),
     verificationData: json['verification_data'] == null
         ? null
         : VerificationData.fromJson(
             json['verification_data'] as Map<String, dynamic>),
-    wallet: json['wallet'] as String,
+    wallet: json['wallet'] as String?,
   );
 }
 
@@ -66,7 +61,7 @@ Map<String, dynamic> _$AuthorizationToJson(Authorization instance) =>
       'object': instance.object,
       'authorization_method': instance.authorizationMethod,
       'balance_transactions':
-          instance.balanceTransactions?.map((e) => e?.toJson())?.toList(),
+          instance.balanceTransactions?.map((e) => e.toJson()).toList(),
       'created': instance.created,
       'livemode': instance.livemode,
       'merchant_amount': instance.merchantAmount,
@@ -74,8 +69,8 @@ Map<String, dynamic> _$AuthorizationToJson(Authorization instance) =>
       'merchant_data': instance.merchantData?.toJson(),
       'pending_request': instance.pendingRequest?.toJson(),
       'request_history':
-          instance.requestHistory?.map((e) => e?.toJson())?.toList(),
-      'transactions': instance.transactions?.map((e) => e?.toJson())?.toList(),
+          instance.requestHistory?.map((e) => e.toJson()).toList(),
+      'transactions': instance.transactions?.map((e) => e.toJson()).toList(),
       'verification_data': instance.verificationData?.toJson(),
       'wallet': instance.wallet,
     };

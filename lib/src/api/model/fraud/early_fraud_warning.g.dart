@@ -8,13 +8,13 @@ part of 'early_fraud_warning.dart';
 
 EarlyFraudWarning _$EarlyFraudWarningFromJson(Map<String, dynamic> json) {
   return EarlyFraudWarning(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    actionable: json['actionable'] as bool,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    actionable: json['actionable'] as bool?,
     charge: json['charge'],
-    created: json['created'] as int,
-    fraudType: json['fraud_type'] as String,
-    livemode: json['livemode'] as bool,
+    created: json['created'] as int?,
+    fraudType: json['fraud_type'] as String?,
+    livemode: json['livemode'] as bool?,
   );
 }
 

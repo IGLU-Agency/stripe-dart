@@ -34,18 +34,18 @@ class Billing {
   }
 
   final Stripe _stripe;
-  Coupons coupons;
-  CreditNotes creditNotes;
-  CustomerBalanceTransactions customerBalanceTransactions;
-  CustomerTaxIds customerTaxIds;
-  Discounts discounts;
-  InvoiceItems invoiceItems;
-  Invoices invoices;
-  Plans plans;
-  SelfServePortal selfServePortal;
-  Subscriptions subscriptions;
-  SubscriptionItems subscriptionItems;
-  SubscriptionSchedules subscriptionSchedules;
-  TaxRates taxRates;
-  UsageRecords usageRecords;
+  Coupons? coupons;
+  CreditNotes? creditNotes;
+  CustomerBalanceTransactions? customerBalanceTransactions;
+  CustomerTaxIds? customerTaxIds;
+  Discounts? discounts;
+  InvoiceItems? invoiceItems;
+  Invoices? invoices;
+  Plans? plans;
+  SelfServePortal? selfServePortal;
+  Subscriptions? subscriptions;
+  SubscriptionItems? subscriptionItems;
+  SubscriptionSchedules? subscriptionSchedules;
+  TaxRates? taxRates;
+  UsageRecords? usageRecords;
 }

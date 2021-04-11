@@ -8,15 +8,16 @@ part of 'report_type.dart';
 
 ReportType _$ReportTypeFromJson(Map<String, dynamic> json) {
   return ReportType(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    dataAvailableEnd: json['data_available_end'] as int,
-    dataAvailableStart: json['data_available_start'] as int,
-    defaultColumns:
-        (json['default_columns'] as List)?.map((e) => e as String)?.toList(),
-    name: json['name'] as String,
-    updated: json['updated'] as int,
-    version: json['version'] as int,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    dataAvailableEnd: json['data_available_end'] as int?,
+    dataAvailableStart: json['data_available_start'] as int?,
+    defaultColumns: (json['default_columns'] as List<dynamic>?)
+        ?.map((e) => e as String)
+        .toList(),
+    name: json['name'] as String?,
+    updated: json['updated'] as int?,
+    version: json['version'] as int?,
   );
 }
 

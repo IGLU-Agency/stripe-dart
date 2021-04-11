@@ -4,9 +4,9 @@ part 'inventory.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Inventory {
-  int quantity;
-  String type;
-  String value;
+  int? quantity;
+  String? type;
+  String? value;
 
   Inventory({this.quantity, this.type, this.value});
   factory Inventory.fromJson(Map<String, dynamic> json) =>

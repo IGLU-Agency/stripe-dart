@@ -8,9 +8,10 @@ part of 'display_item_custom.dart';
 
 DisplayItemCustom _$DisplayItemCustomFromJson(Map<String, dynamic> json) {
   return DisplayItemCustom(
-    description: json['description'] as String,
-    images: (json['images'] as List)?.map((e) => e as String)?.toList(),
-    name: json['name'] as String,
+    description: json['description'] as String?,
+    images:
+        (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
+    name: json['name'] as String?,
   );
 }
 

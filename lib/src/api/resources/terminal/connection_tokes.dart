@@ -8,10 +8,10 @@ class ConnectionTokens {
   }
 
   final Stripe _stripe;
-  BasicResource _resource;
+  late BasicResource _resource;
   final String _endpoint = "/terminal/connection_tokens";
 
-  Future<Map<String, dynamic>> create({Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> create({Map<String, dynamic>? params}) {
     return _resource.create(_endpoint, params: params);
   }
 }

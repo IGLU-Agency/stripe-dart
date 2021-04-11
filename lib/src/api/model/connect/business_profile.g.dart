@@ -8,16 +8,16 @@ part of 'business_profile.dart';
 
 BusinessProfile _$BusinessProfileFromJson(Map<String, dynamic> json) {
   return BusinessProfile(
-    mcc: json['mcc'] as String,
-    name: json['name'] as String,
-    productDescription: json['product_description'] as String,
+    mcc: json['mcc'] as String?,
+    name: json['name'] as String?,
+    productDescription: json['product_description'] as String?,
     supportAddress: json['support_address'] == null
         ? null
         : Address.fromJson(json['support_address'] as Map<String, dynamic>),
-    supportEmail: json['support_email'] as String,
-    supportPhone: json['support_phone'] as String,
-    supportUrl: json['support_url'] as String,
-    url: json['url'] as String,
+    supportEmail: json['support_email'] as String?,
+    supportPhone: json['support_phone'] as String?,
+    supportUrl: json['support_url'] as String?,
+    url: json['url'] as String?,
   );
 }
 

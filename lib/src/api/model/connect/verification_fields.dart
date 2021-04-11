@@ -6,8 +6,8 @@ part 'verification_fields.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class VerificationFields {
-  VerificationFieldsCompany company;
-  VerificationFieldsIndividual individual;
+  VerificationFieldsCompany? company;
+  VerificationFieldsIndividual? individual;
 
   VerificationFields({this.company, this.individual});
   factory VerificationFields.fromJson(Map<String, dynamic> json) =>

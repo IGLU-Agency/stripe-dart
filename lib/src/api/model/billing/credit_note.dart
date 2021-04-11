@@ -5,30 +5,30 @@ part 'credit_note.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class CreditNote {
-  String id;
-  String object;
-  int amount;
-  int created;
-  String currency;
+  String? id;
+  String? object;
+  int? amount;
+  int? created;
+  String? currency;
   dynamic customer;
   dynamic customerBalanceTransaction;
-  int discountAmount;
+  int? discountAmount;
   dynamic invoice;
-  CreditNoteLines lines;
-  bool livemode;
-  String memo;
-  Map<String, dynamic> metadata;
-  String number;
-  int outOfBandAmount;
-  String pdf;
-  String reason;
+  CreditNoteLines? lines;
+  bool? livemode;
+  String? memo;
+  Map<String, dynamic>? metadata;
+  String? number;
+  int? outOfBandAmount;
+  String? pdf;
+  String? reason;
   dynamic refund;
-  String status;
-  int subtotal;
-  List<TaxAmount> taxAmounts;
-  int total;
-  String type;
-  int voidedAt;
+  String? status;
+  int? subtotal;
+  List<TaxAmount>? taxAmounts;
+  int? total;
+  String? type;
+  int? voidedAt;
 
   CreditNote({
     this.id,

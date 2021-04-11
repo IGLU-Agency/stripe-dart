@@ -5,16 +5,16 @@ part 'file.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class File {
-  String id;
-  String object;
-  int created;
-  String filename;
-  Links links;
-  String purpose;
-  int size;
-  String title;
-  String type;
-  String url;
+  String? id;
+  String? object;
+  int? created;
+  String? filename;
+  Links? links;
+  String? purpose;
+  int? size;
+  String? title;
+  String? type;
+  String? url;
 
   File(
       {this.id,

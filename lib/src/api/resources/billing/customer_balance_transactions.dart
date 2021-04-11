@@ -8,29 +8,29 @@ class CustomerBalanceTransactions {
   }
 
   final Stripe _stripe;
-  BasicResource _resource;
+  late BasicResource _resource;
   final String _endpoint = "/customers/:id/balance_transactions";
 
-  Future<Map<String, dynamic>> create(String customerId,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> create(String customerId,
+      {Map<String, dynamic>? params}) {
     return _resource.create(_endpoint.replaceAll(":id", customerId),
         params: params);
   }
 
-  Future<Map<String, dynamic>> retrieve(String customerId, String id,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> retrieve(String customerId, String id,
+      {Map<String, dynamic>? params}) {
     return _resource.retrieve(_endpoint.replaceAll(":id", customerId), id,
         params: params);
   }
 
-  Future<Map<String, dynamic>> update(String customerId, String id,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> update(String customerId, String id,
+      {Map<String, dynamic>? params}) {
     return _resource.update(_endpoint.replaceAll(":id", customerId), id,
         params: params);
   }
 
-  Future<Map<String, dynamic>> list(String customerId,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> list(String customerId,
+      {Map<String, dynamic>? params}) {
     return _resource.list(_endpoint.replaceAll(":id", customerId),
         params: params);
   }

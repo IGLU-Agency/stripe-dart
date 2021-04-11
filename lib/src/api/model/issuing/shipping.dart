@@ -5,16 +5,16 @@ part 'shipping.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Shipping {
-  Address address;
-  String carrier;
-  int eta;
-  String name;
-  String phone;
-  String service;
-  String status;
-  String trackingNumber;
-  String trackingUrl;
-  String type;
+  Address? address;
+  String? carrier;
+  int? eta;
+  String? name;
+  String? phone;
+  String? service;
+  String? status;
+  String? trackingNumber;
+  String? trackingUrl;
+  String? type;
 
   Shipping(
       {this.address,

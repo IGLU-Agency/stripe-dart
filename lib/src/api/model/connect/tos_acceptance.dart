@@ -4,9 +4,9 @@ part 'tos_acceptance.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class TosAcceptance {
-  int date;
-  String ip;
-  String userAgent;
+  int? date;
+  String? ip;
+  String? userAgent;
 
   TosAcceptance({this.date, this.ip, this.userAgent});
   factory TosAcceptance.fromJson(Map<String, dynamic> json) =>

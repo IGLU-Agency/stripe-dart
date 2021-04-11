@@ -4,10 +4,10 @@ part 'settings_payouts_schedule.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SettingsPayoutsSchedule {
-  int delayDays;
-  String interval;
-  int monthlyAnchor;
-  String weeklyAnchor;
+  int? delayDays;
+  String? interval;
+  int? monthlyAnchor;
+  String? weeklyAnchor;
 
   SettingsPayoutsSchedule(
       {this.delayDays, this.interval, this.monthlyAnchor, this.weeklyAnchor});

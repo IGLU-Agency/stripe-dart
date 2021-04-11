@@ -4,11 +4,11 @@ part 'ip_address_location.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class IpAddressLocation {
-  String city;
-  String country;
-  double latitude;
-  double longitude;
-  String region;
+  String? city;
+  String? country;
+  double? latitude;
+  double? longitude;
+  String? region;
 
   IpAddressLocation(
       {this.city, this.country, this.latitude, this.longitude, this.region});

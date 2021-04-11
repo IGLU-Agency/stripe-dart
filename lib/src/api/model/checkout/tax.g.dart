@@ -8,7 +8,7 @@ part of 'tax.dart';
 
 Tax _$TaxFromJson(Map<String, dynamic> json) {
   return Tax(
-    amount: json['amount'] as int,
+    amount: json['amount'] as int?,
     rate: json['rate'] == null
         ? null
         : Rate.fromJson(json['rate'] as Map<String, dynamic>),

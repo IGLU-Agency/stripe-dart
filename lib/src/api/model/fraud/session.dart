@@ -4,10 +4,10 @@ part 'session.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Session {
-  String browser;
-  String device;
-  double platform;
-  double version;
+  String? browser;
+  String? device;
+  double? platform;
+  double? version;
 
   Session({
     this.browser,

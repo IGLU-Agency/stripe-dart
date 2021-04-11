@@ -5,7 +5,7 @@ part 'balance_issuing.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class BalanceIssuing {
-  List<BalanceFund> available;
+  List<BalanceFund>? available;
 
   BalanceIssuing({
     this.available,

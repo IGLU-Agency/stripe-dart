@@ -8,8 +8,8 @@ part of 'tax_amount.dart';
 
 TaxAmount _$TaxAmountFromJson(Map<String, dynamic> json) {
   return TaxAmount(
-    amount: json['amount'] as int,
-    inclusive: json['inclusive'] as bool,
+    amount: json['amount'] as int?,
+    inclusive: json['inclusive'] as bool?,
     taxRate: json['tax_rate'],
   );
 }

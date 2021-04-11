@@ -6,16 +6,16 @@ part 'report_run.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ReportRun {
-  String id;
-  ReportRunParameters parameters;
-  String reportType;
-  File result;
-  String status;
-  String object;
-  int created;
-  String error;
-  bool livemode;
-  int succeededAt;
+  String? id;
+  ReportRunParameters? parameters;
+  String? reportType;
+  File? result;
+  String? status;
+  String? object;
+  int? created;
+  String? error;
+  bool? livemode;
+  int? succeededAt;
 
   ReportRun(
       {this.id,

@@ -8,14 +8,14 @@ part of 'refund_item.dart';
 
 RefundItem _$RefundItemFromJson(Map<String, dynamic> json) {
   return RefundItem(
-    object: json['object'] as String,
-    amount: json['amount'] as int,
+    object: json['object'] as String?,
+    amount: json['amount'] as int?,
     balanceTransaction: json['balance_transaction'],
-    created: json['created'] as int,
-    currency: json['currency'] as String,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
     fee: json['fee'],
-    id: json['id'] as String,
-    metadata: json['metadata'] as Map<String, dynamic>,
+    id: json['id'] as String?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
   );
 }
 

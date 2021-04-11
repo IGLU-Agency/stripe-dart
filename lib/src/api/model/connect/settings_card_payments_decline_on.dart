@@ -4,8 +4,8 @@ part 'settings_card_payments_decline_on.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SettingsCardPaymentsDeclineOn {
-  bool avsFailure;
-  bool cvcFailure;
+  bool? avsFailure;
+  bool? cvcFailure;
 
   SettingsCardPaymentsDeclineOn({this.avsFailure, this.cvcFailure});
   factory SettingsCardPaymentsDeclineOn.fromJson(Map<String, dynamic> json) =>

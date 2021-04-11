@@ -8,10 +8,10 @@ part of 'package_dimensions.dart';
 
 PackageDimensions _$PackageDimensionsFromJson(Map<String, dynamic> json) {
   return PackageDimensions(
-    height: (json['height'] as num)?.toDouble(),
-    length: (json['length'] as num)?.toDouble(),
-    weight: (json['weight'] as num)?.toDouble(),
-    width: (json['width'] as num)?.toDouble(),
+    height: (json['height'] as num?)?.toDouble(),
+    length: (json['length'] as num?)?.toDouble(),
+    weight: (json['weight'] as num?)?.toDouble(),
+    width: (json['width'] as num?)?.toDouble(),
   );
 }
 

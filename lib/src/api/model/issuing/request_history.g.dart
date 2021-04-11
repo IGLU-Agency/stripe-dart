@@ -9,12 +9,12 @@ part of 'request_history.dart';
 RequestHistory _$RequestHistoryFromJson(Map<String, dynamic> json) {
   return RequestHistory(
     amount: json['amount'],
-    approved: json['approved'] as bool,
-    created: json['created'] as int,
-    currency: json['currency'] as String,
+    approved: json['approved'] as bool?,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
     merchantAmount: json['merchant_amount'],
-    merchantCurrency: json['merchant_currency'] as String,
-    reason: json['reason'] as String,
+    merchantCurrency: json['merchant_currency'] as String?,
+    reason: json['reason'] as String?,
   );
 }
 

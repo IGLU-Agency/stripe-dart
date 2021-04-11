@@ -4,12 +4,12 @@ part 'discount.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Discount {
-  String object;
-  Coupon coupon;
+  String? object;
+  Coupon? coupon;
   dynamic customer;
-  int end;
-  int start;
-  String subscription;
+  int? end;
+  int? start;
+  String? subscription;
 
   Discount({
     this.object,

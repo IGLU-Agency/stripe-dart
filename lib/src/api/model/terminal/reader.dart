@@ -4,17 +4,17 @@ part 'reader.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Reader {
-  String id;
-  String deviceType;
-  String label;
-  String location;
-  Map<String, dynamic> metadata;
-  String serialNumber;
-  String status;
-  String object;
-  String deviceSwVersion;
-  String ipAddress;
-  bool livemode;
+  String? id;
+  String? deviceType;
+  String? label;
+  String? location;
+  Map<String, dynamic>? metadata;
+  String? serialNumber;
+  String? status;
+  String? object;
+  String? deviceSwVersion;
+  String? ipAddress;
+  bool? livemode;
 
   Reader(
       {this.id,

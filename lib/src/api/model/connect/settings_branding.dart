@@ -6,8 +6,8 @@ part 'settings_branding.g.dart';
 class SettingsBranding {
   dynamic icon;
   dynamic logo;
-  String primaryColor;
-  String secondaryColor;
+  String? primaryColor;
+  String? secondaryColor;
 
   SettingsBranding(
       {this.icon, this.logo, this.primaryColor, this.secondaryColor});

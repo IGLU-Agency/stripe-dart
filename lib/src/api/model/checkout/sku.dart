@@ -6,20 +6,20 @@ part 'sku.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Sku {
-  String id;
-  String object;
-  bool active;
-  Map<String, dynamic> attributes;
-  int created;
-  String currency;
-  String image;
-  Inventory inventory;
-  bool livemode;
-  Map<String, dynamic> metadata;
-  PackageDimensions packageDimensions;
-  int price;
+  String? id;
+  String? object;
+  bool? active;
+  Map<String, dynamic>? attributes;
+  int? created;
+  String? currency;
+  String? image;
+  Inventory? inventory;
+  bool? livemode;
+  Map<String, dynamic>? metadata;
+  PackageDimensions? packageDimensions;
+  int? price;
   dynamic product;
-  int updated;
+  int? updated;
 
   Sku({
     this.id,

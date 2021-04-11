@@ -5,8 +5,8 @@ part 'intent_action.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class IntentAction {
-  RedirectToUrl redirectToUrl;
-  String type;
+  RedirectToUrl? redirectToUrl;
+  String? type;
   dynamic useStripeSdk;
 
   IntentAction({this.type, this.useStripeSdk});

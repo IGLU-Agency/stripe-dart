@@ -6,20 +6,20 @@ part 'reviews.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Reviews {
-  String id;
-  String object;
+  String? id;
+  String? object;
   dynamic paymentIntent;
-  String billingZip;
+  String? billingZip;
   dynamic charge;
-  String closedReason;
-  int created;
-  String ipAddress;
-  IpAddressLocation ipAddressLocation;
-  bool livemode;
-  bool open;
-  String openedReason;
-  String reason;
-  Session session;
+  String? closedReason;
+  int? created;
+  String? ipAddress;
+  IpAddressLocation? ipAddressLocation;
+  bool? livemode;
+  bool? open;
+  String? openedReason;
+  String? reason;
+  Session? session;
 
   Reviews({
     this.id,

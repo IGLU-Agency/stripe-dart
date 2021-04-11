@@ -5,10 +5,10 @@ part 'billing.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Billing {
-  Address address;
-  String email;
-  String name;
-  String phone;
+  Address? address;
+  String? email;
+  String? name;
+  String? phone;
 
   Billing({this.address, this.email, this.name, this.phone});
   factory Billing.fromJson(Map<String, dynamic> json) =>

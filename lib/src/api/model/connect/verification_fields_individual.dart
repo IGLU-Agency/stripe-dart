@@ -4,8 +4,8 @@ part 'verification_fields_individual.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class VerificationFieldsIndividual {
-  List<String> additional;
-  List<String> minimum;
+  List<String>? additional;
+  List<String>? minimum;
 
   VerificationFieldsIndividual({this.additional, this.minimum});
   factory VerificationFieldsIndividual.fromJson(Map<String, dynamic> json) =>

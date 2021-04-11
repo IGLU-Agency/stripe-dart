@@ -8,11 +8,11 @@ part of 'fee_detail.dart';
 
 FeeDetail _$FeeDetailFromJson(Map<String, dynamic> json) {
   return FeeDetail(
-    amount: json['amount'] as int,
-    application: json['application'] as String,
-    currency: json['currency'] as String,
-    description: json['description'] as String,
-    type: json['type'] as String,
+    amount: json['amount'] as int?,
+    application: json['application'] as String?,
+    currency: json['currency'] as String?,
+    description: json['description'] as String?,
+    type: json['type'] as String?,
   );
 }
 

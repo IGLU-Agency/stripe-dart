@@ -9,11 +9,11 @@ part 'settings.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Settings {
-  SettingsBranding branding;
-  SettingsCardPayments cardPayments;
-  SettingsDashboard dashboard;
-  SettingsPayments payments;
-  SettingsPayouts payouts;
+  SettingsBranding? branding;
+  SettingsCardPayments? cardPayments;
+  SettingsDashboard? dashboard;
+  SettingsPayments? payments;
+  SettingsPayouts? payouts;
 
   Settings({this.branding, this.cardPayments, this.dashboard, this.payments});
   factory Settings.fromJson(Map<String, dynamic> json) =>

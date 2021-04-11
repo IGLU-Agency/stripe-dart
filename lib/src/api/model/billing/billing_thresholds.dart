@@ -3,7 +3,7 @@ part 'billing_thresholds.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class BillingThresholds {
-  int usageGte;
+  int? usageGte;
 
   BillingThresholds({this.usageGte});
   factory BillingThresholds.fromJson(Map<String, dynamic> json) =>

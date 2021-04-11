@@ -6,12 +6,12 @@ part 'balance.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Balance {
-  List<BalanceFund> available;
-  List<BalanceFund> pending;
-  String object;
-  List<BalanceFund> connectReserved;
-  BalanceIssuing issuing;
-  bool livemode;
+  List<BalanceFund>? available;
+  List<BalanceFund>? pending;
+  String? object;
+  List<BalanceFund>? connectReserved;
+  BalanceIssuing? issuing;
+  bool? livemode;
 
   Balance(
       {this.available,

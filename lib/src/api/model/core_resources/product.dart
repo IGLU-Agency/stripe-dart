@@ -4,25 +4,25 @@ part 'product.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Product {
-  String id;
-  String object;
-  bool active;
-  List<String> attributes;
-  String caption;
-  int created;
-  List<String> deactivateOn;
-  String description;
-  List<String> images;
-  bool livemode;
-  Map<String, dynamic> metadata;
-  String name;
-  PackageDimensions packageDimensions;
-  bool shippable;
-  String type;
-  int updated;
-  String url;
-  String statementDescriptor;
-  String unitLabel;
+  String? id;
+  String? object;
+  bool? active;
+  List<String>? attributes;
+  String? caption;
+  int? created;
+  List<String>? deactivateOn;
+  String? description;
+  List<String>? images;
+  bool? livemode;
+  Map<String, dynamic>? metadata;
+  String? name;
+  PackageDimensions? packageDimensions;
+  bool? shippable;
+  String? type;
+  int? updated;
+  String? url;
+  String? statementDescriptor;
+  String? unitLabel;
 
   Product(
       {this.id,

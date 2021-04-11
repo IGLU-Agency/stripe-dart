@@ -4,8 +4,8 @@ part 'tax_amount.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class TaxAmount {
-  int amount;
-  bool inclusive;
+  int? amount;
+  bool? inclusive;
   dynamic taxRate;
 
   TaxAmount({this.amount, this.inclusive, this.taxRate});
