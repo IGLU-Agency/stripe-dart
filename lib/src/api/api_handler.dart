@@ -101,8 +101,8 @@ class StripeApiHandler {
   ///
   ///
   ///
-  static Map<String, String?> _headers({RequestOptions? options}) {
-    final Map<String, String?> headers = Map();
+  static Map<String, String> _headers({RequestOptions? options}) {
+    final Map<String, String> headers = Map();
     headers["Accept-Charset"] = "UTF-8";
     headers["Accept"] = "application/json; charset=utf-8";
     headers["Content-Type"] = "application/x-www-form-urlencoded";
@@ -121,16 +121,14 @@ class StripeApiHandler {
     headers["X-Stripe-Client-User-Agent"] = json.encode(propertyMap);
 
     if (options != null) {
-      if (options.apiVersion != null) {
-        headers["Stripe-Version"] = options.apiVersion;
-      }
+      headers["Stripe-Version"] = options.apiVersion;
 
       if (options.stripeAccount != null) {
-        headers["Stripe-Account"] = options.stripeAccount;
+        headers["Stripe-Account"] = options.stripeAccount!;
       }
 
       if (options.idempotencyKey != null) {
-        headers["Idempotency-Key"] = options.idempotencyKey;
+        headers["Idempotency-Key"] = options.idempotencyKey!;
       }
     }
 
