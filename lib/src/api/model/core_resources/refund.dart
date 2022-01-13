@@ -1,26 +1,25 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'refund.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Refund {
-  String id;
-  String object;
-  int amount;
+  String? id;
+  String? object;
+  int? amount;
   dynamic balanceTransaction;
   dynamic charge;
-  int created;
-  String description;
-  String currency;
-  Map<String, dynamic> metadata;
+  int? created;
+  String? description;
+  String? currency;
+  Map<String, dynamic>? metadata;
   dynamic paymentIntent;
-  String reason;
-  String receiptNumber;
+  String? reason;
+  String? receiptNumber;
   dynamic sourceTransferReversal;
-  String status;
+  String? status;
   dynamic transferReversal;
   dynamic failureBalanceTransaction;
-  String failureReason;
+  String? failureReason;
 
   Refund({
     this.id,

@@ -2,15 +2,14 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'relationship.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Relationship {
-  bool director;
-  bool executive;
-  bool owner;
-  double percentOwnership;
-  bool representative;
-  String title;
+  bool? director;
+  bool? executive;
+  bool? owner;
+  double? percentOwnership;
+  bool? representative;
+  String? title;
 
   Relationship(
       {this.director,

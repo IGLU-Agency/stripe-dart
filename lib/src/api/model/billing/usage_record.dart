@@ -1,15 +1,14 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'usage_record.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class UsageRecord {
-  String id;
-  int quantity;
-  String subscriptionItem;
-  int timestamp;
-  String object;
-  bool livemode;
+  String? id;
+  int? quantity;
+  String? subscriptionItem;
+  int? timestamp;
+  String? object;
+  bool? livemode;
 
   UsageRecord(
       {this.object,

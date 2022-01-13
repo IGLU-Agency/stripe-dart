@@ -2,10 +2,9 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'scheduled_query_error.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ScheduledQueryError {
-  String message;
+  String? message;
 
   ScheduledQueryError({this.message});
   factory ScheduledQueryError.fromJson(Map<String, dynamic> json) =>

@@ -2,16 +2,15 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'address.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Address {
-  String city;
-  String country;
-  String line1;
-  String line2;
-  String postalCode;
-  String state;
-  String town;
+  String? city;
+  String? country;
+  String? line1;
+  String? line2;
+  String? postalCode;
+  String? state;
+  String? town;
 
   Address(
       {this.city,

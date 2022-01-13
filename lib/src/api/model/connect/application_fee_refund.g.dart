@@ -8,14 +8,14 @@ part of 'application_fee_refund.dart';
 
 ApplicationFeeRefund _$ApplicationFeeRefundFromJson(Map<String, dynamic> json) {
   return ApplicationFeeRefund(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    amount: json['amount'] as int,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    amount: json['amount'] as int?,
     balanceTransaction: json['balance_transaction'],
-    created: json['created'] as int,
-    currency: json['currency'] as String,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
     fee: json['fee'],
-    metadata: json['metadata'] as Map<String, dynamic>,
+    metadata: json['metadata'] as Map<String, dynamic>?,
   );
 }
 

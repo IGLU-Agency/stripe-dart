@@ -8,9 +8,9 @@ part of 'source_types.dart';
 
 SourceTypes _$SourceTypesFromJson(Map<String, dynamic> json) {
   return SourceTypes(
-    bankAccount: json['bank_account'] as int,
-    card: json['card'] as int,
-    fpx: json['fpx'] as int,
+    bankAccount: json['bank_account'] as int?,
+    card: json['card'] as int?,
+    fpx: json['fpx'] as int?,
   );
 }
 

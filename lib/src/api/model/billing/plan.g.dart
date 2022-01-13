@@ -8,31 +8,30 @@ part of 'plan.dart';
 
 Plan _$PlanFromJson(Map<String, dynamic> json) {
   return Plan(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    active: json['active'] as bool,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    active: json['active'] as bool?,
     aggregateUsage: json['aggregate_usage'],
-    amount: json['amount'] as int,
-    amountDecimal: json['amount_decimal'] as String,
-    billingScheme: json['billing_scheme'] as String,
-    created: json['created'] as int,
-    currency: json['currency'] as String,
-    interval: json['interval'] as String,
-    intervalCount: json['interval_count'] as int,
-    livemode: json['livemode'] as bool,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    nickname: json['nickname'] as String,
+    amount: json['amount'] as int?,
+    amountDecimal: json['amount_decimal'] as String?,
+    billingScheme: json['billing_scheme'] as String?,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
+    interval: json['interval'] as String?,
+    intervalCount: json['interval_count'] as int?,
+    livemode: json['livemode'] as bool?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    nickname: json['nickname'] as String?,
     product: json['product'],
-    tiers: (json['tiers'] as List)
-        ?.map(
-            (e) => e == null ? null : Tier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    tiersMode: json['tiers_mode'] as String,
+    tiers: (json['tiers'] as List<dynamic>?)
+        ?.map((e) => Tier.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    tiersMode: json['tiers_mode'] as String?,
     transformUsage: json['transform_usage'] == null
         ? null
         : Transform.fromJson(json['transform_usage'] as Map<String, dynamic>),
-    trialPeriodDays: json['trial_period_days'] as int,
-    usageType: json['usage_type'] as String,
+    trialPeriodDays: json['trial_period_days'] as int?,
+    usageType: json['usage_type'] as String?,
   );
 }
 
@@ -52,7 +51,7 @@ Map<String, dynamic> _$PlanToJson(Plan instance) => <String, dynamic>{
       'metadata': instance.metadata,
       'nickname': instance.nickname,
       'product': instance.product,
-      'tiers': instance.tiers?.map((e) => e?.toJson())?.toList(),
+      'tiers': instance.tiers?.map((e) => e.toJson()).toList(),
       'tiers_mode': instance.tiersMode,
       'transform_usage': instance.transformUsage?.toJson(),
       'trial_period_days': instance.trialPeriodDays,

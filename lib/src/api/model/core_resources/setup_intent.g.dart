@@ -8,30 +8,30 @@ part of 'setup_intent.dart';
 
 SetupIntent _$SetupIntentFromJson(Map<String, dynamic> json) {
   return SetupIntent(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    application: json['application'] as String,
-    cancellationReason: json['cancellation_reason'] as String,
-    clientSecret: json['client_secret'] as String,
-    created: json['created'] as int,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    application: json['application'] as String?,
+    cancellationReason: json['cancellation_reason'] as String?,
+    clientSecret: json['client_secret'] as String?,
+    created: json['created'] as int?,
     customer: json['customer'],
-    description: json['description'] as String,
+    description: json['description'] as String?,
     lastSetupError: json['last_setup_error'],
-    livemode: json['livemode'] as bool,
+    livemode: json['livemode'] as bool?,
     mandate: json['mandate'],
-    metadata: json['metadata'] as Map<String, dynamic>,
+    metadata: json['metadata'] as Map<String, dynamic>?,
     nextAction: json['next_action'] == null
         ? null
         : IntentAction.fromJson(json['next_action'] as Map<String, dynamic>),
     onBehalfOf: json['on_behalf_of'],
     paymentMethod: json['payment_method'],
     paymentMethodOptions: json['payment_method_options'],
-    paymentMethodTypes: (json['payment_method_types'] as List)
+    paymentMethodTypes: (json['payment_method_types'] as List<dynamic>?)
         ?.map((e) => e as String)
-        ?.toList(),
+        .toList(),
     singleUseMandate: json['single_use_mandate'],
-    status: json['status'] as String,
-    usage: json['usage'] as String,
+    status: json['status'] as String?,
+    usage: json['usage'] as String?,
   );
 }
 

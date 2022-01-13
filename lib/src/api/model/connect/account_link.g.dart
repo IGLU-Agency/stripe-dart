@@ -8,10 +8,10 @@ part of 'account_link.dart';
 
 AccountLink _$AccountLinkFromJson(Map<String, dynamic> json) {
   return AccountLink(
-    object: json['object'] as String,
-    created: json['created'] as int,
-    expiresAt: json['expires_at'] as int,
-    url: json['url'] as String,
+    object: json['object'] as String?,
+    created: json['created'] as int?,
+    expiresAt: json['expires_at'] as int?,
+    url: json['url'] as String?,
   );
 }
 

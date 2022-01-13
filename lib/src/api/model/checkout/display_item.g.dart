@@ -9,12 +9,12 @@ part of 'display_item.dart';
 DisplayItem _$DisplayItemFromJson(Map<String, dynamic> json) {
   return DisplayItem(
     amount: json['amount'],
-    currency: json['currency'] as String,
+    currency: json['currency'] as String?,
     custom: json['custom'] == null
         ? null
         : DisplayItemCustom.fromJson(json['custom'] as Map<String, dynamic>),
-    quantity: json['quantity'] as int,
-    type: json['type'] as String,
+    quantity: json['quantity'] as int?,
+    type: json['type'] as String?,
     sku: json['sku'] == null
         ? null
         : Sku.fromJson(json['sku'] as Map<String, dynamic>),

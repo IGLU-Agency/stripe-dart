@@ -8,28 +8,27 @@ part of 'checkout_session.dart';
 
 CheckoutSession _$CheckoutSessionFromJson(Map<String, dynamic> json) {
   return CheckoutSession(
-    billingAddressCollection: json['billing_address_collection'] as String,
-    cancelUrl: json['cancel_url'] as String,
-    clientReferenceId: json['client_reference_id'] as String,
+    billingAddressCollection: json['billing_address_collection'] as String?,
+    cancelUrl: json['cancel_url'] as String?,
+    clientReferenceId: json['client_reference_id'] as String?,
     customer: json['customer'],
-    customerEmail: json['customer_email'] as String,
-    displayItems: (json['display_items'] as List)
-        ?.map((e) =>
-            e == null ? null : DisplayItem.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    id: json['id'] as String,
+    customerEmail: json['customer_email'] as String?,
+    displayItems: (json['display_items'] as List<dynamic>?)
+        ?.map((e) => DisplayItem.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    id: json['id'] as String?,
     lineItems: json['line_items'] == null
         ? null
         : LineItems.fromJson(json['line_items'] as Map<String, dynamic>),
-    livemode: json['livemode'] as bool,
-    locale: json['locale'] as String,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    mode: json['mode'] as String,
-    object: json['object'] as String,
+    livemode: json['livemode'] as bool?,
+    locale: json['locale'] as String?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    mode: json['mode'] as String?,
+    object: json['object'] as String?,
     paymentIntent: json['payment_intent'],
-    paymentMethodTypes: (json['payment_method_types'] as List)
+    paymentMethodTypes: (json['payment_method_types'] as List<dynamic>?)
         ?.map((e) => e as String)
-        ?.toList(),
+        .toList(),
     setupIntent: json['setup_intent'],
     shipping: json['shipping'] == null
         ? null
@@ -38,9 +37,9 @@ CheckoutSession _$CheckoutSessionFromJson(Map<String, dynamic> json) {
         ? null
         : ShippingAddressCollection.fromJson(
             json['shipping_address_collection'] as Map<String, dynamic>),
-    submitType: json['submit_type'] as String,
+    submitType: json['submit_type'] as String?,
     subscription: json['subscription'],
-    successUrl: json['success_url'] as String,
+    successUrl: json['success_url'] as String?,
   );
 }
 
@@ -51,7 +50,7 @@ Map<String, dynamic> _$CheckoutSessionToJson(CheckoutSession instance) =>
       'client_reference_id': instance.clientReferenceId,
       'customer': instance.customer,
       'customer_email': instance.customerEmail,
-      'display_items': instance.displayItems?.map((e) => e?.toJson())?.toList(),
+      'display_items': instance.displayItems?.map((e) => e.toJson()).toList(),
       'line_items': instance.lineItems?.toJson(),
       'metadata': instance.metadata,
       'mode': instance.mode,

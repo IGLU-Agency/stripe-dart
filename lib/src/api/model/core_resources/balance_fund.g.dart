@@ -8,8 +8,8 @@ part of 'balance_fund.dart';
 
 BalanceFund _$BalanceFundFromJson(Map<String, dynamic> json) {
   return BalanceFund(
-    amount: json['amount'] as int,
-    currency: json['currency'] as String,
+    amount: json['amount'] as int?,
+    currency: json['currency'] as String?,
     sourceTypes: json['source_types'] == null
         ? null
         : SourceTypes.fromJson(json['source_types'] as Map<String, dynamic>),

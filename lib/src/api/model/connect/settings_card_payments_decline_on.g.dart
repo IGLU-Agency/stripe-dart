@@ -9,8 +9,8 @@ part of 'settings_card_payments_decline_on.dart';
 SettingsCardPaymentsDeclineOn _$SettingsCardPaymentsDeclineOnFromJson(
     Map<String, dynamic> json) {
   return SettingsCardPaymentsDeclineOn(
-    avsFailure: json['avs_failure'] as bool,
-    cvcFailure: json['cvc_failure'] as bool,
+    avsFailure: json['avs_failure'] as bool?,
+    cvcFailure: json['cvc_failure'] as bool?,
   );
 }
 

@@ -8,7 +8,7 @@ part of 'three_d_secure_usage.dart';
 
 ThreeDSecureUsage _$ThreeDSecureUsageFromJson(Map<String, dynamic> json) {
   return ThreeDSecureUsage(
-    supported: json['supported'] as bool,
+    supported: json['supported'] as bool?,
   );
 }
 

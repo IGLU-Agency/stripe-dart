@@ -2,25 +2,24 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:stripedart/src/api/model/core_resources/balance_transaction.dart';
 part 'dispute.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Dispute {
-  String id;
-  String object;
-  int amount;
-  List<BalanceTransaction> balanceTransactions;
+  String? id;
+  String? object;
+  int? amount;
+  List<BalanceTransaction>? balanceTransactions;
   dynamic charge;
-  int created;
-  String currency;
-  Map<String, dynamic> evidence;
+  int? created;
+  String? currency;
+  Map<String, dynamic>? evidence;
   //TODO: EVIDENCE DETAILS
   dynamic evidenceDetails;
-  bool isChargeRefundable;
-  bool livemode;
-  Map<String, dynamic> metadata;
+  bool? isChargeRefundable;
+  bool? livemode;
+  Map<String, dynamic>? metadata;
   dynamic paymentIntent;
-  String reason;
-  String status;
+  String? reason;
+  String? status;
 
   Dispute({
     this.id,

@@ -1,21 +1,20 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'event.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Event {
-  String id;
-  String object;
-  String connect;
-  String apiVersion;
-  int created;
+  String? id;
+  String? object;
+  String? connect;
+  String? apiVersion;
+  int? created;
   //TODO: DATA
   dynamic data;
-  bool livemode;
-  int pendingWebhooks;
+  bool? livemode;
+  int? pendingWebhooks;
   //TODO: REQUEST
   dynamic request;
-  String type;
+  String? type;
 
   Event(
       {this.id,

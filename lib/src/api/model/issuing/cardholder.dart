@@ -7,24 +7,23 @@ import 'package:stripedart/src/api/model/issuing/spending_controls.dart';
 
 part 'cardholder.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Cardholder {
-  String id;
-  String object;
-  Billing billing;
-  Company company;
-  int created;
-  String email;
-  Individual individual;
-  bool livemode;
-  Map<String, dynamic> metadata;
-  String name;
-  String phoneNumber;
-  Requirements requirements;
-  SpendingControls spendingControls;
-  String status;
-  String type;
+  String? id;
+  String? object;
+  Billing? billing;
+  Company? company;
+  int? created;
+  String? email;
+  Individual? individual;
+  bool? livemode;
+  Map<String, dynamic>? metadata;
+  String? name;
+  String? phoneNumber;
+  Requirements? requirements;
+  SpendingControls? spendingControls;
+  String? status;
+  String? type;
 
   Cardholder(
       {this.id,

@@ -8,9 +8,9 @@ part of 'au_becs_debit.dart';
 
 AuBecsDebit _$AuBecsDebitFromJson(Map<String, dynamic> json) {
   return AuBecsDebit(
-    bsbNumber: json['bsb_number'] as String,
-    fingerprint: json['fingerprint'] as String,
-    last4: json['last4'] as String,
+    bsbNumber: json['bsb_number'] as String?,
+    fingerprint: json['fingerprint'] as String?,
+    last4: json['last4'] as String?,
   );
 }
 

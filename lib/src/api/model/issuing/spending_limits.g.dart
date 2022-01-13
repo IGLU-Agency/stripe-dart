@@ -9,9 +9,11 @@ part of 'spending_limits.dart';
 SpendingLimits _$SpendingLimitsFromJson(Map<String, dynamic> json) {
   return SpendingLimits(
     amount: json['amount'],
-    categories: (json['categories'] as List)?.map((e) => e as String)?.toList(),
-    interval: json['interval'] as String,
-    spendingLimitsCurrency: json['spending_limits_currency'] as String,
+    categories: (json['categories'] as List<dynamic>?)
+        ?.map((e) => e as String)
+        .toList(),
+    interval: json['interval'] as String?,
+    spendingLimitsCurrency: json['spending_limits_currency'] as String?,
   );
 }
 

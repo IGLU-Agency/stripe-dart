@@ -2,13 +2,12 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'spending_limits.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SpendingLimits {
   dynamic amount;
-  List<String> categories;
-  String interval;
-  String spendingLimitsCurrency;
+  List<String>? categories;
+  String? interval;
+  String? spendingLimitsCurrency;
 
   SpendingLimits({
     this.amount,

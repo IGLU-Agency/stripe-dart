@@ -8,15 +8,15 @@ part of 'payment_method.dart';
 
 PaymentMethod _$PaymentMethodFromJson(Map<String, dynamic> json) {
   return PaymentMethod(
-    id: json['id'] as String,
+    id: json['id'] as String?,
     billingDetails: json['billing_details'] == null
         ? null
         : Billing.fromJson(json['billing_details'] as Map<String, dynamic>),
     auBecsDebit: json['au_becs_debit'] == null
         ? null
         : AuBecsDebit.fromJson(json['au_becs_debit'] as Map<String, dynamic>),
-    cardPresent: json['card_present'] as Map<String, dynamic>,
-    created: json['created'] as int,
+    cardPresent: json['card_present'] as Map<String, dynamic>?,
+    created: json['created'] as int?,
     customer: json['customer'],
     fpx: json['fpx'] == null
         ? null
@@ -24,13 +24,13 @@ PaymentMethod _$PaymentMethodFromJson(Map<String, dynamic> json) {
     ideal: json['ideal'] == null
         ? null
         : Ideal.fromJson(json['ideal'] as Map<String, dynamic>),
-    livemode: json['livemode'] as bool,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    object: json['object'] as String,
+    livemode: json['livemode'] as bool?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    object: json['object'] as String?,
     sepaDebit: json['sepa_debit'] == null
         ? null
         : SepaDebit.fromJson(json['sepa_debit'] as Map<String, dynamic>),
-    type: json['type'] as String,
+    type: json['type'] as String?,
     card: json['card'] == null
         ? null
         : Card.fromJson(json['card'] as Map<String, dynamic>),

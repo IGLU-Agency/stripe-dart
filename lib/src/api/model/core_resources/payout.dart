@@ -1,29 +1,28 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'payout.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Payout {
-  String id;
-  String object;
-  int amount;
-  int arrivalDate;
-  bool automatic;
+  String? id;
+  String? object;
+  int? amount;
+  int? arrivalDate;
+  bool? automatic;
   dynamic balanceTransaction;
-  int created;
-  String currency;
-  String description;
+  int? created;
+  String? currency;
+  String? description;
   dynamic destination;
-  String failureBalanceTransaction;
-  String failureCode;
-  String failureMessage;
-  bool livemode;
-  Map<String, dynamic> metadata;
-  String method;
-  String sourceType;
-  String statementDescriptor;
-  String status;
-  String type;
+  String? failureBalanceTransaction;
+  String? failureCode;
+  String? failureMessage;
+  bool? livemode;
+  Map<String, dynamic>? metadata;
+  String? method;
+  String? sourceType;
+  String? statementDescriptor;
+  String? status;
+  String? type;
 
   Payout({
     this.id,

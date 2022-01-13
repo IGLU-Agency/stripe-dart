@@ -10,8 +10,8 @@ Document _$DocumentFromJson(Map<String, dynamic> json) {
   return Document(
     back: json['back'],
     front: json['front'],
-    details: json['details'] as String,
-    detailsCode: json['details_code'] as String,
+    details: json['details'] as String?,
+    detailsCode: json['details_code'] as String?,
   );
 }
 

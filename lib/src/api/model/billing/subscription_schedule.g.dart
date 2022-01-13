@@ -8,21 +8,21 @@ part of 'subscription_schedule.dart';
 
 SubscriptionSchedule _$SubscriptionScheduleFromJson(Map<String, dynamic> json) {
   return SubscriptionSchedule(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    canceledAt: json['canceled_at'] as int,
-    completedAt: json['completed_at'] as int,
-    created: json['created'] as int,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    canceledAt: json['canceled_at'] as int?,
+    completedAt: json['completed_at'] as int?,
+    created: json['created'] as int?,
     currentPhase: json['current_phase'],
     customer: json['customer'],
     defaultSettings: json['default_settings'],
-    endBehavior: json['end_behavior'] as String,
-    livemode: json['livemode'] as bool,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    phases: json['phases'] as List,
-    releasedAt: json['released_at'] as int,
-    releasedSubscription: json['released_subscription'] as String,
-    status: json['status'] as String,
+    endBehavior: json['end_behavior'] as String?,
+    livemode: json['livemode'] as bool?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    phases: json['phases'] as List<dynamic>?,
+    releasedAt: json['released_at'] as int?,
+    releasedSubscription: json['released_subscription'] as String?,
+    status: json['status'] as String?,
     subscription: json['subscription'],
   );
 }

@@ -8,15 +8,15 @@ part of 'value_list.dart';
 
 ValueList _$ValueListFromJson(Map<String, dynamic> json) {
   return ValueList(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    created: json['created'] as int,
-    livemode: json['livemode'] as bool,
-    alias: json['alias'] as String,
-    createdBy: json['created_by'] as String,
-    itemType: json['item_type'] as String,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    name: json['name'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    created: json['created'] as int?,
+    livemode: json['livemode'] as bool?,
+    alias: json['alias'] as String?,
+    createdBy: json['created_by'] as String?,
+    itemType: json['item_type'] as String?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    name: json['name'] as String?,
   )..listItems = json['list_items'] == null
       ? null
       : ListItems.fromJson(json['list_items'] as Map<String, dynamic>);

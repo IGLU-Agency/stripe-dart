@@ -8,17 +8,17 @@ part of 'invoice_item.dart';
 
 InvoiceItem _$InvoiceItemFromJson(Map<String, dynamic> json) {
   return InvoiceItem(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    amount: json['amount'] as int,
-    currency: json['currency'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    amount: json['amount'] as int?,
+    currency: json['currency'] as String?,
     customer: json['customer'],
-    date: json['date'] as int,
-    description: json['description'] as String,
-    discountable: json['discountable'] as bool,
+    date: json['date'] as int?,
+    description: json['description'] as String?,
+    discountable: json['discountable'] as bool?,
     invoice: json['invoice'],
-    livemode: json['livemode'] as bool,
-    metadata: json['metadata'] as Map<String, dynamic>,
+    livemode: json['livemode'] as bool?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -28,16 +28,15 @@ InvoiceItem _$InvoiceItemFromJson(Map<String, dynamic> json) {
     price: json['price'] == null
         ? null
         : Price.fromJson(json['price'] as Map<String, dynamic>),
-    proration: json['proration'] as bool,
-    quantity: json['quantity'] as int,
+    proration: json['proration'] as bool?,
+    quantity: json['quantity'] as int?,
     subscription: json['subscription'],
-    taxRates: (json['tax_rates'] as List)
-        ?.map(
-            (e) => e == null ? null : Rate.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    unitAmount: json['unit_amount'] as int,
-    unitAmountDecimal: json['unit_amount_decimal'] as String,
-  )..priceBackFilled = json['price_back_filled'] as bool;
+    taxRates: (json['tax_rates'] as List<dynamic>?)
+        ?.map((e) => Rate.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    unitAmount: json['unit_amount'] as int?,
+    unitAmountDecimal: json['unit_amount_decimal'] as String?,
+  )..priceBackFilled = json['price_back_filled'] as bool?;
 }
 
 Map<String, dynamic> _$InvoiceItemToJson(InvoiceItem instance) =>
@@ -60,7 +59,7 @@ Map<String, dynamic> _$InvoiceItemToJson(InvoiceItem instance) =>
       'proration': instance.proration,
       'quantity': instance.quantity,
       'subscription': instance.subscription,
-      'tax_rates': instance.taxRates?.map((e) => e?.toJson())?.toList(),
+      'tax_rates': instance.taxRates?.map((e) => e.toJson()).toList(),
       'unit_amount': instance.unitAmount,
       'unit_amount_decimal': instance.unitAmountDecimal,
     };

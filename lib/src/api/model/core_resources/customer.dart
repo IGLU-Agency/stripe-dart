@@ -4,35 +4,34 @@ import 'package:stripedart/src/api/model/terminal/address.dart';
 
 part 'customer.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Customer {
-  String id;
-  Address address;
-  String description;
-  String email;
-  Map<String, dynamic> metadata;
-  String name;
-  String phone;
-  Shipping shipping;
-  String object;
-  int balance;
-  int created;
-  String currency;
+  String? id;
+  Address? address;
+  String? description;
+  String? email;
+  Map<String, dynamic>? metadata;
+  String? name;
+  String? phone;
+  Shipping? shipping;
+  String? object;
+  int? balance;
+  int? created;
+  String? currency;
   dynamic defaultSource;
-  bool delinquent;
+  bool? delinquent;
   //TODO discount
   dynamic discount;
-  String invoicePrefix;
+  String? invoicePrefix;
   //TODO invoice settings
   dynamic invoiceSettings;
-  bool livemode;
-  int nextInvoiceSequence;
-  List<String> preferredLocales;
+  bool? livemode;
+  int? nextInvoiceSequence;
+  List<String>? preferredLocales;
   //TODO: sources
   dynamic sources;
   dynamic subscriptions;
-  String taxExempt;
+  String? taxExempt;
   //TODO: tax_ids
   dynamic taxIds;
 

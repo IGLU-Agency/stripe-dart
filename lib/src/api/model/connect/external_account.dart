@@ -2,42 +2,41 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'external_account.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ExternalAccount {
-  String id;
-  String object;
+  String? id;
+  String? object;
   dynamic account;
-  String addressCity;
-  String addressCountry;
-  String addressLine1;
-  String addressLine1Check;
-  String addressLine2;
-  String addressState;
-  String addressZip;
-  String addressZipCheck;
-  List<String> availablePayoutMethods;
-  String brand;
-  String country;
-  String currency;
+  String? addressCity;
+  String? addressCountry;
+  String? addressLine1;
+  String? addressLine1Check;
+  String? addressLine2;
+  String? addressState;
+  String? addressZip;
+  String? addressZipCheck;
+  List<String>? availablePayoutMethods;
+  String? brand;
+  String? country;
+  String? currency;
   dynamic customer;
-  String cvcCheck;
-  bool defaultForCurrency;
-  String dynamicLast4;
-  int expMonth;
-  int expYear;
-  String fingerprint;
-  String funding;
-  String last4;
-  Map<String, dynamic> metadata;
-  String name;
+  String? cvcCheck;
+  bool? defaultForCurrency;
+  String? dynamicLast4;
+  int? expMonth;
+  int? expYear;
+  String? fingerprint;
+  String? funding;
+  String? last4;
+  Map<String, dynamic>? metadata;
+  String? name;
   dynamic recipient;
-  String tokenizationMethod;
-  String accountHolderName;
-  String accountHolderType;
-  String bankName;
-  String routingNumber;
-  String status;
+  String? tokenizationMethod;
+  String? accountHolderName;
+  String? accountHolderType;
+  String? bankName;
+  String? routingNumber;
+  String? status;
 
   ExternalAccount(
       {this.id,

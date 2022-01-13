@@ -8,21 +8,21 @@ part of 'coupon.dart';
 
 Coupon _$CouponFromJson(Map<String, dynamic> json) {
   return Coupon(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    amountOff: json['amount_off'] as int,
-    created: json['created'] as int,
-    currency: json['currency'] as String,
-    duration: json['duration'] as String,
-    durationInMonths: json['duration_in_months'] as int,
-    livemode: json['livemode'] as bool,
-    maxRedemptions: json['max_redemptions'] as int,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    name: json['name'] as String,
-    percentOff: (json['percent_off'] as num)?.toDouble(),
-    redeemBy: json['redeem_by'] as int,
-    timesRedeemed: json['times_redeemed'] as int,
-    valid: json['valid'] as bool,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    amountOff: json['amount_off'] as int?,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
+    duration: json['duration'] as String?,
+    durationInMonths: json['duration_in_months'] as int?,
+    livemode: json['livemode'] as bool?,
+    maxRedemptions: json['max_redemptions'] as int?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    name: json['name'] as String?,
+    percentOff: (json['percent_off'] as num?)?.toDouble(),
+    redeemBy: json['redeem_by'] as int?,
+    timesRedeemed: json['times_redeemed'] as int?,
+    valid: json['valid'] as bool?,
   );
 }
 

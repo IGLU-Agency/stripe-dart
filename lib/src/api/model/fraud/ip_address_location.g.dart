@@ -8,11 +8,11 @@ part of 'ip_address_location.dart';
 
 IpAddressLocation _$IpAddressLocationFromJson(Map<String, dynamic> json) {
   return IpAddressLocation(
-    city: json['city'] as String,
-    country: json['country'] as String,
-    latitude: (json['latitude'] as num)?.toDouble(),
-    longitude: (json['longitude'] as num)?.toDouble(),
-    region: json['region'] as String,
+    city: json['city'] as String?,
+    country: json['country'] as String?,
+    latitude: (json['latitude'] as num?)?.toDouble(),
+    longitude: (json['longitude'] as num?)?.toDouble(),
+    region: json['region'] as String?,
   );
 }
 

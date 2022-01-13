@@ -8,32 +8,31 @@ part of 'checkout_price.dart';
 
 CheckoutPrice _$CheckoutPriceFromJson(Map<String, dynamic> json) {
   return CheckoutPrice(
-    active: json['active'] as bool,
-    billingScheme: json['billing_scheme'] as String,
-    created: json['created'] as int,
-    currency: json['currency'] as String,
-    id: json['id'] as String,
-    livemode: json['livemode'] as bool,
-    lookupKey: json['lookup_key'] as String,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    nickname: json['nickname'] as String,
-    object: json['object'] as String,
+    active: json['active'] as bool?,
+    billingScheme: json['billing_scheme'] as String?,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
+    id: json['id'] as String?,
+    livemode: json['livemode'] as bool?,
+    lookupKey: json['lookup_key'] as String?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    nickname: json['nickname'] as String?,
+    object: json['object'] as String?,
     product: json['product'],
     recurring: json['recurring'] == null
         ? null
         : Recurring.fromJson(json['recurring'] as Map<String, dynamic>),
-    tiers: (json['tiers'] as List)
-        ?.map(
-            (e) => e == null ? null : Tier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    tiersMode: json['tiers_mode'] as String,
+    tiers: (json['tiers'] as List<dynamic>?)
+        ?.map((e) => Tier.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    tiersMode: json['tiers_mode'] as String?,
     transformQuantity: json['transform_quantity'] == null
         ? null
         : Transform.fromJson(
             json['transform_quantity'] as Map<String, dynamic>),
-    type: json['type'] as String,
-    unitAmount: json['unit_amount'] as int,
-    unitAmountDecimal: json['unit_amount_decimal'] as String,
+    type: json['type'] as String?,
+    unitAmount: json['unit_amount'] as int?,
+    unitAmountDecimal: json['unit_amount_decimal'] as String?,
   );
 }
 
@@ -51,7 +50,7 @@ Map<String, dynamic> _$CheckoutPriceToJson(CheckoutPrice instance) =>
       'nickname': instance.nickname,
       'product': instance.product,
       'recurring': instance.recurring?.toJson(),
-      'tiers': instance.tiers?.map((e) => e?.toJson())?.toList(),
+      'tiers': instance.tiers?.map((e) => e.toJson()).toList(),
       'tiers_mode': instance.tiersMode,
       'transform_quantity': instance.transformQuantity?.toJson(),
       'type': instance.type,

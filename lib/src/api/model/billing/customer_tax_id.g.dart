@@ -8,14 +8,14 @@ part of 'customer_tax_id.dart';
 
 CustomerTaxId _$CustomerTaxIdFromJson(Map<String, dynamic> json) {
   return CustomerTaxId(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    country: json['country'] as String,
-    created: json['created'] as int,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    country: json['country'] as String?,
+    created: json['created'] as int?,
     customer: json['customer'],
-    livemode: json['livemode'] as bool,
-    type: json['type'] as String,
-    value: json['value'] as String,
+    livemode: json['livemode'] as bool?,
+    type: json['type'] as String?,
+    value: json['value'] as String?,
     verification: json['verification'] == null
         ? null
         : TaxIdVerification.fromJson(

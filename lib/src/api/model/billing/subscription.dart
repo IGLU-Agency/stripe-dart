@@ -6,33 +6,32 @@ import 'package:stripedart/src/api/model/billing/plan.dart';
 import 'package:stripedart/src/api/model/billing/subscription_items.dart';
 part 'subscription.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Subscription {
-  String id;
-  String object;
+  String? id;
+  String? object;
   dynamic applicationFeePercent;
-  int billingCycleAnchor;
-  BillingThresholds billingThresholds;
-  int cancelAt;
-  bool cancelAtPeriodEnd;
-  int canceledAt;
-  String collectionMethod;
-  int created;
-  int currentPeriodEnd;
-  int currentPeriodStart;
+  int? billingCycleAnchor;
+  BillingThresholds? billingThresholds;
+  int? cancelAt;
+  bool? cancelAtPeriodEnd;
+  int? canceledAt;
+  String? collectionMethod;
+  int? created;
+  int? currentPeriodEnd;
+  int? currentPeriodStart;
   dynamic customer;
-  int daysUntilDue;
+  int? daysUntilDue;
   dynamic defaultPaymentMethod;
   dynamic defaultSource;
-  List<Rate> defaultTaxRates;
-  Discount discount;
-  int endedAt;
-  SubscriptionItems items;
+  List<Rate>? defaultTaxRates;
+  Discount? discount;
+  int? endedAt;
+  SubscriptionItems? items;
   dynamic latestInvoice;
-  bool livemode;
-  Map<String, dynamic> metadata;
-  int nextPendingInvoiceItemInvoice;
+  bool? livemode;
+  Map<String, dynamic>? metadata;
+  int? nextPendingInvoiceItemInvoice;
   //TODO: pause collection
   dynamic pauseCollection;
   //TODO: pending invoice item interval
@@ -40,13 +39,13 @@ class Subscription {
   dynamic pendingSetupIntent;
   //TODO: pending update
   dynamic pendingUpdate;
-  Plan plan;
-  int quantity;
+  Plan? plan;
+  int? quantity;
   dynamic schedule;
-  int startDate;
-  String status;
+  int? startDate;
+  String? status;
   dynamic taxPercent;
-  int trialEnd;
+  int? trialEnd;
   dynamic trialStart;
 
   Subscription({

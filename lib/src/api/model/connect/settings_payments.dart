@@ -2,12 +2,11 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'settings_payments.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SettingsPayments {
-  String statementDescriptor;
-  String statementDescriptorKana;
-  String statementDescriptorKanji;
+  String? statementDescriptor;
+  String? statementDescriptorKana;
+  String? statementDescriptorKanji;
 
   SettingsPayments(
       {this.statementDescriptor,

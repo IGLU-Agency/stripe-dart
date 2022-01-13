@@ -3,19 +3,18 @@ import 'package:stripedart/src/api/model/terminal/address.dart';
 
 part 'shipping.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Shipping {
-  Address address;
-  String carrier;
-  int eta;
-  String name;
-  String phone;
-  String service;
-  String status;
-  String trackingNumber;
-  String trackingUrl;
-  String type;
+  Address? address;
+  String? carrier;
+  int? eta;
+  String? name;
+  String? phone;
+  String? service;
+  String? status;
+  String? trackingNumber;
+  String? trackingUrl;
+  String? type;
 
   Shipping(
       {this.address,

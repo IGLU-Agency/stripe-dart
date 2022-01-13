@@ -8,8 +8,8 @@ part of 'ideal.dart';
 
 Ideal _$IdealFromJson(Map<String, dynamic> json) {
   return Ideal(
-    bank: json['bank'] as String,
-    bic: json['bic'] as String,
+    bank: json['bank'] as String?,
+    bic: json['bic'] as String?,
   );
 }
 

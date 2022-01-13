@@ -8,20 +8,23 @@ part of 'country_spec.dart';
 
 CountrySpec _$CountrySpecFromJson(Map<String, dynamic> json) {
   return CountrySpec(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    defaultCurrency: json['default_currency'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    defaultCurrency: json['default_currency'] as String?,
     supportedBankAccountCurrencies:
-        json['supported_bank_account_currencies'] as Map<String, dynamic>,
-    supportedPaymentCurrencies: (json['supported_payment_currencies'] as List)
-        ?.map((e) => e as String)
-        ?.toList(),
-    supportedPaymentMethods: (json['supported_payment_methods'] as List)
-        ?.map((e) => e as String)
-        ?.toList(),
-    supportedTransferCountries: (json['supported_transfer_countries'] as List)
-        ?.map((e) => e as String)
-        ?.toList(),
+        json['supported_bank_account_currencies'] as Map<String, dynamic>?,
+    supportedPaymentCurrencies:
+        (json['supported_payment_currencies'] as List<dynamic>?)
+            ?.map((e) => e as String)
+            .toList(),
+    supportedPaymentMethods:
+        (json['supported_payment_methods'] as List<dynamic>?)
+            ?.map((e) => e as String)
+            .toList(),
+    supportedTransferCountries:
+        (json['supported_transfer_countries'] as List<dynamic>?)
+            ?.map((e) => e as String)
+            .toList(),
     verificationFields: json['verification_fields'] == null
         ? null
         : VerificationFields.fromJson(

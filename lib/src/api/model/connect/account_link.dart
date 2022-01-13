@@ -2,13 +2,12 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'account_link.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class AccountLink {
-  String object;
-  int created;
-  int expiresAt;
-  String url;
+  String? object;
+  int? created;
+  int? expiresAt;
+  String? url;
 
   AccountLink({
     this.object,

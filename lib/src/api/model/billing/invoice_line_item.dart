@@ -7,28 +7,27 @@ import 'package:stripedart/src/api/model/billing/period.dart';
 
 part 'invoice_line_item.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class InvoiceLineItem {
-  String id;
-  String object;
-  int amount;
-  String currency;
-  String description;
-  Map<String, dynamic> metadata;
-  Period period;
-  Plan plan;
-  bool proration;
-  int quantity;
-  String type;
-  bool discountable;
-  String invoiceItem;
-  bool livemode;
-  Price price;
-  String subscription;
-  String subscriptionItem;
-  List<TaxAmount> taxAmounts;
-  List<Rate> taxRates;
+  String? id;
+  String? object;
+  int? amount;
+  String? currency;
+  String? description;
+  Map<String, dynamic>? metadata;
+  Period? period;
+  Plan? plan;
+  bool? proration;
+  int? quantity;
+  String? type;
+  bool? discountable;
+  String? invoiceItem;
+  bool? livemode;
+  Price? price;
+  String? subscription;
+  String? subscriptionItem;
+  List<TaxAmount>? taxAmounts;
+  List<Rate>? taxRates;
 
   InvoiceLineItem(
       {this.id,

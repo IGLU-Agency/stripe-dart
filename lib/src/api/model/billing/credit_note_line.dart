@@ -4,22 +4,21 @@ import 'package:stripedart/src/api/model/billing/rate.dart';
 
 part 'credit_note_line.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class CreditNoteLine {
-  String id;
-  String object;
-  int amount;
-  int discountAmount;
-  String description;
-  String invoiceLineItem;
-  bool livemode;
-  int quantity;
-  List<TaxAmount> taxAmounts;
-  List<Rate> taxRates;
-  String type;
-  int unitAmount;
-  String unitAmountDecimal;
+  String? id;
+  String? object;
+  int? amount;
+  int? discountAmount;
+  String? description;
+  String? invoiceLineItem;
+  bool? livemode;
+  int? quantity;
+  List<TaxAmount>? taxAmounts;
+  List<Rate>? taxRates;
+  String? type;
+  int? unitAmount;
+  String? unitAmountDecimal;
 
   CreditNoteLine(
       {this.id,

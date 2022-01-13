@@ -8,25 +8,25 @@ part of 'sku.dart';
 
 Sku _$SkuFromJson(Map<String, dynamic> json) {
   return Sku(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    active: json['active'] as bool,
-    attributes: json['attributes'] as Map<String, dynamic>,
-    created: json['created'] as int,
-    currency: json['currency'] as String,
-    image: json['image'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    active: json['active'] as bool?,
+    attributes: json['attributes'] as Map<String, dynamic>?,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
+    image: json['image'] as String?,
     inventory: json['inventory'] == null
         ? null
         : Inventory.fromJson(json['inventory'] as Map<String, dynamic>),
-    livemode: json['livemode'] as bool,
-    metadata: json['metadata'] as Map<String, dynamic>,
+    livemode: json['livemode'] as bool?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
     packageDimensions: json['package_dimensions'] == null
         ? null
         : PackageDimensions.fromJson(
             json['package_dimensions'] as Map<String, dynamic>),
-    price: json['price'] as int,
+    price: json['price'] as int?,
     product: json['product'],
-    updated: json['updated'] as int,
+    updated: json['updated'] as int?,
   );
 }
 

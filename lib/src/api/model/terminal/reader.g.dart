@@ -8,17 +8,17 @@ part of 'reader.dart';
 
 Reader _$ReaderFromJson(Map<String, dynamic> json) {
   return Reader(
-    id: json['id'] as String,
-    deviceType: json['device_type'] as String,
-    label: json['label'] as String,
-    location: json['location'] as String,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    serialNumber: json['serial_number'] as String,
-    status: json['status'] as String,
-    object: json['object'] as String,
-    deviceSwVersion: json['device_sw_version'] as String,
-    ipAddress: json['ip_address'] as String,
-    livemode: json['livemode'] as bool,
+    id: json['id'] as String?,
+    deviceType: json['device_type'] as String?,
+    label: json['label'] as String?,
+    location: json['location'] as String?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    serialNumber: json['serial_number'] as String?,
+    status: json['status'] as String?,
+    object: json['object'] as String?,
+    deviceSwVersion: json['device_sw_version'] as String?,
+    ipAddress: json['ip_address'] as String?,
+    livemode: json['livemode'] as bool?,
   );
 }
 

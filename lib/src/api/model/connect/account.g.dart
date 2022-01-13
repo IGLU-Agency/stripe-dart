@@ -8,27 +8,27 @@ part of 'account.dart';
 
 Account _$AccountFromJson(Map<String, dynamic> json) {
   return Account(
-    id: json['id'] as String,
-    businessType: json['business_type'] as String,
+    id: json['id'] as String?,
+    businessType: json['business_type'] as String?,
     company: json['company'] == null
         ? null
         : Company.fromJson(json['company'] as Map<String, dynamic>),
-    country: json['country'] as String,
-    email: json['email'] as String,
+    country: json['country'] as String?,
+    email: json['email'] as String?,
     individual: json['individual'] == null
         ? null
         : Individual.fromJson(json['individual'] as Map<String, dynamic>),
-    metadata: json['metadata'] as Map<String, dynamic>,
+    metadata: json['metadata'] as Map<String, dynamic>?,
     requirements: json['requirements'] == null
         ? null
         : Requirements.fromJson(json['requirements'] as Map<String, dynamic>),
-    type: json['type'] as String,
-    chargesEnabled: json['charges_enabled'] as bool,
-    created: json['created'] as int,
-    defaultCurrency: json['default_currency'] as String,
-    detailsSubmitted: json['details_submitted'] as bool,
-    object: json['object'] as String,
-    payoutsEnabled: json['payouts_enabled'] as bool,
+    type: json['type'] as String?,
+    chargesEnabled: json['charges_enabled'] as bool?,
+    created: json['created'] as int?,
+    defaultCurrency: json['default_currency'] as String?,
+    detailsSubmitted: json['details_submitted'] as bool?,
+    object: json['object'] as String?,
+    payoutsEnabled: json['payouts_enabled'] as bool?,
     tosAcceptance: json['tos_acceptance'] == null
         ? null
         : TosAcceptance.fromJson(

@@ -5,16 +5,15 @@ import 'package:stripedart/src/api/model/checkout/sku.dart';
 
 part 'display_item.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class DisplayItem {
   dynamic amount;
-  String currency;
-  DisplayItemCustom custom;
-  int quantity;
-  String type;
-  Sku sku;
-  Plan plan;
+  String? currency;
+  DisplayItemCustom? custom;
+  int? quantity;
+  String? type;
+  Sku? sku;
+  Plan? plan;
 
   DisplayItem(
       {this.amount,

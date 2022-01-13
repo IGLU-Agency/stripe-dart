@@ -11,31 +11,32 @@ Customer _$CustomerFromJson(Map<String, dynamic> json) {
     address: json['address'] == null
         ? null
         : Address.fromJson(json['address'] as Map<String, dynamic>),
-    balance: json['balance'] as int,
-    created: json['created'] as int,
-    currency: json['currency'] as String,
+    balance: json['balance'] as int?,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
     defaultSource: json['default_source'],
-    delinquent: json['delinquent'] as bool,
-    description: json['description'] as String,
+    delinquent: json['delinquent'] as bool?,
+    description: json['description'] as String?,
     discount: json['discount'],
-    email: json['email'] as String,
-    id: json['id'] as String,
-    invoicePrefix: json['invoice_prefix'] as String,
+    email: json['email'] as String?,
+    id: json['id'] as String?,
+    invoicePrefix: json['invoice_prefix'] as String?,
     invoiceSettings: json['invoice_settings'],
-    livemode: json['livemode'] as bool,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    name: json['name'] as String,
-    nextInvoiceSequence: json['next_invoice_sequence'] as int,
-    object: json['object'] as String,
-    phone: json['phone'] as String,
-    preferredLocales:
-        (json['preferred_locales'] as List)?.map((e) => e as String)?.toList(),
+    livemode: json['livemode'] as bool?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    name: json['name'] as String?,
+    nextInvoiceSequence: json['next_invoice_sequence'] as int?,
+    object: json['object'] as String?,
+    phone: json['phone'] as String?,
+    preferredLocales: (json['preferred_locales'] as List<dynamic>?)
+        ?.map((e) => e as String)
+        .toList(),
     shipping: json['shipping'] == null
         ? null
         : Shipping.fromJson(json['shipping'] as Map<String, dynamic>),
     sources: json['sources'],
     subscriptions: json['subscriptions'],
-    taxExempt: json['tax_exempt'] as String,
+    taxExempt: json['tax_exempt'] as String?,
     taxIds: json['tax_ids'],
   );
 }

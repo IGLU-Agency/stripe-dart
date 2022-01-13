@@ -8,14 +8,14 @@ part of 'location.dart';
 
 Location _$LocationFromJson(Map<String, dynamic> json) {
   return Location(
-    id: json['id'] as String,
+    id: json['id'] as String?,
     address: json['address'] == null
         ? null
         : Address.fromJson(json['address'] as Map<String, dynamic>),
-    displayName: json['display_name'] as String,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    object: json['object'] as String,
-    livemode: json['livemode'] as bool,
+    displayName: json['display_name'] as String?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    object: json['object'] as String?,
+    livemode: json['livemode'] as bool?,
   );
 }
 

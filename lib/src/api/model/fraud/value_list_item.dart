@@ -2,16 +2,15 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'value_list_item.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class ValueListItem {
-  String id;
-  String value;
-  String valueList;
-  String object;
-  int created;
-  String createdBy;
-  bool livemode;
+  String? id;
+  String? value;
+  String? valueList;
+  String? object;
+  int? created;
+  String? createdBy;
+  bool? livemode;
 
   ValueListItem(
       {this.created,

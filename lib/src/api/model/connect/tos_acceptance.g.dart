@@ -8,9 +8,9 @@ part of 'tos_acceptance.dart';
 
 TosAcceptance _$TosAcceptanceFromJson(Map<String, dynamic> json) {
   return TosAcceptance(
-    date: json['date'] as int,
-    ip: json['ip'] as String,
-    userAgent: json['user_agent'] as String,
+    date: json['date'] as int?,
+    ip: json['ip'] as String?,
+    userAgent: json['user_agent'] as String?,
   );
 }
 

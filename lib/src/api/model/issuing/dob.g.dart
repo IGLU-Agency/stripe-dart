@@ -8,9 +8,9 @@ part of 'dob.dart';
 
 Dob _$DobFromJson(Map<String, dynamic> json) {
   return Dob(
-    day: json['day'] as int,
-    month: json['month'] as int,
-    year: json['year'] as int,
+    day: json['day'] as int?,
+    month: json['month'] as int?,
+    year: json['year'] as int?,
   );
 }
 

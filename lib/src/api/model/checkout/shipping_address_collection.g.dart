@@ -9,8 +9,9 @@ part of 'shipping_address_collection.dart';
 ShippingAddressCollection _$ShippingAddressCollectionFromJson(
     Map<String, dynamic> json) {
   return ShippingAddressCollection(
-    allowedCountries:
-        (json['allowed_countries'] as List)?.map((e) => e as String)?.toList(),
+    allowedCountries: (json['allowed_countries'] as List<dynamic>?)
+        ?.map((e) => e as String)
+        .toList(),
   );
 }
 

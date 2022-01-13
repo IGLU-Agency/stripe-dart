@@ -3,11 +3,10 @@ import 'package:stripedart/src/api/model/connect/settings_card_payments_decline_
 
 part 'settings_card_payments.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SettingsCardPayments {
-  SettingsCardPaymentsDeclineOn declineOn;
-  String statementDescriptorPrefix;
+  SettingsCardPaymentsDeclineOn? declineOn;
+  String? statementDescriptorPrefix;
 
   SettingsCardPayments({this.declineOn, this.statementDescriptorPrefix});
   factory SettingsCardPayments.fromJson(Map<String, dynamic> json) =>

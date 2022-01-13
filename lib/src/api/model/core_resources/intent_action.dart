@@ -3,11 +3,10 @@ import 'package:stripedart/src/api/model/core_resources/redirect_to_url.dart';
 
 part 'intent_action.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class IntentAction {
-  RedirectToUrl redirectToUrl;
-  String type;
+  RedirectToUrl? redirectToUrl;
+  String? type;
   dynamic useStripeSdk;
 
   IntentAction({this.type, this.useStripeSdk});

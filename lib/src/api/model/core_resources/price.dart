@@ -3,28 +3,27 @@ import 'package:stripedart/src/api/model/checkout/tier.dart';
 import 'package:stripedart/src/api/model/checkout/transform.dart';
 part 'price.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Price {
-  String id;
-  String object;
-  bool active;
-  String billingScheme;
-  int created;
-  String currency;
-  bool livemode;
-  String lookupKey;
-  Map<String, dynamic> metadata;
-  String nickname;
+  String? id;
+  String? object;
+  bool? active;
+  String? billingScheme;
+  int? created;
+  String? currency;
+  bool? livemode;
+  String? lookupKey;
+  Map<String, dynamic>? metadata;
+  String? nickname;
   dynamic product;
   //TODO: recurring
   dynamic recurring;
-  List<Tier> tiers;
-  String tiersMode;
-  Transform transformQuantity;
-  String type;
-  int unitAmount;
-  String unitAmountDecimal;
+  List<Tier>? tiers;
+  String? tiersMode;
+  Transform? transformQuantity;
+  String? type;
+  int? unitAmount;
+  String? unitAmountDecimal;
 
   Price({
     this.id,

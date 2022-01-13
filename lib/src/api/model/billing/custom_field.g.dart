@@ -8,8 +8,8 @@ part of 'custom_field.dart';
 
 CustomField _$CustomFieldFromJson(Map<String, dynamic> json) {
   return CustomField(
-    name: json['name'] as String,
-    value: json['value'] as String,
+    name: json['name'] as String?,
+    value: json['value'] as String?,
   );
 }
 

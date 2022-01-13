@@ -8,7 +8,7 @@ part of 'intent_action.dart';
 
 IntentAction _$IntentActionFromJson(Map<String, dynamic> json) {
   return IntentAction(
-    type: json['type'] as String,
+    type: json['type'] as String?,
     useStripeSdk: json['use_stripe_sdk'],
   )..redirectToUrl = json['redirect_to_url'] == null
       ? null

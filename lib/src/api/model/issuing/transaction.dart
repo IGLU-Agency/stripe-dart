@@ -3,24 +3,23 @@ import 'package:stripedart/src/api/model/issuing/merchant_data.dart';
 
 part 'transaction.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Transaction {
-  String id;
-  String object;
+  String? id;
+  String? object;
   dynamic amount;
   dynamic authorization;
   dynamic balanceTransaction;
   dynamic card;
   dynamic cardholder;
-  int created;
-  String currency;
-  bool livemode;
+  int? created;
+  String? currency;
+  bool? livemode;
   dynamic merchantAmount;
-  String merchantCurrency;
-  MerchantData merchantData;
-  Map<String, dynamic> metadata;
-  String type;
+  String? merchantCurrency;
+  MerchantData? merchantData;
+  Map<String, dynamic>? metadata;
+  String? type;
 
   Transaction(
       {this.id,

@@ -8,8 +8,8 @@ part of 'connection_token.dart';
 
 ConnectionToken _$ConnectionTokenFromJson(Map<String, dynamic> json) {
   return ConnectionToken(
-    location: json['location'] as String,
-    secret: json['secret'] as int,
+    location: json['location'] as String?,
+    secret: json['secret'] as int?,
   );
 }
 

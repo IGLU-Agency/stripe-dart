@@ -8,12 +8,12 @@ part of 'relationship.dart';
 
 Relationship _$RelationshipFromJson(Map<String, dynamic> json) {
   return Relationship(
-    director: json['director'] as bool,
-    executive: json['executive'] as bool,
-    owner: json['owner'] as bool,
-    percentOwnership: (json['percent_ownership'] as num)?.toDouble(),
-    representative: json['representative'] as bool,
-    title: json['title'] as String,
+    director: json['director'] as bool?,
+    executive: json['executive'] as bool?,
+    owner: json['owner'] as bool?,
+    percentOwnership: (json['percent_ownership'] as num?)?.toDouble(),
+    representative: json['representative'] as bool?,
+    title: json['title'] as String?,
   );
 }
 

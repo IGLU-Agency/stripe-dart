@@ -30,22 +30,22 @@ class StripeApiHandler {
 
   final http.Client _client = http.Client();
 
-  final String stripeAccount;
+  final String? stripeAccount;
 
   StripeApiHandler({this.stripeAccount});
 
-  Future<Map<String, dynamic>> request(
+  Future<Map<String, dynamic>?> request(
       RequestMethod method, String path, String key, String apiVersion,
-      {final Map<String, dynamic> params}) {
+      {final Map<String, dynamic>? params}) {
     final options =
         RequestOptions(apiVersion, key: key, stripeAccount: stripeAccount);
     return _getStripeResponse(method, liveApiPath + path, options,
         params: params);
   }
 
-  Future<Map<String, dynamic>> _getStripeResponse(
+  Future<Map<String, dynamic>?> _getStripeResponse(
       RequestMethod method, final String url, final RequestOptions options,
-      {Map<String, dynamic> params}) async {
+      {Map<String, dynamic>? params}) async {
     final headers = _headers(options: options);
 
     http.Response response;
@@ -76,7 +76,7 @@ class StripeApiHandler {
 
     final requestId = response.headers[headerKeyRequestID];
     final statusCode = response.statusCode;
-    Map<String, dynamic> resp;
+    Map<String, dynamic>? resp;
     try {
       resp = json.decode(utf8.decode(response.bodyBytes));
     } catch (error) {
@@ -90,7 +90,7 @@ class StripeApiHandler {
       };
     }
     if (statusCode < 200 || statusCode >= 300) {
-      final Map<String, dynamic> errBody = resp[fieldError];
+      final Map<String, dynamic> errBody = resp![fieldError];
       errBody["requestId"] = requestId;
       return {"isError": true, "error": errBody};
     } else {
@@ -101,8 +101,8 @@ class StripeApiHandler {
   ///
   ///
   ///
-  static Map<String, String> _headers({RequestOptions options}) {
-    final Map<String, String> headers = Map();
+  static Map<String, String?> _headers({RequestOptions? options}) {
+    final Map<String, String?> headers = Map();
     headers["Accept-Charset"] = "UTF-8";
     headers["Accept"] = "application/json; charset=utf-8";
     headers["Content-Type"] = "application/x-www-form-urlencoded";
@@ -179,11 +179,11 @@ class RequestOptions {
   static const String TYPE_JSON = "json_data";
 
   final String apiVersion;
-  final String guid;
-  final String idempotencyKey;
-  final String key;
-  final String requestType;
-  final String stripeAccount;
+  final String? guid;
+  final String? idempotencyKey;
+  final String? key;
+  final String? requestType;
+  final String? stripeAccount;
 
   RequestOptions(
     this.apiVersion, {

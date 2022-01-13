@@ -2,13 +2,12 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'package_dimensions.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class PackageDimensions {
-  double height;
-  double length;
-  double weight;
-  double width;
+  double? height;
+  double? length;
+  double? weight;
+  double? width;
 
   PackageDimensions({this.height, this.length, this.weight, this.width});
   factory PackageDimensions.fromJson(Map<String, dynamic> json) =>

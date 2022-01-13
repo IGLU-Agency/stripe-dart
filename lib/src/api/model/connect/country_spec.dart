@@ -3,17 +3,16 @@ import 'package:stripedart/src/api/model/connect/verification_fields.dart';
 
 part 'country_spec.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class CountrySpec {
-  String id;
-  String defaultCurrency;
-  Map<String, dynamic> supportedBankAccountCurrencies;
-  List<String> supportedPaymentCurrencies;
-  List<String> supportedPaymentMethods;
-  List<String> supportedTransferCountries;
-  String object;
-  VerificationFields verificationFields;
+  String? id;
+  String? defaultCurrency;
+  Map<String, dynamic>? supportedBankAccountCurrencies;
+  List<String>? supportedPaymentCurrencies;
+  List<String>? supportedPaymentMethods;
+  List<String>? supportedTransferCountries;
+  String? object;
+  VerificationFields? verificationFields;
 
   CountrySpec(
       {this.id,

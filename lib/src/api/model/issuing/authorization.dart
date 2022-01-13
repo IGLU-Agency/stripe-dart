@@ -9,30 +9,29 @@ import 'package:stripedart/src/api/model/issuing/verification_data.dart';
 
 part 'authorization.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Authorization {
-  String id;
+  String? id;
   dynamic amount;
-  bool approved;
-  Card card;
+  bool? approved;
+  Card? card;
   dynamic cardholder;
-  String currency;
-  Map<String, dynamic> metadata;
-  String status;
-  String object;
-  String authorizationMethod;
-  List<BalanceTransaction> balanceTransactions;
-  int created;
-  bool livemode;
-  int merchantAmount;
-  String merchantCurrency;
-  MerchantData merchantData;
-  PendingRequest pendingRequest;
-  List<RequestHistory> requestHistory;
-  List<Transaction> transactions;
-  VerificationData verificationData;
-  String wallet;
+  String? currency;
+  Map<String, dynamic>? metadata;
+  String? status;
+  String? object;
+  String? authorizationMethod;
+  List<BalanceTransaction>? balanceTransactions;
+  int? created;
+  bool? livemode;
+  int? merchantAmount;
+  String? merchantCurrency;
+  MerchantData? merchantData;
+  PendingRequest? pendingRequest;
+  List<RequestHistory>? requestHistory;
+  List<Transaction>? transactions;
+  VerificationData? verificationData;
+  String? wallet;
 
   Authorization({
     this.id,

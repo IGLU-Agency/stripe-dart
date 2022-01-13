@@ -8,24 +8,24 @@ part of 'refund.dart';
 
 Refund _$RefundFromJson(Map<String, dynamic> json) {
   return Refund(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    amount: json['amount'] as int,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    amount: json['amount'] as int?,
     balanceTransaction: json['balance_transaction'],
     charge: json['charge'],
-    created: json['created'] as int,
-    currency: json['currency'] as String,
-    metadata: json['metadata'] as Map<String, dynamic>,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
     paymentIntent: json['payment_intent'],
-    reason: json['reason'] as String,
-    receiptNumber: json['receipt_number'] as String,
+    reason: json['reason'] as String?,
+    receiptNumber: json['receipt_number'] as String?,
     sourceTransferReversal: json['source_transfer_reversal'],
-    status: json['status'] as String,
+    status: json['status'] as String?,
     transferReversal: json['transfer_reversal'],
   )
-    ..description = json['description'] as String
+    ..description = json['description'] as String?
     ..failureBalanceTransaction = json['failure_balance_transaction']
-    ..failureReason = json['failure_reason'] as String;
+    ..failureReason = json['failure_reason'] as String?;
 }
 
 Map<String, dynamic> _$RefundToJson(Refund instance) => <String, dynamic>{

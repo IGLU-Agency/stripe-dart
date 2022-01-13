@@ -3,10 +3,9 @@ import 'package:stripedart/src/api/model/core_resources/balance_fund.dart';
 
 part 'balance_issuing.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class BalanceIssuing {
-  List<BalanceFund> available;
+  List<BalanceFund>? available;
 
   BalanceIssuing({
     this.available,

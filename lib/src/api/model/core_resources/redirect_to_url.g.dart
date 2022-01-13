@@ -8,8 +8,8 @@ part of 'redirect_to_url.dart';
 
 RedirectToUrl _$RedirectToUrlFromJson(Map<String, dynamic> json) {
   return RedirectToUrl(
-    url: json['url'] as String,
-    returnUrl: json['return_url'] as String,
+    url: json['url'] as String?,
+    returnUrl: json['return_url'] as String?,
   );
 }
 

@@ -14,8 +14,8 @@ class Radar {
   }
 
   final Stripe _stripe;
-  EarlyFraudWarnings earlyFraudWarnings;
-  Reviews reviews;
-  ValueLists valueLists;
-  ValueListItems valueListItems;
+  EarlyFraudWarnings? earlyFraudWarnings;
+  Reviews? reviews;
+  ValueLists? valueLists;
+  ValueListItems? valueListItems;
 }

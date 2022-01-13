@@ -11,9 +11,9 @@ Billing _$BillingFromJson(Map<String, dynamic> json) {
     address: json['address'] == null
         ? null
         : Address.fromJson(json['address'] as Map<String, dynamic>),
-    email: json['email'] as String,
-    name: json['name'] as String,
-    phone: json['phone'] as String,
+    email: json['email'] as String?,
+    name: json['name'] as String?,
+    phone: json['phone'] as String?,
   );
 }
 

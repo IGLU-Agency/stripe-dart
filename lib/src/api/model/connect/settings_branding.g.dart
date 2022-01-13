@@ -10,8 +10,8 @@ SettingsBranding _$SettingsBrandingFromJson(Map<String, dynamic> json) {
   return SettingsBranding(
     icon: json['icon'],
     logo: json['logo'],
-    primaryColor: json['primary_color'] as String,
-    secondaryColor: json['secondary_color'] as String,
+    primaryColor: json['primary_color'] as String?,
+    secondaryColor: json['secondary_color'] as String?,
   );
 }
 

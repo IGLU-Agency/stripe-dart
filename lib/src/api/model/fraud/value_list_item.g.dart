@@ -8,13 +8,13 @@ part of 'value_list_item.dart';
 
 ValueListItem _$ValueListItemFromJson(Map<String, dynamic> json) {
   return ValueListItem(
-    created: json['created'] as int,
-    createdBy: json['created_by'] as String,
-    id: json['id'] as String,
-    livemode: json['livemode'] as bool,
-    object: json['object'] as String,
-    value: json['value'] as String,
-    valueList: json['value_list'] as String,
+    created: json['created'] as int?,
+    createdBy: json['created_by'] as String?,
+    id: json['id'] as String?,
+    livemode: json['livemode'] as bool?,
+    object: json['object'] as String?,
+    value: json['value'] as String?,
+    valueList: json['value_list'] as String?,
   );
 }
 

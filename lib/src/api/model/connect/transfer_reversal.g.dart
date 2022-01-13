@@ -8,15 +8,15 @@ part of 'transfer_reversal.dart';
 
 TransferReversal _$TransferReversalFromJson(Map<String, dynamic> json) {
   return TransferReversal(
-    id: json['id'] as String,
-    amount: json['amount'] as int,
+    id: json['id'] as String?,
+    amount: json['amount'] as int?,
     balanceTransaction: json['balance_transaction'],
-    created: json['created'] as int,
-    currency: json['currency'] as String,
-    description: json['description'] as String,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
+    description: json['description'] as String?,
     destinationPaymentRefund: json['destination_payment_refund'],
-    metadata: json['metadata'] as Map<String, dynamic>,
-    object: json['object'] as String,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    object: json['object'] as String?,
     sourceRefund: json['source_refund'],
     transfer: json['transfer'],
   );

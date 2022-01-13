@@ -4,29 +4,28 @@ import 'package:stripedart/src/api/model/checkout/transform.dart';
 
 part 'plan.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Plan {
-  String id;
-  String object;
-  bool active;
+  String? id;
+  String? object;
+  bool? active;
   dynamic aggregateUsage;
-  int amount;
-  String amountDecimal;
-  String billingScheme;
-  int created;
-  String currency;
-  String interval;
-  int intervalCount;
-  bool livemode;
-  Map<String, dynamic> metadata;
-  String nickname;
+  int? amount;
+  String? amountDecimal;
+  String? billingScheme;
+  int? created;
+  String? currency;
+  String? interval;
+  int? intervalCount;
+  bool? livemode;
+  Map<String, dynamic>? metadata;
+  String? nickname;
   dynamic product;
-  List<Tier> tiers;
-  String tiersMode;
-  Transform transformUsage;
-  int trialPeriodDays;
-  String usageType;
+  List<Tier>? tiers;
+  String? tiersMode;
+  Transform? transformUsage;
+  int? trialPeriodDays;
+  String? usageType;
 
   Plan({
     this.id,

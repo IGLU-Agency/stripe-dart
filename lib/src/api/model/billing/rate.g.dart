@@ -8,17 +8,17 @@ part of 'rate.dart';
 
 Rate _$RateFromJson(Map<String, dynamic> json) {
   return Rate(
-    active: json['active'] as bool,
-    created: json['created'] as int,
-    description: json['description'] as String,
-    displayName: json['display_name'] as String,
-    id: json['id'] as String,
-    inclusive: json['inclusive'] as bool,
-    jurisdiction: json['jurisdiction'] as String,
-    livemode: json['livemode'] as bool,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    object: json['object'] as String,
-    percentage: (json['percentage'] as num)?.toDouble(),
+    active: json['active'] as bool?,
+    created: json['created'] as int?,
+    description: json['description'] as String?,
+    displayName: json['display_name'] as String?,
+    id: json['id'] as String?,
+    inclusive: json['inclusive'] as bool?,
+    jurisdiction: json['jurisdiction'] as String?,
+    livemode: json['livemode'] as bool?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    object: json['object'] as String?,
+    percentage: (json['percentage'] as num?)?.toDouble(),
   );
 }
 

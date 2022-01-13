@@ -14,10 +14,10 @@ class Files {
   }
 
   final Stripe _stripe;
-  BasicResource _resource;
+  late BasicResource _resource;
   final String _endpoint = "/files";
 
-  Future<Map<String, dynamic>> create(
+  Future<Map<String, dynamic>?> create(
       File file, List<Map<String, dynamic>> options) async {
     var map = Map<String, dynamic>();
     var postUri = Uri.parse("https://files.stripe.com/v1/files");
@@ -32,19 +32,19 @@ class Files {
     if (response.statusCode == 200) {
       var streamedResponse = await http.Response.fromStream(response);
       var jsonResponse =
-          convert.jsonDecode(streamedResponse.body) as Map<String, dynamic>;
+          convert.jsonDecode(streamedResponse.body) as Map<String, dynamic>?;
       return jsonResponse;
     } else {
       return map;
     }
   }
 
-  Future<Map<String, dynamic>> retrieve(String id,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> retrieve(String id,
+      {Map<String, dynamic>? params}) {
     return _resource.retrieve(_endpoint, id, params: params);
   }
 
-  Future<Map<String, dynamic>> list({Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> list({Map<String, dynamic>? params}) {
     return _resource.list(_endpoint, params: params);
   }
 }

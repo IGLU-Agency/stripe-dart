@@ -8,9 +8,9 @@ part of 'settings_payments.dart';
 
 SettingsPayments _$SettingsPaymentsFromJson(Map<String, dynamic> json) {
   return SettingsPayments(
-    statementDescriptor: json['statement_descriptor'] as String,
-    statementDescriptorKana: json['statement_descriptor_kana'] as String,
-    statementDescriptorKanji: json['statement_descriptor_kanji'] as String,
+    statementDescriptor: json['statement_descriptor'] as String?,
+    statementDescriptorKana: json['statement_descriptor_kana'] as String?,
+    statementDescriptorKanji: json['statement_descriptor_kanji'] as String?,
   );
 }
 

@@ -35,18 +35,18 @@ class Core {
   }
 
   final Stripe _stripe;
-  Balance balance;
-  BalanceTransactions balanceTransactions;
-  Customers customers;
-  Disputes disputes;
-  Events events;
-  Files files;
-  FileLinks fileLinks;
-  Mandates mandates;
-  PaymentIntents paymentIntents;
-  Payouts payouts;
-  Prices prices;
-  Products products;
-  Refunds refunds;
-  SetupIntents setupIntents;
+  Balance? balance;
+  BalanceTransactions? balanceTransactions;
+  late Customers customers;
+  Disputes? disputes;
+  Events? events;
+  Files? files;
+  FileLinks? fileLinks;
+  Mandates? mandates;
+  PaymentIntents? paymentIntents;
+  Payouts? payouts;
+  Prices? prices;
+  Products? products;
+  Refunds? refunds;
+  SetupIntents? setupIntents;
 }

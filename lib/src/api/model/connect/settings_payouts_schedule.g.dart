@@ -9,10 +9,10 @@ part of 'settings_payouts_schedule.dart';
 SettingsPayoutsSchedule _$SettingsPayoutsScheduleFromJson(
     Map<String, dynamic> json) {
   return SettingsPayoutsSchedule(
-    delayDays: json['delay_days'] as int,
-    interval: json['interval'] as String,
-    monthlyAnchor: json['monthly_anchor'] as int,
-    weeklyAnchor: json['weekly_anchor'] as String,
+    delayDays: json['delay_days'] as int?,
+    interval: json['interval'] as String?,
+    monthlyAnchor: json['monthly_anchor'] as int?,
+    weeklyAnchor: json['weekly_anchor'] as String?,
   );
 }
 

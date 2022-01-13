@@ -8,11 +8,11 @@ class Mandates {
   }
 
   final Stripe _stripe;
-  BasicResource _resource;
+  late BasicResource _resource;
   final String _endpoint = "/mandates";
 
-  Future<Map<String, dynamic>> retrieve(String id,
-      {Map<String, dynamic> params}) {
+  Future<Map<String, dynamic>?> retrieve(String id,
+      {Map<String, dynamic>? params}) {
     return _resource.retrieve(_endpoint, id, params: params);
   }
 }

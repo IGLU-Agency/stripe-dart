@@ -8,11 +8,11 @@ part of 'recurring.dart';
 
 Recurring _$RecurringFromJson(Map<String, dynamic> json) {
   return Recurring(
-    aggregateUsage: json['aggregate_usage'] as String,
-    interval: json['interval'] as String,
-    intervalCount: json['interval_count'] as int,
-    trialPeriodDays: json['trial_period_days'] as int,
-    usageType: json['usage_type'] as String,
+    aggregateUsage: json['aggregate_usage'] as String?,
+    interval: json['interval'] as String?,
+    intervalCount: json['interval_count'] as int?,
+    trialPeriodDays: json['trial_period_days'] as int?,
+    usageType: json['usage_type'] as String?,
   );
 }
 

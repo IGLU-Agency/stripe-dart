@@ -1,16 +1,15 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'portal_session.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class PortalSession {
-  String id;
-  String object;
-  int created;
-  String customer;
-  bool livemode;
-  String returnUrl;
-  String url;
+  String? id;
+  String? object;
+  int? created;
+  String? customer;
+  bool? livemode;
+  String? returnUrl;
+  String? url;
 
   PortalSession({
     this.id,

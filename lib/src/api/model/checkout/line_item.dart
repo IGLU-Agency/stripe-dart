@@ -4,18 +4,17 @@ import 'package:stripedart/stripedart.dart';
 
 part 'line_item.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class LineItem {
-  String id;
-  String object;
-  int amountSubtotal;
-  int amountTotal;
-  String currency;
-  String description;
-  CheckoutPrice price;
-  int quantity;
-  List<Tax> taxes;
+  String? id;
+  String? object;
+  int? amountSubtotal;
+  int? amountTotal;
+  String? currency;
+  String? description;
+  CheckoutPrice? price;
+  int? quantity;
+  List<Tax>? taxes;
 
   LineItem(
       {this.id,

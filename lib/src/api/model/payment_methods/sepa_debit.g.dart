@@ -8,11 +8,11 @@ part of 'sepa_debit.dart';
 
 SepaDebit _$SepaDebitFromJson(Map<String, dynamic> json) {
   return SepaDebit(
-    bankCode: json['bank_code'] as String,
-    branchCode: json['branch_code'] as String,
-    country: json['country'] as String,
-    fingerprint: json['fingerprint'] as String,
-    last4: json['last4'] as String,
+    bankCode: json['bank_code'] as String?,
+    branchCode: json['branch_code'] as String?,
+    country: json['country'] as String?,
+    fingerprint: json['fingerprint'] as String?,
+    last4: json['last4'] as String?,
   );
 }
 

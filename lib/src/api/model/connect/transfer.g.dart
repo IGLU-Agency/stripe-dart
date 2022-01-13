@@ -8,25 +8,25 @@ part of 'transfer.dart';
 
 Transfer _$TransferFromJson(Map<String, dynamic> json) {
   return Transfer(
-    id: json['id'] as String,
-    amount: json['amount'] as int,
+    id: json['id'] as String?,
+    amount: json['amount'] as int?,
     balanceTransaction: json['balance_transaction'],
-    created: json['created'] as int,
-    currency: json['currency'] as String,
-    description: json['description'] as String,
-    amountReversed: json['amount_reversed'] as int,
+    created: json['created'] as int?,
+    currency: json['currency'] as String?,
+    description: json['description'] as String?,
+    amountReversed: json['amount_reversed'] as int?,
     destination: json['destination'],
     destinationPayment: json['destination_payment'],
-    livemode: json['livemode'] as bool,
-    metadata: json['metadata'] as Map<String, dynamic>,
-    object: json['object'] as String,
+    livemode: json['livemode'] as bool?,
+    metadata: json['metadata'] as Map<String, dynamic>?,
+    object: json['object'] as String?,
     reversals: json['reversals'] == null
         ? null
         : Reversals.fromJson(json['reversals'] as Map<String, dynamic>),
-    reversed: json['reversed'] as bool,
+    reversed: json['reversed'] as bool?,
     sourceTransaction: json['source_transaction'],
-    sourceType: json['source_type'] as String,
-    transferGroup: json['transfer_group'] as String,
+    sourceType: json['source_type'] as String?,
+    transferGroup: json['transfer_group'] as String?,
   );
 }
 

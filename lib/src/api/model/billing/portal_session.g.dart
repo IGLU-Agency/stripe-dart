@@ -8,13 +8,13 @@ part of 'portal_session.dart';
 
 PortalSession _$PortalSessionFromJson(Map<String, dynamic> json) {
   return PortalSession(
-    id: json['id'] as String,
-    object: json['object'] as String,
-    created: json['created'] as int,
-    customer: json['customer'] as String,
-    livemode: json['livemode'] as bool,
-    returnUrl: json['return_url'] as String,
-    url: json['url'] as String,
+    id: json['id'] as String?,
+    object: json['object'] as String?,
+    created: json['created'] as int?,
+    customer: json['customer'] as String?,
+    livemode: json['livemode'] as bool?,
+    returnUrl: json['return_url'] as String?,
+    url: json['url'] as String?,
   );
 }
 

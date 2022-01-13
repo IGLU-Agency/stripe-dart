@@ -3,13 +3,12 @@ import 'package:stripedart/src/api/model/checkout/line_item.dart';
 
 part 'line_items.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class LineItems {
-  String object;
-  List<LineItem> data;
-  bool hasMore;
-  String url;
+  String? object;
+  List<LineItem>? data;
+  bool? hasMore;
+  String? url;
 
   LineItems({this.object, this.data, this.hasMore, this.url});
   factory LineItems.fromJson(Map<String, dynamic> json) =>

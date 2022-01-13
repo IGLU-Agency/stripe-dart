@@ -9,7 +9,7 @@ part of 'transform.dart';
 Transform _$TransformFromJson(Map<String, dynamic> json) {
   return Transform(
     divideBy: json['divide_by'],
-    round: json['round'] as String,
+    round: json['round'] as String?,
   );
 }
 

@@ -8,12 +8,12 @@ part of 'usage_record.dart';
 
 UsageRecord _$UsageRecordFromJson(Map<String, dynamic> json) {
   return UsageRecord(
-    object: json['object'] as String,
-    id: json['id'] as String,
-    livemode: json['livemode'] as bool,
-    quantity: json['quantity'] as int,
-    subscriptionItem: json['subscription_item'] as String,
-    timestamp: json['timestamp'] as int,
+    object: json['object'] as String?,
+    id: json['id'] as String?,
+    livemode: json['livemode'] as bool?,
+    quantity: json['quantity'] as int?,
+    subscriptionItem: json['subscription_item'] as String?,
+    timestamp: json['timestamp'] as int?,
   );
 }
 

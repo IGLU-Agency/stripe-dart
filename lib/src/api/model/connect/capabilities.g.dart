@@ -8,14 +8,14 @@ part of 'capabilities.dart';
 
 Capabilities _$CapabilitiesFromJson(Map<String, dynamic> json) {
   return Capabilities(
-    auBecsDebitPayments: json['au_becs_debit_payments'] as String,
-    cardIssuing: json['card_issuing'] as String,
-    cardPayments: json['card_payments'] as String,
-    jcbPayments: json['jcb_payments'] as String,
-    legacyPayments: json['legacy_payments'] as String,
-    taxReportingUS_1099Misc: json['tax_reporting_u_s_1099_misc'] as String,
-    taxReportingUs_1099K: json['tax_reporting_us_1099_k'] as String,
-    transfers: json['transfers'] as String,
+    auBecsDebitPayments: json['au_becs_debit_payments'] as String?,
+    cardIssuing: json['card_issuing'] as String?,
+    cardPayments: json['card_payments'] as String?,
+    jcbPayments: json['jcb_payments'] as String?,
+    legacyPayments: json['legacy_payments'] as String?,
+    taxReportingUS_1099Misc: json['tax_reporting_u_s_1099_misc'] as String?,
+    taxReportingUs_1099K: json['tax_reporting_us_1099_k'] as String?,
+    transfers: json['transfers'] as String?,
   );
 }
 

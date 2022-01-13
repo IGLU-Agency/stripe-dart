@@ -7,14 +7,13 @@ import 'package:stripedart/src/api/model/connect/settings_payouts.dart';
 
 part 'settings.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Settings {
-  SettingsBranding branding;
-  SettingsCardPayments cardPayments;
-  SettingsDashboard dashboard;
-  SettingsPayments payments;
-  SettingsPayouts payouts;
+  SettingsBranding? branding;
+  SettingsCardPayments? cardPayments;
+  SettingsDashboard? dashboard;
+  SettingsPayments? payments;
+  SettingsPayouts? payouts;
 
   Settings({this.branding, this.cardPayments, this.dashboard, this.payments});
   factory Settings.fromJson(Map<String, dynamic> json) =>

@@ -8,12 +8,12 @@ part of 'settings_payouts.dart';
 
 SettingsPayouts _$SettingsPayoutsFromJson(Map<String, dynamic> json) {
   return SettingsPayouts(
-    debitNegativeBalances: json['debit_negative_balances'] as bool,
+    debitNegativeBalances: json['debit_negative_balances'] as bool?,
     schedule: json['schedule'] == null
         ? null
         : SettingsPayoutsSchedule.fromJson(
             json['schedule'] as Map<String, dynamic>),
-    statementDescriptor: json['statement_descriptor'] as String,
+    statementDescriptor: json['statement_descriptor'] as String?,
   );
 }
 

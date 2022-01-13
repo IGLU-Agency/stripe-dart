@@ -10,29 +10,28 @@ import 'package:stripedart/src/api/model/issuing/requirements.dart';
 
 part 'account.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class Account {
-  String id;
-  String businessType;
-  Capabilities capabilities;
-  Company company;
-  String country;
-  String email;
-  Individual individual;
-  Map<String, dynamic> metadata;
-  Requirements requirements;
-  TosAcceptance tosAcceptance;
-  String type;
-  String object;
-  BusinessProfile businessProfile;
-  bool chargesEnabled;
-  int created;
-  String defaultCurrency;
-  bool detailsSubmitted;
-  ExternalAccounts externalAccounts;
-  bool payoutsEnabled;
-  Settings settings;
+  String? id;
+  String? businessType;
+  Capabilities? capabilities;
+  Company? company;
+  String? country;
+  String? email;
+  Individual? individual;
+  Map<String, dynamic>? metadata;
+  Requirements? requirements;
+  TosAcceptance? tosAcceptance;
+  String? type;
+  String? object;
+  BusinessProfile? businessProfile;
+  bool? chargesEnabled;
+  int? created;
+  String? defaultCurrency;
+  bool? detailsSubmitted;
+  ExternalAccounts? externalAccounts;
+  bool? payoutsEnabled;
+  Settings? settings;
 
   Account(
       {this.id,

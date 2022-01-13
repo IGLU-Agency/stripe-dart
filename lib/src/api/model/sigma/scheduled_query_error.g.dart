@@ -8,7 +8,7 @@ part of 'scheduled_query_error.dart';
 
 ScheduledQueryError _$ScheduledQueryErrorFromJson(Map<String, dynamic> json) {
   return ScheduledQueryError(
-    message: json['message'] as String,
+    message: json['message'] as String?,
   );
 }
 

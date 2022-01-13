@@ -3,13 +3,12 @@ import 'package:stripedart/src/api/model/issuing/spending_limits.dart';
 
 part 'spending_controls.g.dart';
 
-@JsonSerializable(
-    nullable: true, fieldRename: FieldRename.snake, explicitToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)
 class SpendingControls {
-  List<String> allowedCategories;
-  List<String> blockedCategories;
-  SpendingLimits spendingLimits;
-  String spendingLimitsCurrency;
+  List<String>? allowedCategories;
+  List<String>? blockedCategories;
+  SpendingLimits? spendingLimits;
+  String? spendingLimitsCurrency;
 
   SpendingControls({
     this.allowedCategories,
