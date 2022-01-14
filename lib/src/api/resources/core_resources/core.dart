@@ -29,6 +29,7 @@ class Core {
     payouts = Payouts(_stripe);
     prices = Prices(_stripe);
     products = Products(_stripe);
+    prices = Prices(_stripe);
     refunds = Refunds(_stripe);
     setupIntents = SetupIntents(_stripe);
   }

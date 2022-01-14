@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'dart:convert' show json;
+import 'dart:convert' show json, utf8;
 
 import 'package:http/http.dart' as http;
 
@@ -56,19 +56,19 @@ class StripeApiHandler {
         if (params != null && params.isNotEmpty) {
           fUrl = "$url?${_encodeMap(params)}";
         }
-        response = await _client.get(Uri.parse(fUrl), headers: headers as Map<String, String>?);
+        response = await _client.get(Uri.parse(fUrl), headers: headers);
         break;
 
       case RequestMethod.post:
         response = await _client.post(
           Uri.parse(url),
-          headers: headers as Map<String, String>?,
+          headers: headers,
           body: params != null ? _urlEncodeMap(params) : null,
         );
         break;
 
       case RequestMethod.delete:
-        response = await _client.delete(Uri.parse(url), headers: headers as Map<String, String>?);
+        response = await _client.delete(Uri.parse(url), headers: headers);
         break;
       default:
         throw Exception("Request Method: $method not implemented");
@@ -78,7 +78,7 @@ class StripeApiHandler {
     final statusCode = response.statusCode;
     Map<String, dynamic>? resp;
     try {
-      resp = json.decode(response.body);
+      resp = json.decode(utf8.decode(response.bodyBytes));
     } catch (error) {
       return {
         "isError": true,
@@ -101,10 +101,10 @@ class StripeApiHandler {
   ///
   ///
   ///
-  static Map<String, String?> _headers({RequestOptions? options}) {
-    final Map<String, String?> headers = Map();
+  static Map<String, String> _headers({RequestOptions? options}) {
+    final Map<String, String> headers = Map();
     headers["Accept-Charset"] = "UTF-8";
-    headers["Accept"] = "application/json";
+    headers["Accept"] = "application/json; charset=utf-8";
     headers["Content-Type"] = "application/x-www-form-urlencoded";
     headers["User-Agent"] = "Stripe/v1Dart/$versionName";
 
@@ -121,16 +121,14 @@ class StripeApiHandler {
     headers["X-Stripe-Client-User-Agent"] = json.encode(propertyMap);
 
     if (options != null) {
-      if (options.apiVersion != null) {
-        headers["Stripe-Version"] = options.apiVersion;
-      }
+      headers["Stripe-Version"] = options.apiVersion;
 
       if (options.stripeAccount != null) {
-        headers["Stripe-Account"] = options.stripeAccount;
+        headers["Stripe-Account"] = options.stripeAccount!;
       }
 
       if (options.idempotencyKey != null) {
-        headers["Idempotency-Key"] = options.idempotencyKey;
+        headers["Idempotency-Key"] = options.idempotencyKey!;
       }
     }
 
