@@ -105,7 +105,7 @@ class Stripe {
   /// Validates the received [publishableKey] and throws a [Exception] if an
   /// invalid key has been submitted.
   static void _validateKey(String publishableKey, String? stripeAccount) {
-    if (publishableKey == null || publishableKey.isEmpty) {
+    if (publishableKey.isEmpty) {
       throw Exception("Invalid Publishable Key: " +
           "You must use a valid publishable key to create a token.  " +
           "For more info, see https://stripe.com/docs/stripe.js.");

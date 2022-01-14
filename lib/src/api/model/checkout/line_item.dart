@@ -1,5 +1,4 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:stripedart/src/api/model/checkout/tax.dart';
 import 'package:stripedart/stripedart.dart';
 
 part 'line_item.g.dart';
