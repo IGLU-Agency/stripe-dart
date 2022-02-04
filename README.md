@@ -3,7 +3,7 @@
 The Stripe Dart library provides convenient access to the Stripe API from
 applications written in server-side Dart.
 
-For collecting customer and payment information in Flutter app, use our [Stripe Flutter SDK](https://github.com/LucaIaconelli/stripe-flutter).
+For collecting customer and payment information in Flutter app, use our [Stripe Flutter SDK](https://github.com/IGLU-Agency/stripe-flutter).
 
 ## Documentation
 
@@ -34,6 +34,6 @@ var stripe = Stripe('sk_test_...', {
 });
 ```
 
-| Option              | Default            | Description                                                                           |
-| ------------------- | ------------------ | ------------------------------------------------------------------------------------- |
-| `apiVersion`        | `null`             | Stripe API version to be used. If not set the account's default version will be used. |
+| Option       | Default | Description                                                                           |
+| ------------ | ------- | ------------------------------------------------------------------------------------- |
+| `apiVersion` | `null`  | Stripe API version to be used. If not set the account's default version will be used. |
